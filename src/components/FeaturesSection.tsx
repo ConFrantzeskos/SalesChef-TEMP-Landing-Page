@@ -75,7 +75,7 @@ const FeaturesSection = () => {
     {
       icon: RefreshCw,
       title: "Continuous Optimization",
-      description: "Your product content is never "done"—SalesChef continually tests and improves to maximize sales.",
+      description: "Your product content is never \"done\"—SalesChef continually tests and improves to maximize sales.",
       className: "bg-gradient-to-br from-amber-50/80 to-white border border-amber-100/60",
       iconClassName: "bg-gradient-to-br from-amber-100 to-white"
     },
