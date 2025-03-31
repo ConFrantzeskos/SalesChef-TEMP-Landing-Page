@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -122,9 +123,34 @@ const Hero = () => {
                 className="w-4/5 h-4/5 object-contain" 
               />
             </div>
-            <p className="text-xs text-gray-600 mt-2 max-w-xs text-center">
-              PIM / DAM: Product Source of Truth and Assets
-            </p>
+            
+            {/* Database visualization with arrows */}
+            <div className="relative mt-3 px-6 py-2 bg-white/20 rounded-md border border-white/30 backdrop-blur-sm">
+              <div className="flex items-center justify-center gap-2">
+                <Database className="h-4 w-4 text-white" />
+                <span className="text-xs text-white font-mono">PIM / DAM: Product Source of Truth and Assets</span>
+                <Database className="h-4 w-4 text-white" />
+              </div>
+              
+              {/* Data flowing visualization */}
+              <div className="absolute -top-3 left-12 h-3 w-10 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+                </div>
+              </div>
+              
+              <div className="absolute -top-3 right-12 h-3 w-10 overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="w-1/3 flex flex-col items-center h-full relative">
