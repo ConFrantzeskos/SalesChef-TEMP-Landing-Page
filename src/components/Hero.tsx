@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -57,8 +56,8 @@ const Hero = () => {
             </div>
             
             <div className="relative h-64 w-full rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur-sm">
+              {/* Dots and connections */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                {/* Dots and connections */}
                 <div className="absolute top-[5%] left-[10%] w-3 h-3 rounded-full bg-white/70 animate-pulse"></div>
                 <div className="absolute top-[25%] left-[5%] w-2 h-2 rounded-full bg-white/60 animate-pulse" style={{animationDelay: '0.5s'}}></div>
                 <div className="absolute top-[70%] left-[15%] w-4 h-4 rounded-full bg-white/80 animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -106,6 +105,26 @@ const Hero = () => {
                 <div className="absolute top-[53%] left-[65%] text-[7px] text-white/60 font-mono">{"{id:15483}"}</div>
               </div>
             </div>
+            
+            {/* Arrow pointing to Central Platform */}
+            <div className="hidden md:flex justify-center w-full mt-4">
+              <div className="w-12 h-16 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-0.5 h-full bg-white/40"></div>
+                </div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/40"></div>
+              </div>
+            </div>
+            
+            {/* Mobile arrow (horizontal) */}
+            <div className="flex md:hidden justify-center w-full my-8">
+              <div className="h-8 w-12 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-0.5 w-full bg-white/40"></div>
+                </div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/40"></div>
+              </div>
+            </div>
           </div>
           
           {/* Central Platform */}
@@ -140,9 +159,29 @@ const Hero = () => {
                     <Search className="h-3.5 w-3.5" />
                     <span className="text-xs">Keywords</span>
                   </div>
+                  
+                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                    <Hash className="h-3.5 w-3.5" />
+                    <span className="text-xs">Product Attributes</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                    <Target className="h-3.5 w-3.5" />
+                    <span className="text-xs">Competitive Insights</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
+
+            {/* Arrow pointing to SalesChef Logo */}
+            <div className="hidden md:flex justify-center w-full">
+              <div className="w-12 h-8 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-0.5 h-full bg-white/40"></div>
+                </div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/40"></div>
+              </div>
+            </div>
 
             {/* Logo */}
             <div className="relative w-48 h-48 bg-white/90 rounded-full shadow-[0_0_40px_rgba(255,255,255,0.6)] flex items-center justify-center">
@@ -151,6 +190,16 @@ const Hero = () => {
                 alt="SalesChef Logo" 
                 className="w-4/5 h-4/5 object-contain" 
               />
+            </div>
+            
+            {/* Arrow pointing to SalesChef PIM/DAM */}
+            <div className="hidden md:flex justify-center w-full mt-6">
+              <div className="w-12 h-8 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-0.5 h-full bg-white/40"></div>
+                </div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/40"></div>
+              </div>
             </div>
             
             {/* SalesChef PIM/DAM */}
@@ -174,6 +223,23 @@ const Hero = () => {
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <span className="text-white/90 font-semibold text-sm">CONTENT TRANSFORMATION</span>
+            </div>
+            
+            {/* Arrow pointing from SalesChef to Content Transformation (mobile) */}
+            <div className="flex md:hidden justify-center w-full mb-8">
+              <div className="h-8 w-12 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-0.5 w-full bg-white/40"></div>
+                </div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/40"></div>
+              </div>
+            </div>
+            
+            {/* Arrow pointing from SalesChef to Content Transformation (desktop) */}
+            <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-y-1/4">
+              <div className="h-0.5 w-16 bg-white/40 relative">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/40"></div>
+              </div>
             </div>
             
             <div className="grid grid-cols-3 gap-3 w-full">
