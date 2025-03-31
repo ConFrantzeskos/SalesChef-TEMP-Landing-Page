@@ -2,7 +2,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import FeaturesSection from '@/components/FeaturesSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
 import FaqSection from '@/components/FaqSection';
 
 const Index = () => {
@@ -12,7 +11,6 @@ const Index = () => {
       <main className="min-h-screen">
         <Hero />
         <FeaturesSection />
-        <TestimonialsSection />
         <FaqSection />
       </main>
     </>
