@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,12 +85,44 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        "bounce-x": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(5px)" }
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" }
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" }
+        },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 5px 0 rgba(255,255,255,0.4)" },
+          "50%": { boxShadow: "0 0 20px 0 rgba(255,255,255,0.6)" }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        "bounce-x": "bounce-x 1s ease-in-out infinite",
+        "fade-in": "fade-in 0.5s ease-out forwards",
+        "pulse-soft": "pulse-soft 3s ease-in-out infinite",
+        "float": "float 4s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite"
+			},
+      backgroundImage: {
+        'grid-purple-500': 'linear-gradient(to right, rgb(168 85 247 / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(168 85 247 / 0.1) 1px, transparent 1px)',
+        'gradient-chef': 'linear-gradient(135deg, rgba(147,51,234,0.9) 0%, rgba(219,39,119,0.9) 100%)',
+      },
+      boxShadow: {
+        'chef': '0 10px 30px -10px rgba(147,51,234,0.3)'
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

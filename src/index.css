@@ -33,7 +33,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 280 70% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -121,7 +121,7 @@
   }
 
   .chef-chip {
-    @apply inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium;
+    @apply inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium shadow-sm;
   }
 
   .circuit-pattern {
@@ -134,4 +134,3 @@
   margin: 0 auto;
   text-align: center;
 }
-

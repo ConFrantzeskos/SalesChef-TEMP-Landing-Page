@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -45,17 +46,17 @@ const Hero = () => {
   return (
     <div className="px-4 py-20 md:py-32 sm:px-6 lg:px-8 min-h-[90vh] flex flex-col justify-center bg-gradient-to-br from-purple-50 via-white to-pink-50/30">
       {/* Central Platform Showcase */}
-      <div className="w-full max-w-7xl mx-auto chef-gradient-bg rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden relative">
+      <div className="w-full max-w-7xl mx-auto chef-gradient-bg rounded-3xl shadow-xl p-8 md:p-12 overflow-hidden relative">
         <div className="absolute inset-0 circuit-pattern opacity-15"></div>
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
           {/* Unstructured Data Section */}
           <div className="w-full md:w-1/3 flex flex-col items-center">
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <span className="text-white/90 font-semibold text-sm">UNSTRUCTURED DATA</span>
+            <div className="bg-white/15 backdrop-blur-sm px-6 py-2 rounded-full mb-8 shadow-sm">
+              <span className="text-white/90 font-semibold text-sm tracking-wider">UNSTRUCTURED DATA</span>
             </div>
             
-            <div className="relative h-64 w-full rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur-sm">
+            <div className="relative h-64 w-full rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur-sm shadow-lg">
               {/* Dots and connections */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
                 <div className="absolute top-[5%] left-[10%] w-3 h-3 rounded-full bg-white/70 animate-pulse"></div>
@@ -66,35 +67,35 @@ const Hero = () => {
                 <div className="absolute top-[15%] left-[40%] w-3 h-3 rounded-full bg-white/75 animate-pulse" style={{animationDelay: '1.5s'}}></div>
                 
                 {/* Connection lines */}
-                <div className="absolute top-[10%] left-[35%] w-12 h-[2px] bg-white/60 rotate-45 opacity-70"></div>
-                <div className="absolute top-[30%] left-[15%] w-14 h-[2px] bg-white/70 -rotate-30 opacity-80"></div>
-                <div className="absolute top-[60%] left-[40%] w-16 h-[2px] bg-white/50 rotate-15 opacity-60"></div>
-                <div className="absolute top-[75%] left-[10%] w-10 h-[2px] bg-white/65 -rotate-15 opacity-75"></div>
+                <div className="absolute top-[10%] left-[35%] w-12 h-[1px] bg-white/60 rotate-45 opacity-70"></div>
+                <div className="absolute top-[30%] left-[15%] w-14 h-[1px] bg-white/70 -rotate-30 opacity-80"></div>
+                <div className="absolute top-[60%] left-[40%] w-16 h-[1px] bg-white/50 rotate-15 opacity-60"></div>
+                <div className="absolute top-[75%] left-[10%] w-10 h-[1px] bg-white/65 -rotate-15 opacity-75"></div>
                 
                 {/* Document tags */}
-                <div className="absolute top-[8%] left-[45%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded">
+                <div className="absolute top-[8%] left-[45%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded shadow-sm">
                   supplier forms
                 </div>
-                <div className="absolute top-[32%] left-[45%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded">
+                <div className="absolute top-[32%] left-[45%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded shadow-sm">
                   compliance specs
                 </div>
-                <div className="absolute top-[55%] left-[20%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded">
+                <div className="absolute top-[55%] left-[20%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded shadow-sm">
                   factory specs
                 </div>
-                <div className="absolute top-[78%] left-[50%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded">
+                <div className="absolute top-[78%] left-[50%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded shadow-sm">
                   product specs
                 </div>
                 
                 {/* File type icons */}
-                <div className="absolute top-[18%] left-[15%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded">
+                <div className="absolute top-[18%] left-[15%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded shadow-sm">
                   <Image className="h-3 w-3 inline mr-1" />
                   images
                 </div>
-                <div className="absolute top-[45%] left-[35%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded">
+                <div className="absolute top-[45%] left-[35%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded shadow-sm">
                   <FileSpreadsheet className="h-3 w-3 inline mr-1" />
                   spreadsheets
                 </div>
-                <div className="absolute top-[65%] left-[30%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded">
+                <div className="absolute top-[65%] left-[30%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded shadow-sm">
                   <Database className="h-3 w-3 inline mr-1" />
                   databases
                 </div>
@@ -107,10 +108,10 @@ const Hero = () => {
             </div>
             
             {/* Arrow pointing to Central Platform */}
-            <div className="hidden md:flex justify-center w-full mt-4">
+            <div className="hidden md:flex justify-center w-full mt-6">
               <div className="w-12 h-16 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-0.5 h-full bg-white/40"></div>
+                  <div className="w-0.5 h-full bg-white/40 animate-pulse"></div>
                 </div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/40"></div>
               </div>
@@ -120,7 +121,7 @@ const Hero = () => {
             <div className="flex md:hidden justify-center w-full my-8">
               <div className="h-8 w-12 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-0.5 w-full bg-white/40"></div>
+                  <div className="h-0.5 w-full bg-white/40 animate-pulse"></div>
                 </div>
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/40"></div>
               </div>
@@ -134,50 +135,50 @@ const Hero = () => {
               <CardHeader className="pb-2 text-center">
                 <div className="flex items-center justify-center gap-2">
                   <Radar className="h-4 w-4 text-white" />
-                  <CardTitle className="text-sm font-semibold text-white">Data Enrichment</CardTitle>
+                  <CardTitle className="text-sm font-semibold text-white tracking-wide">Data Enrichment</CardTitle>
                   <Radar className="h-4 w-4 text-white" />
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                  <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all">
                     <Globe className="h-3.5 w-3.5" />
-                    <span className="text-xs">Web Scraping</span>
+                    <span className="text-xs font-medium">Web Scraping</span>
                   </div>
                   
-                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                  <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all">
                     <MessagesSquare className="h-3.5 w-3.5" />
-                    <span className="text-xs">Social Media</span>
+                    <span className="text-xs font-medium">Social Media</span>
                   </div>
                   
-                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                  <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all">
                     <Star className="h-3.5 w-3.5" />
-                    <span className="text-xs">Review Sites</span>
+                    <span className="text-xs font-medium">Review Sites</span>
                   </div>
                   
-                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                  <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all">
                     <Search className="h-3.5 w-3.5" />
-                    <span className="text-xs">Keywords</span>
+                    <span className="text-xs font-medium">Keywords</span>
                   </div>
                   
-                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                  <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all">
                     <Hash className="h-3.5 w-3.5" />
-                    <span className="text-xs">Product Attributes</span>
+                    <span className="text-xs font-medium">Product Attributes</span>
                   </div>
                   
-                  <div className="flex items-center gap-1 bg-white/15 rounded px-2 py-1.5 text-white/90">
+                  <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all">
                     <Target className="h-3.5 w-3.5" />
-                    <span className="text-xs">Competitive Insights</span>
+                    <span className="text-xs font-medium">Competitive Insights</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Arrow pointing to SalesChef Logo */}
-            <div className="hidden md:flex justify-center w-full">
+            <div className="hidden md:flex justify-center w-full my-2">
               <div className="w-12 h-8 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-0.5 h-full bg-white/40"></div>
+                  <div className="w-0.5 h-full bg-white/40 animate-pulse"></div>
                 </div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/40"></div>
               </div>
@@ -196,7 +197,7 @@ const Hero = () => {
             <div className="hidden md:flex justify-center w-full mt-6">
               <div className="w-12 h-8 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-0.5 h-full bg-white/40"></div>
+                  <div className="w-0.5 h-full bg-white/40 animate-pulse"></div>
                 </div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/40"></div>
               </div>
@@ -207,7 +208,7 @@ const Hero = () => {
               <CardHeader className="pb-2 text-center">
                 <div className="flex items-center justify-center gap-2">
                   <Database className="h-4 w-4 text-white" />
-                  <CardTitle className="text-sm font-semibold text-white">SalesChef PIM/DAM</CardTitle>
+                  <CardTitle className="text-sm font-semibold text-white tracking-wide">SalesChef PIM/DAM</CardTitle>
                   <Database className="h-4 w-4 text-white" />
                 </div>
               </CardHeader>
@@ -221,15 +222,15 @@ const Hero = () => {
           
           {/* Content Output */}
           <div className="w-full md:w-1/3 flex flex-col items-center">
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <span className="text-white/90 font-semibold text-sm">CONTENT TRANSFORMATION</span>
+            <div className="bg-white/15 backdrop-blur-sm px-6 py-2 rounded-full mb-8 shadow-sm">
+              <span className="text-white/90 font-semibold text-sm tracking-wider">CONTENT TRANSFORMATION</span>
             </div>
             
             {/* Arrow pointing from SalesChef to Content Transformation (mobile) */}
             <div className="flex md:hidden justify-center w-full mb-8">
               <div className="h-8 w-12 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-0.5 w-full bg-white/40"></div>
+                  <div className="h-0.5 w-full bg-white/40 animate-pulse"></div>
                 </div>
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/40"></div>
               </div>
@@ -237,49 +238,49 @@ const Hero = () => {
             
             {/* Arrow pointing from SalesChef to Content Transformation (desktop) */}
             <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-y-1/4">
-              <div className="h-0.5 w-16 bg-white/40 relative">
+              <div className="h-0.5 w-16 bg-white/40 relative animate-pulse">
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/40"></div>
               </div>
             </div>
             
             <div className="grid grid-cols-3 gap-3 w-full">
               {/* Output channels */}
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <FileText className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Sales Sheet</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <ShoppingBag className="h-5 w-5 text-pink-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">PDP</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <BarChart2 className="h-5 w-5 text-blue-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Analytics</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <FileText className="h-5 w-5 text-red-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">PDF</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <Image className="h-5 w-5 text-indigo-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Social</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <MessageCircle className="h-5 w-5 text-emerald-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Scripts</p>
@@ -287,42 +288,42 @@ const Hero = () => {
               </Card>
               
               {/* Additional tiles */}
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <TrendingUp className="h-5 w-5 text-amber-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">SEO Content</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <LineChart className="h-5 w-5 text-cyan-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Reports</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <UserRound className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Personas</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <Code className="h-5 w-5 text-blue-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">API Data</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <Palette className="h-5 w-5 text-rose-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Design</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all duration-300 border border-white/50 rounded-lg">
                 <CardContent className="p-3 flex flex-col items-center justify-center">
                   <ShieldCheck className="h-5 w-5 text-green-600 mb-1.5" />
                   <p className="text-xs font-bold text-gray-800 text-center">Compliance</p>
@@ -343,11 +344,11 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto w-full mt-16">
         <div className="text-left">
           <div className="flex items-center gap-2">
-            <span className="chef-chip bg-purple-100 text-purple-800">
+            <span className="chef-chip bg-purple-100 text-purple-800 shadow-sm">
               <Sparkles className="h-3 w-3" />
               AI-Powered
             </span>
-            <span className="chef-chip bg-pink-100 text-pink-800">
+            <span className="chef-chip bg-pink-100 text-pink-800 shadow-sm">
               PXM Platform
             </span>
           </div>
@@ -362,7 +363,7 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center pt-2 pb-6 mt-6">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 mr-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 mr-4 shadow-md">
               <ChefHat className="h-6 w-6 text-white" />
             </div>
             <p className="text-sm text-gray-600 italic">
@@ -373,15 +374,15 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white shadow-lg"
+              className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white shadow-lg transition-all duration-300"
             >
               Book a Demo
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4 animate-bounce-x" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-purple-200 text-purple-800 hover:bg-purple-50"
+              className="border-purple-200 text-purple-800 hover:bg-purple-50 transition-all duration-300"
             >
               How It Works
             </Button>
@@ -390,9 +391,9 @@ const Hero = () => {
           <div className="pt-8 mt-4">
             <p className="text-sm text-gray-500 mb-4 font-medium">Trusted by leading retailers</p>
             <div className="grid grid-cols-3 gap-6 opacity-80">
-              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg" />
-              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg" />
-              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg" />
+              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg shadow-sm" />
+              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg shadow-sm" />
+              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg shadow-sm" />
             </div>
           </div>
         </div>
