@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -124,16 +123,22 @@ const Hero = () => {
               />
             </div>
             
-            {/* Database visualization with arrows */}
-            <div className="relative mt-3 px-6 py-2 bg-white/20 rounded-md border border-white/30 backdrop-blur-sm">
-              <div className="flex items-center justify-center gap-2">
-                <Database className="h-4 w-4 text-white" />
-                <span className="text-xs text-white font-mono">PIM / DAM: Product Source of Truth and Assets</span>
-                <Database className="h-4 w-4 text-white" />
+            <div className="relative mt-3 px-4 py-3 bg-white/20 rounded-lg border-2 border-white/30 backdrop-blur-sm shadow-lg">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Database className="h-5 w-5 text-white" />
+                <span className="text-sm text-white font-semibold">SalesChef PIM/DAM</span>
+                <Database className="h-5 w-5 text-white" />
               </div>
               
-              {/* Data flowing visualization */}
-              <div className="absolute -top-3 left-12 h-3 w-10 overflow-hidden">
+              <div className="text-xs text-white/90 font-mono text-center">
+                Product Source of Truth and Assets
+              </div>
+              
+              <div className="absolute left-0 right-0 top-12 h-[1px] bg-white/20"></div>
+              <div className="absolute left-1/3 top-0 bottom-0 w-[1px] bg-white/20"></div>
+              <div className="absolute right-1/3 top-0 bottom-0 w-[1px] bg-white/20"></div>
+              
+              <div className="absolute -top-3 left-1/4 h-3 w-10 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
                   <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
                   <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
@@ -142,7 +147,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute -top-3 right-12 h-3 w-10 overflow-hidden">
+              <div className="absolute -top-3 right-1/4 h-3 w-10 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
                   <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
                   <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
@@ -154,8 +159,8 @@ const Hero = () => {
           </div>
           
           <div className="w-1/3 flex flex-col items-center h-full relative">
-            <div className="text-white/80 font-bold mb-1 text-xs">AI-CORRECTED</div>
-            <div className="text-white/80 font-bold mb-3 text-xs">STRUCTURED OUTPUT</div>
+            <div className="text-white/80 font-bold mb-1 text-xs">CONTENT TRANSFORMATION</div>
+            <div className="text-white/80 font-bold mb-3 text-xs">AND OUTPUT</div>
             
             <div className="grid grid-cols-3 gap-1.5 mb-1.5 w-full">
               <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
