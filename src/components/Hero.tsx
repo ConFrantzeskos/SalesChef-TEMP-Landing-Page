@@ -26,7 +26,11 @@ import {
   Text,
   Clipboard,
   Binary,
-  FileDigit
+  FileDigit,
+  Upload,
+  LayoutGrid,
+  CheckCircle,
+  FileCheck
 } from "lucide-react";
 
 const Hero = () => {
@@ -124,59 +128,77 @@ const Hero = () => {
             <div className="text-white/80 font-bold mb-1 text-xs">COMPLETE SOURCE OF TRUTH</div>
             <div className="text-white/80 font-bold mb-3 text-xs">STRUCTURED OUTPUT</div>
             
-            <div className="grid grid-cols-2 gap-2 mb-2 w-full">
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <FileText className="h-6 w-6 text-purple-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">Sales Sheet</p>
+            <div className="grid grid-cols-3 gap-1.5 mb-1.5 w-full">
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <FileText className="h-4 w-4 text-purple-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Sales Sheet</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <ShoppingBag className="h-6 w-6 text-pink-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">PDP</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <ShoppingBag className="h-4 w-4 text-pink-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">PDP</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <BarChart2 className="h-6 w-6 text-blue-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">Analytics</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <BarChart2 className="h-4 w-4 text-blue-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Analytics</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <FileText className="h-6 w-6 text-red-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">PDF</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <FileText className="h-4 w-4 text-red-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">PDF</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <Image className="h-4 w-4 text-indigo-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Social Media</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <MessageCircle className="h-4 w-4 text-emerald-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Scripts</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <TrendingUp className="h-4 w-4 text-amber-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Sell Points</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <Palette className="h-4 w-4 text-cyan-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Artwork</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <MessageSquare className="h-4 w-4 text-green-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">FAQs</p>
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-2 mb-2 w-full">
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <Image className="h-6 w-6 text-indigo-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">Social Media</p>
+            <div className="grid grid-cols-3 gap-1.5 w-full">
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <ShieldCheck className="h-4 w-4 text-purple-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Compliance</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <MessageCircle className="h-6 w-6 text-emerald-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">Service Scripts</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <Sparkles className="h-4 w-4 text-fuchsia-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">AI Features</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <TrendingUp className="h-6 w-6 text-amber-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">Sell Points</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <CheckCircle className="h-4 w-4 text-teal-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Corrected Specs</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <Palette className="h-6 w-6 text-cyan-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">Artwork</p>
-              </div>
-            </div>
-            
-            <div className="mt-2 w-full grid grid-cols-2 gap-2">
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <MessageSquare className="h-6 w-6 text-green-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">FAQs</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <FileCheck className="h-4 w-4 text-orange-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Sell Sheets</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
-                <ShieldCheck className="h-6 w-6 text-purple-600 mb-1" />
-                <p className="text-[8px] font-bold text-gray-800 text-center">Product Compliance</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <LayoutGrid className="h-4 w-4 text-violet-600 mb-0.5" />
+                <p className="text-[7px] font-bold text-gray-800 text-center">Marketplace</p>
               </div>
             </div>
           </div>
