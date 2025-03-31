@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChefHat, FileText, ShoppingBag, BarChart2, Sparkles } from "lucide-react";
+import { ArrowRight, ChefHat, FileText, ShoppingBag, BarChart2, Sparkles, MessageSquare, FilePdf } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -72,63 +72,110 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Enhanced visual with data transformation graphic */}
+          {/* Right Column - Data Transformation Visualization */}
           <div className="relative h-full min-h-[500px] rounded-2xl chef-gradient-bg p-6 shadow-2xl overflow-hidden">
             {/* Circuit pattern background */}
             <div className="absolute inset-0 circuit-pattern opacity-20"></div>
             
             {/* Data Transformation Animation */}
             <div className="absolute inset-0 flex items-center justify-center">
-              {/* Data particles */}
-              <div className="absolute w-full h-full">
-                <div className="absolute top-5 left-10 animate-pulse opacity-60 bg-white/40 rounded-md w-16 h-8"></div>
-                <div className="absolute top-20 right-20 animate-pulse delay-300 opacity-60 bg-white/40 rounded-md w-24 h-4"></div>
-                <div className="absolute bottom-20 left-16 animate-pulse delay-500 opacity-60 bg-white/40 rounded-md w-10 h-10"></div>
-                <div className="absolute bottom-40 right-24 animate-pulse delay-700 opacity-60 bg-white/40 rounded-md w-20 h-6"></div>
+              {/* Input: Unstructured Data Visualization */}
+              <div className="absolute left-0 top-0 bottom-0 w-1/3 flex flex-col items-center justify-center px-4">
+                <div className="text-white/80 font-bold mb-3 text-xs">UNSTRUCTURED DATA</div>
+                
+                {/* Chaotic data elements */}
+                <div className="relative h-48 w-full">
+                  {/* Random dots */}
+                  <div className="absolute top-[10%] left-[20%] w-3 h-3 rounded-full bg-white/70 animate-pulse"></div>
+                  <div className="absolute top-[40%] left-[10%] w-2 h-2 rounded-full bg-white/60 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                  <div className="absolute top-[70%] left-[30%] w-4 h-4 rounded-full bg-white/80 animate-pulse" style={{animationDelay: '1s'}}></div>
+                  
+                  {/* Random slashes */}
+                  <div className="absolute top-[15%] left-[50%] w-12 h-[2px] bg-white/60 rotate-45"></div>
+                  <div className="absolute top-[35%] left-[40%] w-10 h-[2px] bg-white/70 -rotate-30"></div>
+                  <div className="absolute top-[60%] left-[45%] w-14 h-[2px] bg-white/50 rotate-15"></div>
+                  
+                  {/* Text fragments */}
+                  <div className="absolute top-[20%] left-[25%] text-[8px] text-white/80 bg-white/10 px-1 rounded">lore</div>
+                  <div className="absolute top-[50%] left-[15%] text-[7px] text-white/70 bg-white/10 px-1 rounded">inseam</div>
+                  <div className="absolute top-[80%] left-[20%] text-[9px] text-white/90 bg-white/10 px-1 rounded">specs</div>
+                  
+                  {/* Code-like fragments */}
+                  <div className="absolute top-[30%] left-[50%] text-[6px] text-white/60 font-mono">{"{data:[]}"}</div>
+                  <div className="absolute top-[65%] left-[45%] text-[7px] text-white/60 font-mono">{"<attr>"}</div>
+                </div>
+
+                {/* Animated arrows pointing to center */}
+                <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                  </div>
+                </div>
               </div>
               
-              {/* Output content examples */}
-              <div className="absolute z-10">
-                {/* PDF icon */}
-                <div className="absolute -top-24 -right-16 transform rotate-12 bg-white/90 rounded-lg shadow-lg p-3">
-                  <FileText className="h-10 w-10 text-pink-600" />
-                  <p className="text-xs font-bold text-purple-800">Sales Sheet</p>
-                </div>
-                
-                {/* PDP icon */}
-                <div className="absolute -bottom-20 -left-24 transform -rotate-6 bg-white/90 rounded-lg shadow-lg p-3">
-                  <ShoppingBag className="h-10 w-10 text-purple-600" />
-                  <p className="text-xs font-bold text-purple-800">PDP</p>
-                </div>
-                
-                {/* Chart icon */}
-                <div className="absolute -bottom-16 -right-16 transform rotate-6 bg-white/90 rounded-lg shadow-lg p-3">
-                  <BarChart2 className="h-10 w-10 text-blue-600" />
-                  <p className="text-xs font-bold text-purple-800">Analytics</p>
-                </div>
-                
-                {/* Center logo - much bigger now */}
-                <div className="relative w-80 h-80">
+              {/* Center: SalesChef Logo */}
+              <div className="absolute z-20 flex flex-col items-center justify-center">
+                <div className="relative w-36 h-36 bg-white/90 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.8)] flex items-center justify-center">
                   <img 
                     src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
                     alt="SalesChef Logo" 
-                    className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.9)] filter contrast-150 brightness-125" 
+                    className="w-4/5 h-4/5 object-contain" 
                   />
+                </div>
+                <span className="mt-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1 text-white text-sm font-semibold">
+                  PXM Platform
+                </span>
+              </div>
+              
+              {/* Output: Structured Content Tiles */}
+              <div className="absolute right-0 top-0 bottom-0 w-1/3 flex flex-col items-center justify-center">
+                <div className="text-white/80 font-bold mb-3 text-xs">STRUCTURED OUTPUT</div>
+                
+                {/* Animated arrows pointing from center */}
+                <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                  </div>
+                </div>
+                
+                {/* Output Tiles */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
+                    <FileText className="h-8 w-8 text-purple-600 mx-auto" />
+                    <p className="text-xs font-bold text-gray-800 text-center mt-1">Sales Sheet</p>
+                  </div>
+                  
+                  <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
+                    <ShoppingBag className="h-8 w-8 text-pink-600 mx-auto" />
+                    <p className="text-xs font-bold text-gray-800 text-center mt-1">PDP</p>
+                  </div>
+                  
+                  <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
+                    <BarChart2 className="h-8 w-8 text-blue-600 mx-auto" />
+                    <p className="text-xs font-bold text-gray-800 text-center mt-1">Analytics</p>
+                  </div>
+                  
+                  <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
+                    <FilePdf className="h-8 w-8 text-red-600 mx-auto" />
+                    <p className="text-xs font-bold text-gray-800 text-center mt-1">PDF</p>
+                  </div>
+                  
+                  <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105" style={{gridColumn: "span 2"}}>
+                    <MessageSquare className="h-8 w-8 text-green-600 mx-auto" />
+                    <p className="text-xs font-bold text-gray-800 text-center mt-1">FAQs</p>
+                  </div>
                 </div>
               </div>
               
-              {/* Animated connection lines */}
-              <div className="absolute inset-0 z-5">
-                <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border-t-2 border-white/30 rounded-full animate-spin" style={{ animationDuration: '15s' }}></div>
-                <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 border-2 border-white/20 rounded-full animate-spin" style={{ animationDuration: '10s', animationDirection: 'reverse' }}></div>
+              {/* Background animated elements */}
+              <div className="absolute inset-0 z-0">
+                <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 border border-white/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+                <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border border-white/10 rounded-full animate-spin" style={{ animationDuration: '30s', animationDirection: 'reverse' }}></div>
               </div>
-            </div>
-            
-            {/* Platform label */}
-            <div className="absolute bottom-4 left-0 right-0 text-center">
-              <span className="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 text-white text-lg font-semibold shadow-lg">
-                PXM Platform
-              </span>
             </div>
           </div>
         </div>
