@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -38,7 +37,11 @@ import {
   MessagesSquare,
   Hash,
   Target,
-  BarChart
+  BarChart,
+  ArrowDown,
+  ArrowUp,
+  ArrowRightCircle,
+  ArrowLeftCircle
 } from "lucide-react";
 
 const Hero = () => {
@@ -113,17 +116,25 @@ const Hero = () => {
               <div className="absolute top-[72%] left-[18%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '1.1s', animationDuration: '3.9s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"#include"}</div>
             </div>
 
-            <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
-              <div className="flex space-x-1">
-                <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse"></div>
-                <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+              <div className="flex items-center">
+                <div className="w-14 h-1.5 bg-gradient-to-r from-white/10 to-white/60 relative">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+                      <div className="h-1 w-2 bg-white/90 absolute left-0 rounded-full"></div>
+                      <div className="h-1 w-2 bg-white/90 absolute left-4 rounded-full" style={{animationDelay: '0.3s'}}></div>
+                      <div className="h-1 w-2 bg-white/90 absolute left-8 rounded-full" style={{animationDelay: '0.6s'}}></div>
+                      <div className="h-1 w-2 bg-white/90 absolute left-12 rounded-full" style={{animationDelay: '0.9s'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <ArrowRightCircle className="h-5 w-5 text-white/90 animate-pulse" />
               </div>
+              <div className="text-[8px] text-white/70 mt-0.5 text-center">Input</div>
             </div>
           </div>
           
           <div className="absolute z-20 inset-x-0 mx-auto flex flex-col items-center justify-center">
-            {/* Data and Content Enrichment Box */}
             <div className="relative w-64 bg-white/20 backdrop-blur-sm rounded-lg border-2 border-white/30 p-3 mb-4 shadow-lg">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <Radar className="h-4 w-4 text-white" />
@@ -163,23 +174,31 @@ const Hero = () => {
                 </div>
               </div>
               
-              {/* Animated data flow arrows */}
-              <div className="absolute -bottom-3 left-1/4 h-3 w-10 overflow-hidden rotate-180">
-                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+              <div className="absolute -bottom-8 left-1/3 h-8 flex flex-col items-center">
+                <div className="w-1 h-5 bg-gradient-to-b from-white/10 to-white/60 relative">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+                      <div className="w-1 h-1 bg-white/90 absolute top-0 rounded-full"></div>
+                      <div className="w-1 h-1 bg-white/90 absolute top-2 rounded-full" style={{animationDelay: '0.3s'}}></div>
+                      <div className="w-1 h-1 bg-white/90 absolute top-4 rounded-full" style={{animationDelay: '0.6s'}}></div>
+                    </div>
+                  </div>
                 </div>
+                <ArrowDown className="h-4 w-4 text-white/90 animate-pulse" />
+                <div className="text-[8px] text-white/70 mt-0.5">Input</div>
               </div>
               
-              <div className="absolute -bottom-3 right-1/4 h-3 w-10 overflow-hidden rotate-180">
-                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+              <div className="absolute -bottom-8 right-1/3 h-8 flex flex-col items-center">
+                <div className="w-1 h-5 bg-gradient-to-b from-white/10 to-white/60 relative">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+                      <div className="w-1 h-1 bg-white/90 absolute top-0 rounded-full"></div>
+                      <div className="w-1 h-1 bg-white/90 absolute top-2 rounded-full" style={{animationDelay: '0.3s'}}></div>
+                      <div className="w-1 h-1 bg-white/90 absolute top-4 rounded-full" style={{animationDelay: '0.6s'}}></div>
+                    </div>
+                  </div>
                 </div>
+                <ArrowDown className="h-4 w-4 text-white/90 animate-pulse" />
               </div>
             </div>
 
@@ -191,7 +210,7 @@ const Hero = () => {
               />
             </div>
             
-            <div className="relative mt-3 px-4 py-3 bg-white/20 rounded-lg border-2 border-white/30 backdrop-blur-sm shadow-lg">
+            <div className="relative mt-6 px-4 py-3 bg-white/20 rounded-lg border-2 border-white/30 backdrop-blur-sm shadow-lg">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <Database className="h-5 w-5 text-white" />
                 <span className="text-sm text-white font-semibold">SalesChef PIM/DAM</span>
@@ -206,22 +225,49 @@ const Hero = () => {
               <div className="absolute left-1/3 top-0 bottom-0 w-[1px] bg-white/20"></div>
               <div className="absolute right-1/3 top-0 bottom-0 w-[1px] bg-white/20"></div>
               
-              <div className="absolute -top-3 left-1/4 h-3 w-10 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+              <div className="absolute -top-8 left-1/3 h-8 flex flex-col items-center">
+                <div className="text-[8px] text-white/70 mb-0.5">Output</div>
+                <ArrowDown className="h-4 w-4 text-white/90 animate-pulse" />
+                <div className="w-1 h-5 bg-gradient-to-b from-white/60 to-white/10 relative">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+                      <div className="w-1 h-1 bg-white/90 absolute top-0 rounded-full"></div>
+                      <div className="w-1 h-1 bg-white/90 absolute top-2 rounded-full" style={{animationDelay: '0.3s'}}></div>
+                      <div className="w-1 h-1 bg-white/90 absolute top-4 rounded-full" style={{animationDelay: '0.6s'}}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              <div className="absolute -top-3 right-1/4 h-3 w-10 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
-                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+              <div className="absolute -top-8 right-1/3 h-8 flex flex-col items-center">
+                <ArrowUp className="h-4 w-4 text-white/90 animate-pulse" />
+                <div className="w-1 h-5 bg-gradient-to-t from-white/60 to-white/10 relative">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+                      <div className="w-1 h-1 bg-white/90 absolute bottom-0 rounded-full"></div>
+                      <div className="w-1 h-1 bg-white/90 absolute bottom-2 rounded-full" style={{animationDelay: '0.3s'}}></div>
+                      <div className="w-1 h-1 bg-white/90 absolute bottom-4 rounded-full" style={{animationDelay: '0.6s'}}></div>
+                    </div>
+                  </div>
                 </div>
+                <div className="text-[8px] text-white/70 mt-0.5">Input</div>
+              </div>
+              
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+                <div className="flex items-center">
+                  <ArrowRightCircle className="h-5 w-5 text-white/90 animate-pulse" />
+                  <div className="w-14 h-1.5 bg-gradient-to-r from-white/60 to-white/10 relative">
+                    <div className="absolute inset-0 overflow-hidden">
+                      <div className="absolute top-0 left-0 w-full h-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+                        <div className="h-1 w-2 bg-white/90 absolute right-0 rounded-full"></div>
+                        <div className="h-1 w-2 bg-white/90 absolute right-4 rounded-full" style={{animationDelay: '0.3s'}}></div>
+                        <div className="h-1 w-2 bg-white/90 absolute right-8 rounded-full" style={{animationDelay: '0.6s'}}></div>
+                        <div className="h-1 w-2 bg-white/90 absolute right-12 rounded-full" style={{animationDelay: '0.9s'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-[8px] text-white/70 mt-0.5 text-center">Output</div>
               </div>
             </div>
           </div>
@@ -229,6 +275,23 @@ const Hero = () => {
           <div className="w-1/3 flex flex-col items-center h-full relative">
             <div className="text-white/80 font-bold mb-1 text-xs">CONTENT TRANSFORMATION</div>
             <div className="text-white/80 font-bold mb-3 text-xs">AND OUTPUT</div>
+            
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
+              <div className="flex items-center">
+                <div className="w-14 h-1.5 bg-gradient-to-r from-white/60 to-white/10 relative">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+                      <div className="h-1 w-2 bg-white/90 absolute left-0 rounded-full"></div>
+                      <div className="h-1 w-2 bg-white/90 absolute left-4 rounded-full" style={{animationDelay: '0.3s'}}></div>
+                      <div className="h-1 w-2 bg-white/90 absolute left-8 rounded-full" style={{animationDelay: '0.6s'}}></div>
+                      <div className="h-1 w-2 bg-white/90 absolute left-12 rounded-full" style={{animationDelay: '0.9s'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <ArrowLeftCircle className="h-5 w-5 text-white/90 animate-pulse" />
+              </div>
+              <div className="text-[8px] text-white/70 mt-0.5 text-center">Input</div>
+            </div>
             
             <div className="grid grid-cols-3 gap-1.5 mb-1.5 w-full">
               <div className="bg-white/90 rounded-lg shadow-lg p-1.5 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
