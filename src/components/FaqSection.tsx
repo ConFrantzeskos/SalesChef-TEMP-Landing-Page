@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Plus, Minus } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 import { cn } from '@/lib/utils';
 
 interface FaqItemProps {
@@ -12,27 +13,24 @@ interface FaqItemProps {
 
 const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => {
   return (
-    <div className="border border-purple-100/60 rounded-xl overflow-hidden mb-4 transition-all duration-300 shadow-sm hover:shadow-md">
+    <div className="border-b border-gray-200 overflow-hidden">
       <button 
         onClick={onClick}
-        className={cn(
-          "w-full px-6 py-4 flex justify-between items-center text-left transition-colors duration-300",
-          isOpen ? "bg-purple-50/70" : "bg-white hover:bg-purple-50/30"
-        )}
+        className="w-full px-4 py-5 flex justify-between items-center text-left transition-colors duration-300 focus:outline-none"
       >
         <h3 className="font-medium text-gray-900 text-lg">{question}</h3>
         <div className="ml-4">
           {isOpen ? (
-            <Minus className="h-5 w-5 text-purple-600" />
+            <Minus className="h-5 w-5 text-indigo-800" />
           ) : (
-            <Plus className="h-5 w-5 text-purple-600" />
+            <Plus className="h-5 w-5 text-indigo-800" />
           )}
         </div>
       </button>
       
       <div className={cn(
-        "px-6 overflow-hidden transition-all duration-300 bg-white",
-        isOpen ? "max-h-96 py-4 opacity-100" : "max-h-0 py-0 opacity-0"
+        "px-4 overflow-hidden transition-all duration-300",
+        isOpen ? "max-h-96 pb-5 opacity-100" : "max-h-0 pb-0 opacity-0"
       )}>
         <p className="text-gray-600">{answer}</p>
       </div>
@@ -71,17 +69,11 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-purple-50/30 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/3 -right-24 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -left-24 w-96 h-96 bg-purple-100/30 rounded-full blur-3xl" />
-      </div>
-      
-      <div className="max-w-4xl mx-auto relative">
+    <section className="evorra-section bg-white px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-indigo-700">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-primary">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -90,7 +82,7 @@ const FaqSection = () => {
         </div>
         
         {/* FAQ list */}
-        <div className="space-y-6">
+        <div className="bg-white rounded-xl shadow-md border border-gray-100">
           {faqs.map((faq, index) => (
             <FaqItem
               key={index}
@@ -103,12 +95,15 @@ const FaqSection = () => {
         </div>
         
         {/* Additional Support */}
-        <div className="mt-12 text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border border-purple-100/60 shadow-lg">
+        <div className="mt-12 text-center p-8 bg-indigo-50 rounded-xl shadow-md">
           <h3 className="text-xl font-semibold mb-2 text-gray-900">Still have questions?</h3>
           <p className="text-gray-600 mb-4">Our team is ready to help you get started with SalesChef.</p>
-          <button className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300 shadow-md hover:shadow-lg">
+          <Button 
+            size="lg" 
+            className="bg-indigo-800 hover:bg-indigo-900 text-white"
+          >
             Contact Sales
-          </button>
+          </Button>
         </div>
       </div>
     </section>

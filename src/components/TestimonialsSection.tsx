@@ -9,22 +9,11 @@ interface TestimonialProps {
   company: string;
   role: string;
   rating?: number;
-  className?: string;
 }
 
-const Testimonial = ({ quote, author, company, role, rating = 5, className }: TestimonialProps) => {
+const Testimonial = ({ quote, author, company, role, rating = 5 }: TestimonialProps) => {
   return (
-    <div className={cn(
-      "p-6 md:p-8 rounded-2xl bg-white/80 backdrop-blur-sm relative overflow-hidden",
-      "border border-purple-100/60 shadow-lg hover:shadow-xl transition-all duration-300",
-      className
-    )}>
-      {/* Decorative elements */}
-      <div className="absolute -right-12 -bottom-12 w-40 h-40 rounded-full opacity-10 bg-gradient-to-tl from-purple-500 to-blue-500" />
-      
-      {/* Quote mark */}
-      <div className="text-6xl leading-none text-purple-200 font-serif absolute top-4 left-4 opacity-30">"</div>
-      
+    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-8 h-full flex flex-col">      
       {/* Stars */}
       {rating > 0 && (
         <div className="flex mb-4">
@@ -35,14 +24,14 @@ const Testimonial = ({ quote, author, company, role, rating = 5, className }: Te
       )}
       
       {/* Quote text */}
-      <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 relative">{quote}</p>
+      <p className="text-gray-700 text-lg leading-relaxed mb-6 flex-grow">{quote}</p>
       
       {/* Author info */}
       <div className="flex items-center">
-        <div className="mr-4 h-12 w-12 rounded-full bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center text-xl font-semibold text-purple-700">
+        <div className="mr-4 h-12 w-12 rounded-full bg-indigo-100 flex items-center justify-center text-xl font-semibold text-indigo-800">
           {author.charAt(0)}
         </div>
-        <div>
+        <div className="text-left">
           <h4 className="font-medium text-gray-900">{author}</h4>
           <p className="text-sm text-gray-500">{role}, {company}</p>
         </div>
@@ -77,20 +66,14 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-24 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 -right-24 w-96 h-96 bg-purple-100/20 rounded-full blur-3xl" />
-      </div>
-      
-      <div className="max-w-7xl mx-auto relative">
+    <section className="evorra-section evorra-gradient-bg text-white px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-indigo-700">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             What Our Customers Say
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg opacity-80 leading-relaxed">
             Trusted by leading retailers and brands to transform their product content strategy.
           </p>
         </div>
@@ -111,11 +94,11 @@ const TestimonialsSection = () => {
         
         {/* Navigation buttons */}
         <div className="flex justify-center gap-4 mt-8">
-          <button className="p-3 rounded-full bg-white/80 shadow-md hover:shadow-lg border border-purple-100/60 text-purple-700 hover:bg-purple-50 transition-all duration-300">
-            <ChevronLeft className="h-6 w-6" />
+          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-300">
+            <ChevronLeft className="h-5 w-5" />
           </button>
-          <button className="p-3 rounded-full bg-white/80 shadow-md hover:shadow-lg border border-purple-100/60 text-purple-700 hover:bg-purple-50 transition-all duration-300">
-            <ChevronRight className="h-6 w-6" />
+          <button className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-300">
+            <ChevronRight className="h-5 w-5" />
           </button>
         </div>
       </div>
