@@ -1,19 +1,23 @@
 
 import React from 'react';
 import { 
-  Zap, 
-  BarChart3, 
+  ChefHat,
   Database, 
-  FileText, 
-  Sparkles, 
-  RefreshCw
+  Search, 
+  Users, 
+  Palette, 
+  FileUp, 
+  BarChart3,
+  PresentationScreen
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Card, CardContent } from "@/components/ui/card";
 
 interface FeatureCardProps {
   icon: React.ElementType;
   title: string;
   description: string;
+  agentName: string;
   className?: string;
 }
 
@@ -21,22 +25,31 @@ const FeatureCard = ({
   icon: Icon, 
   title, 
   description, 
+  agentName,
   className
 }: FeatureCardProps) => {
   return (
-    <div className={cn(
-      "p-8 rounded-xl transition-all duration-300 hover:shadow-lg group relative bg-white border border-gray-100",
+    <Card className={cn(
+      "chef-card overflow-hidden",
       className
     )}>
-      <div className="mb-6">
-        <div className="p-3 rounded-full bg-indigo-100 inline-flex items-center justify-center">
-          <Icon className="h-6 w-6 text-indigo-800" />
+      <div className="h-1.5 w-full bg-gradient-to-r from-purple-600 to-pink-500" />
+      <CardContent className="p-6">
+        <div className="mb-6">
+          <div className="p-3 rounded-full bg-purple-100 inline-flex items-center justify-center">
+            <Icon className="h-6 w-6 text-purple-800" />
+          </div>
         </div>
-      </div>
-      
-      <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
-    </div>
+        
+        <div className="mb-2">
+          <span className="text-xs font-semibold uppercase tracking-wider text-purple-600">
+            {agentName} Agent
+          </span>
+        </div>
+        <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
+        <p className="text-gray-600 leading-relaxed">{description}</p>
+      </CardContent>
+    </Card>
   );
 };
 
@@ -44,46 +57,61 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: Database,
-      title: "Automated Data Ingestion",
-      description: "Import messy product data from any source—ERP, supplier docs, or POS—in minutes, not months."
+      agentName: "Drop",
+      title: "Clean-up From Chaos",
+      description: "Ingest, correct, standardize and categorize any product data, regardless of format or source."
     },
     {
-      icon: Sparkles,
-      title: "AI-Generated Content",
-      description: "Transform basic specs into SEO-optimized, conversion-focused product descriptions automatically."
+      icon: Search,
+      agentName: "Discover",
+      title: "Context Enrichment",
+      description: "Extract reasons to buy, keywords, and insights from reviews, social media, and competitor data."
+    },
+    {
+      icon: Users,
+      agentName: "Define",
+      title: "Persona Intelligence",
+      description: "Define who needs what info and tailor content for each stakeholder, from sales to retail staff."
+    },
+    {
+      icon: Palette,
+      agentName: "Design",
+      title: "Brand & Tone Consistency",
+      description: "Ensure all content matches your brand guidelines, voice, and style requirements."
+    },
+    {
+      icon: FileUp,
+      agentName: "Develop",
+      title: "Multimodal Content Generation",
+      description: "Create optimized text, images, videos, and more for every channel and purpose."
     },
     {
       icon: BarChart3,
-      title: "Market Intelligence",
-      description: "Get real-time competitive insights and performance tracking for every SKU in your catalog."
+      agentName: "Dissect",
+      title: "Closed-loop Intelligence",
+      description: "Analyze content performance and continuously improve based on real-world results."
     },
     {
-      icon: RefreshCw,
-      title: "Continuous Optimization",
-      description: "Your product content is never \"done\"—SalesChef continually tests and improves to maximize sales."
-    },
-    {
-      icon: Zap,
-      title: "Real-Time Deployment",
-      description: "Push updated product content to all channels instantly, without the PIM bottleneck."
-    },
-    {
-      icon: FileText,
-      title: "Retail Readiness",
-      description: "Ensure every SKU meets marketplace requirements and brand guidelines automatically."
+      icon: PresentationScreen,
+      agentName: "Demonstrate",
+      title: "Executive Communication",
+      description: "Generate sales presentations, sell sheets, range comparisons, and training materials instantly."
     },
   ];
 
   return (
-    <section className="evorra-section bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <section className="chef-section bg-gray-50 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-primary">
-            Powerful Features
-          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <ChefHat className="h-8 w-8 text-purple-700 mr-2" />
+            <h2 className="text-3xl md:text-4xl font-bold text-gradient-primary">
+              Our AI Chef Team
+            </h2>
+          </div>
           <p className="text-lg text-gray-600 leading-relaxed">
-            SalesChef transforms your product data management workflow with AI-powered tools that save time and boost revenue.
+            Like a professional kitchen, SalesChef's AI agents work together to transform raw product data into delicious, revenue-driving content.
           </p>
         </div>
         
@@ -93,6 +121,7 @@ const FeaturesSection = () => {
             <FeatureCard
               key={index}
               icon={feature.icon}
+              agentName={feature.agentName}
               title={feature.title}
               description={feature.description}
             />
