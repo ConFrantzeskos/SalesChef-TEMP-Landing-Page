@@ -87,11 +87,11 @@ const Hero = () => {
                 <FileSpreadsheet className="h-3 w-3 inline mr-1" />
                 spreadsheets
               </div>
-              <div className="absolute top-[85%] left-[60%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.4s', animationDuration: '3.6s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+              <div className="absolute top-[85%] left-[60%] text-[9px] text-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.4s', animationDuration: '3.6s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <Table className="h-3 w-3 inline mr-1" />
                 tables
               </div>
-              <div className="absolute top-[10%] left-[68%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.5s', animationDuration: '4.0s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+              <div className="absolute top-[10%] left-[68%] text-[9px] text-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.5s', animationDuration: '4.0s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <Database className="h-3 w-3 inline mr-1" />
                 databases
               </div>
@@ -122,6 +122,9 @@ const Hero = () => {
                 className="w-4/5 h-4/5 object-contain" 
               />
             </div>
+            <p className="text-xs text-gray-600 mt-2 max-w-xs text-center">
+              PIM / DAM: Product Source of Truth and Assets
+            </p>
           </div>
           
           <div className="w-1/3 flex flex-col items-center h-full relative">
