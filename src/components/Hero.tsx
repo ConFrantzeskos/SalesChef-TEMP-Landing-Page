@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChefHat, FileText, ShoppingBag, BarChart2, Sparkles, MessageSquare, FilePdf } from "lucide-react";
+import { ArrowRight, ChefHat, FileText, ShoppingBag, BarChart2, Sparkles, MessageSquare } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -160,7 +159,7 @@ const Hero = () => {
                   </div>
                   
                   <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                    <FilePdf className="h-8 w-8 text-red-600 mx-auto" />
+                    <FileText className="h-8 w-8 text-red-600 mx-auto" />
                     <p className="text-xs font-bold text-gray-800 text-center mt-1">PDF</p>
                   </div>
                   
