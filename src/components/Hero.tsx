@@ -1,6 +1,23 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChefHat, FileText, ShoppingBag, BarChart2, Sparkles, MessageSquare, ShieldCheck, Image, MessageCircle, TrendingUp, LineChart, Star, Palette } from "lucide-react";
+import { 
+  ArrowRight, 
+  ChefHat, 
+  FileText, 
+  ShoppingBag, 
+  BarChart2, 
+  Sparkles, 
+  MessageSquare, 
+  ShieldCheck, 
+  Image, 
+  MessageCircle, 
+  TrendingUp, 
+  LineChart, 
+  Star, 
+  Palette,
+  UserRound // Added UserRound to replace Users which doesn't exist
+} from "lucide-react";
 
 const Hero = () => {
   return (
@@ -39,7 +56,7 @@ const Hero = () => {
                 images
               </div>
               <div className="absolute top-[40%] left-[45%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.9s', animationDuration: '4.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
-                <Users className="h-3 w-3 inline mr-1" />
+                <UserRound className="h-3 w-3 inline mr-1" />
                 user generated content
               </div>
               <div className="absolute top-[60%] left-[42%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.7s', animationDuration: '3.9s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
