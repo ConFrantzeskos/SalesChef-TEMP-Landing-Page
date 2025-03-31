@@ -15,7 +15,18 @@ import {
   LineChart, 
   Star, 
   Palette,
-  UserRound
+  UserRound,
+  Code,
+  Database,
+  Table,
+  FileSpreadsheet,
+  FileJson,
+  FileInput,
+  Pencil,
+  Text,
+  Clipboard,
+  Binary,
+  FileDigit
 } from "lucide-react";
 
 const Hero = () => {
@@ -34,34 +45,60 @@ const Hero = () => {
               <div className="absolute top-[70%] left-[15%] w-4 h-4 rounded-full bg-white/80 animate-pulse" style={{animationDelay: '1s'}}></div>
               <div className="absolute top-[40%] left-[25%] w-3 h-3 rounded-full bg-white/70 animate-pulse" style={{animationDelay: '1.3s'}}></div>
               <div className="absolute top-[85%] left-[30%] w-2 h-2 rounded-full bg-white/60 animate-pulse" style={{animationDelay: '0.7s'}}></div>
+              <div className="absolute top-[15%] left-[40%] w-3 h-3 rounded-full bg-white/75 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+              <div className="absolute top-[92%] left-[8%] w-4 h-4 rounded-full bg-white/65 animate-pulse" style={{animationDelay: '0.9s'}}></div>
+              <div className="absolute top-[55%] left-[7%] w-2 h-2 rounded-full bg-white/60 animate-pulse" style={{animationDelay: '1.2s'}}></div>
+              <div className="absolute top-[77%] left-[45%] w-3 h-3 rounded-full bg-white/70 animate-pulse" style={{animationDelay: '0.6s'}}></div>
               
               <div className="absolute top-[10%] left-[35%] w-12 h-[2px] bg-white/60 rotate-45 opacity-70 animate-pulse" style={{animationDelay: '1.2s'}}></div>
               <div className="absolute top-[30%] left-[15%] w-14 h-[2px] bg-white/70 -rotate-30 opacity-80 animate-pulse" style={{animationDelay: '0.8s'}}></div>
               <div className="absolute top-[60%] left-[40%] w-16 h-[2px] bg-white/50 rotate-15 opacity-60 animate-pulse" style={{animationDelay: '1.5s'}}></div>
               <div className="absolute top-[75%] left-[10%] w-10 h-[2px] bg-white/65 -rotate-15 opacity-75 animate-pulse" style={{animationDelay: '1.1s'}}></div>
               <div className="absolute top-[50%] left-[60%] w-12 h-[2px] bg-white/55 rotate-30 opacity-65 animate-pulse" style={{animationDelay: '0.9s'}}></div>
+              <div className="absolute top-[22%] left-[25%] w-14 h-[2px] bg-white/60 rotate-60 opacity-70 animate-pulse" style={{animationDelay: '1.4s'}}></div>
+              <div className="absolute top-[80%] left-[35%] w-16 h-[2px] bg-white/55 -rotate-45 opacity-60 animate-pulse" style={{animationDelay: '0.7s'}}></div>
+              <div className="absolute top-[40%] left-[10%] w-12 h-[2px] bg-white/65 rotate-20 opacity-70 animate-pulse" style={{animationDelay: '1.6s'}}></div>
               
               <div className="absolute top-[8%] left-[40%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.3s', animationDuration: '3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>supplier forms</div>
               <div className="absolute top-[32%] left-[45%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.7s', animationDuration: '4s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>compliance specs</div>
               <div className="absolute top-[55%] left-[20%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.1s', animationDuration: '3.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>factory specs</div>
               <div className="absolute top-[78%] left-[50%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.5s', animationDuration: '4.2s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>product specs</div>
+              <div className="absolute top-[95%] left-[20%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.8s', animationDuration: '3.8s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>manufacturing docs</div>
+              <div className="absolute top-[43%] left-[55%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.4s', animationDuration: '3.3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>raw material data</div>
+              <div className="absolute top-[67%] left-[5%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.8s', animationDuration: '4.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>certification docs</div>
               
               <div className="absolute top-[18%] left-[15%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.3s', animationDuration: '3.7s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <Image className="h-3 w-3 inline mr-1" />
                 images
               </div>
-              <div className="absolute top-[45%] left-[55%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.9s', animationDuration: '4.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+              <div className="absolute top-[45%] left-[35%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.9s', animationDuration: '4.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <UserRound className="h-3 w-3 inline mr-1" />
-                user generated content
+                user content
               </div>
               <div className="absolute top-[65%] left-[30%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.7s', animationDuration: '3.9s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <Star className="h-3 w-3 inline mr-1" />
                 reviews
               </div>
+              <div className="absolute top-[25%] left-[60%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.2s', animationDuration: '4.3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+                <FileSpreadsheet className="h-3 w-3 inline mr-1" />
+                spreadsheets
+              </div>
+              <div className="absolute top-[85%] left-[60%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.4s', animationDuration: '3.6s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+                <Table className="h-3 w-3 inline mr-1" />
+                tables
+              </div>
+              <div className="absolute top-[10%] left-[68%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.5s', animationDuration: '4.0s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+                <Database className="h-3 w-3 inline mr-1" />
+                databases
+              </div>
               
               <div className="absolute top-[22%] left-[65%] text-[6px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '0.6s', animationDuration: '3.7s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"{data:[]}"}</div>
               <div className="absolute top-[90%] left-[25%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '1.2s', animationDuration: '4.1s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"<attr>"}</div>
               <div className="absolute top-[38%] left-[8%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '1.4s', animationDuration: '3.3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"[specs]"}</div>
+              <div className="absolute top-[82%] left-[40%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '0.8s', animationDuration: '3.8s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"function() { }"}</div>
+              <div className="absolute top-[53%] left-[65%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '1.6s', animationDuration: '3.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"{id:15483}"}</div>
+              <div className="absolute top-[10%] left-[30%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '0.3s', animationDuration: '4.2s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"SELECT * FROM"}</div>
+              <div className="absolute top-[72%] left-[18%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '1.1s', animationDuration: '3.9s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"#include"}</div>
             </div>
 
             <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
