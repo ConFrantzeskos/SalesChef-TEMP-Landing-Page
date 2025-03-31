@@ -8,12 +8,11 @@ import {
   ShoppingBag, 
   BarChart2, 
   Sparkles, 
-  MessageSquare, 
+  MessageCircle, 
   ShieldCheck, 
   Image, 
-  MessageCircle, 
-  TrendingUp, 
   LineChart, 
+  TrendingUp, 
   Star, 
   Palette,
   UserRound,
@@ -31,8 +30,58 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const Hero = () => {
   return (
-    <div className="px-4 py-20 md:py-32 sm:px-6 lg:px-8 min-h-[90vh] flex flex-col justify-center bg-gradient-to-br from-purple-50 via-white to-pink-50/30">
-      {/* Central Platform Showcase */}
+    <div className="px-4 py-20 md:py-32 sm:px-6 lg:px-8 min-h-[90vh] flex flex-col justify-start bg-gradient-to-br from-purple-50 via-white to-pink-50/30">
+      {/* Hero Text and CTA Section (Moved to the top) */}
+      <div className="max-w-7xl mx-auto w-full mb-24">
+        <div className="text-left">
+          <div className="flex items-center gap-2">
+            <span className="chef-chip bg-purple-100 text-purple-800 shadow-sm">
+              <Sparkles className="h-3 w-3" />
+              AI-Powered
+            </span>
+            <span className="chef-chip bg-pink-100 text-pink-800 shadow-sm">
+              PXM Platform
+            </span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gradient-primary mt-6">
+            From <span className="text-purple-700">Specs</span> to{" "}
+            <span className="text-pink-600">Sales</span>
+          </h1>
+
+          <p className="text-xl text-gray-600 max-w-xl leading-relaxed mt-6">
+            The world's first AI-native Product Information Management platform that transforms messy data into delicious content.
+          </p>
+
+          <div className="flex items-center pt-2 pb-6 mt-6">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 mr-4 shadow-md">
+              <ChefHat className="h-6 w-6 text-white" />
+            </div>
+            <p className="text-sm text-gray-600 italic">
+              "Like a professional chef, we take your raw product ingredients and create perfect dishes for every stakeholder."
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white shadow-lg transition-all duration-300"
+            >
+              Book a Demo
+              <ArrowRight className="ml-2 h-4 w-4 animate-bounce-x" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-purple-200 text-purple-800 hover:bg-purple-50 transition-all duration-300"
+            >
+              How It Works
+            </Button>
+          </div>
+        </div>
+      </div>
+      
+      {/* Central Platform Showcase (Moved below the intro section) */}
       <div className="w-full max-w-7xl mx-auto chef-gradient-bg rounded-3xl shadow-xl p-8 md:p-12 overflow-hidden relative">
         {/* Circuit Pattern Background */}
         <div className="absolute inset-0 circuit-pattern opacity-15"></div>
@@ -327,65 +376,6 @@ const Hero = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 border border-white/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
           <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border border-white/10 rounded-full animate-spin" style={{ animationDuration: '30s', animationDirection: 'reverse' }}></div>
-        </div>
-      </div>
-      
-      {/* Hero Text and CTA Section */}
-      <div className="max-w-7xl mx-auto w-full mt-16">
-        <div className="text-left">
-          <div className="flex items-center gap-2">
-            <span className="chef-chip bg-purple-100 text-purple-800 shadow-sm">
-              <Sparkles className="h-3 w-3" />
-              AI-Powered
-            </span>
-            <span className="chef-chip bg-pink-100 text-pink-800 shadow-sm">
-              PXM Platform
-            </span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gradient-primary mt-6">
-            From <span className="text-purple-700">Specs</span> to{" "}
-            <span className="text-pink-600">Sales</span>
-          </h1>
-
-          <p className="text-xl text-gray-600 max-w-xl leading-relaxed mt-6">
-            The world's first AI-native Product Information Management platform that transforms messy data into delicious content.
-          </p>
-
-          <div className="flex items-center pt-2 pb-6 mt-6">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 mr-4 shadow-md">
-              <ChefHat className="h-6 w-6 text-white" />
-            </div>
-            <p className="text-sm text-gray-600 italic">
-              "Like a professional chef, we take your raw product ingredients and create perfect dishes for every stakeholder."
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white shadow-lg transition-all duration-300"
-            >
-              Book a Demo
-              <ArrowRight className="ml-2 h-4 w-4 animate-bounce-x" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-purple-200 text-purple-800 hover:bg-purple-50 transition-all duration-300"
-            >
-              How It Works
-            </Button>
-          </div>
-
-          <div className="pt-8 mt-4">
-            <p className="text-sm text-gray-500 mb-4 font-medium">Trusted by leading retailers</p>
-            <div className="grid grid-cols-3 gap-6 opacity-80">
-              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg shadow-sm" />
-              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg shadow-sm" />
-              <div className="h-8 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg shadow-sm" />
-            </div>
-          </div>
         </div>
       </div>
     </div>
