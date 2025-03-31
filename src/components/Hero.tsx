@@ -80,7 +80,7 @@ const Hero = () => {
                 <img 
                   src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
                   alt="SalesChef Logo" 
-                  className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]" 
+                  className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.7)] contrast-125 brightness-110" 
                 />
                 <div className="absolute bottom-0 left-0 right-0 text-center text-white text-xl font-semibold">
                   PXM Platform
