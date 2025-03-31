@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChefHat, FileText, ShoppingBag, BarChart2, Sparkles, MessageSquare, Clipboard, ScrollText, Factory, Package2, Image, MessageCircle, TrendingUp, LineChart, Shield, ShieldCheck, Users, Star } from "lucide-react";
+import { ArrowRight, ChefHat, FileText, ShoppingBag, BarChart2, Sparkles, MessageSquare, ShieldCheck, Image, MessageCircle, TrendingUp, LineChart, Star, Palette } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -11,7 +10,6 @@ const Hero = () => {
         {/* Circuit pattern background */}
         <div className="absolute inset-0 circuit-pattern opacity-20"></div>
         
-        {/* Data Transformation Animation */}
         <div className="flex items-center justify-between h-[300px] md:h-[350px] relative">
           {/* Input: Unstructured Data Visualization */}
           <div className="w-1/3 flex flex-col items-center h-full relative px-4">
@@ -68,7 +66,7 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Center: SalesChef Logo - Made Larger */}
+          {/* Center: SalesChef Logo */}
           <div className="absolute z-20 inset-x-0 mx-auto flex flex-col items-center justify-center">
             <div className="relative w-44 h-44 bg-white/90 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.8)] flex items-center justify-center">
               <img 
@@ -82,77 +80,68 @@ const Hero = () => {
             </span>
           </div>
           
-          {/* Output: Structured Content Tiles - Reduced size */}
+          {/* Output: Structured Content Tiles */}
           <div className="w-1/3 flex flex-col items-center h-full relative">
             {/* New heading above the output section */}
             <div className="text-white/80 font-bold mb-1 text-xs">COMPLETE SOURCE OF TRUTH</div>
             <div className="text-white/80 font-bold mb-3 text-xs">STRUCTURED OUTPUT</div>
             
-            {/* Animated arrows pointing from center */}
-            <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
-              <div className="flex space-x-1">
-                <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse"></div>
-                <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                <div className="w-2 h-2 bg-white/70 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+            {/* Output Tiles - Grid with uniform sizing */}
+            <div className="grid grid-cols-2 gap-2 mb-2 w-full">
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <FileText className="h-6 w-6 text-purple-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">Sales Sheet</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <ShoppingBag className="h-6 w-6 text-pink-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">PDP</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <BarChart2 className="h-6 w-6 text-blue-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">Analytics</p>
+              </div>
+              
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <FileText className="h-6 w-6 text-red-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">PDF</p>
               </div>
             </div>
             
-            {/* Output Tiles - First row - Made smaller */}
-            <div className="grid grid-cols-2 gap-2 mb-2">
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <FileText className="h-6 w-6 text-purple-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Sales Sheet</p>
+            {/* Second row of output tiles */}
+            <div className="grid grid-cols-2 gap-2 mb-2 w-full">
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <Image className="h-6 w-6 text-indigo-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">Social Media</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <ShoppingBag className="h-6 w-6 text-pink-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">PDP</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <MessageCircle className="h-6 w-6 text-emerald-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">Service Scripts</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <BarChart2 className="h-6 w-6 text-blue-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Analytics</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <TrendingUp className="h-6 w-6 text-amber-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">Sell Points</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <FileText className="h-6 w-6 text-red-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">PDF</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <Palette className="h-6 w-6 text-cyan-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">Artwork</p>
               </div>
             </div>
             
-            {/* Additional Output Tiles - Second row - Made smaller */}
-            <div className="grid grid-cols-2 gap-2 mb-2">
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <Image className="h-6 w-6 text-indigo-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Social Media</p>
-              </div>
-              
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <MessageCircle className="h-6 w-6 text-emerald-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Service Scripts</p>
-              </div>
-              
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <TrendingUp className="h-6 w-6 text-amber-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Sell Points</p>
-              </div>
-              
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <LineChart className="h-6 w-6 text-cyan-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Insights</p>
-              </div>
-            </div>
-            
-            {/* Product Compliance Tile - Made smaller and better spaced */}
+            {/* Product Compliance Tile */}
             <div className="mt-2 w-full grid grid-cols-2 gap-2">
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <MessageSquare className="h-6 w-6 text-green-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">FAQs</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <MessageSquare className="h-6 w-6 text-green-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">FAQs</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
-                <ShieldCheck className="h-6 w-6 text-purple-600 mx-auto" />
-                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Product Compliance</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center transform transition-transform hover:scale-105">
+                <ShieldCheck className="h-6 w-6 text-purple-600 mb-1" />
+                <p className="text-[8px] font-bold text-gray-800 text-center">Product Compliance</p>
               </div>
             </div>
           </div>
