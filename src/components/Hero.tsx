@@ -106,6 +106,28 @@ const Hero = () => {
                 <div className="absolute top-[53%] left-[65%] text-[7px] text-white/60 font-mono">{"{id:15483}"}</div>
               </div>
             </div>
+
+            {/* Arrow to SalesChef */}
+            <div className="hidden md:flex justify-center w-full mt-4">
+              <div className="relative h-6 w-16">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-0.5 w-full bg-white/70"></div>
+                </div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1/2 transform rotate-45 h-2 w-0.5 bg-white/70"></div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1/2 transform -rotate-45 h-2 w-0.5 bg-white/70"></div>
+              </div>
+            </div>
+
+            {/* Arrow for mobile (downward) */}
+            <div className="flex md:hidden justify-center w-full my-4">
+              <div className="relative h-12 w-6">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-0.5 bg-white/70"></div>
+                </div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform rotate-45 h-0.5 w-2 bg-white/70"></div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform -rotate-45 h-0.5 w-2 bg-white/70"></div>
+              </div>
+            </div>
           </div>
           
           {/* Central Platform */}
@@ -144,6 +166,15 @@ const Hero = () => {
               </CardContent>
             </Card>
 
+            {/* Arrow from Data Enrichment to SalesChef logo */}
+            <div className="relative h-6 w-6 mb-2">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-full w-0.5 bg-white/70"></div>
+              </div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform rotate-45 h-0.5 w-2 bg-white/70"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform -rotate-45 h-0.5 w-2 bg-white/70"></div>
+            </div>
+
             {/* Logo */}
             <div className="relative w-48 h-48 bg-white/90 rounded-full shadow-[0_0_40px_rgba(255,255,255,0.6)] flex items-center justify-center">
               <img 
@@ -151,6 +182,15 @@ const Hero = () => {
                 alt="SalesChef Logo" 
                 className="w-4/5 h-4/5 object-contain" 
               />
+            </div>
+            
+            {/* Arrow from SalesChef to PIM/DAM */}
+            <div className="relative h-6 w-6 mt-2">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-full w-0.5 bg-white/70"></div>
+              </div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform rotate-45 h-0.5 w-2 bg-white/70"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform -rotate-45 h-0.5 w-2 bg-white/70"></div>
             </div>
             
             {/* SalesChef PIM/DAM */}
@@ -172,6 +212,28 @@ const Hero = () => {
           
           {/* Content Output */}
           <div className="w-full md:w-1/3 flex flex-col items-center">
+            {/* Arrow from SalesChef to Content Transformation (only visible on desktop) */}
+            <div className="hidden md:flex justify-center w-full mb-4">
+              <div className="relative h-6 w-16 rotate-180">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-0.5 w-full bg-white/70"></div>
+                </div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1/2 transform rotate-45 h-2 w-0.5 bg-white/70"></div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-1/2 transform -rotate-45 h-2 w-0.5 bg-white/70"></div>
+              </div>
+            </div>
+
+            {/* Arrow for mobile (downward) - only visible on mobile */}
+            <div className="flex md:hidden justify-center w-full my-4">
+              <div className="relative h-12 w-6">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-0.5 bg-white/70"></div>
+                </div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform rotate-45 h-0.5 w-2 bg-white/70"></div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform -rotate-45 h-0.5 w-2 bg-white/70"></div>
+              </div>
+            </div>
+            
             <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <span className="text-white/90 font-semibold text-sm">CONTENT TRANSFORMATION</span>
             </div>
