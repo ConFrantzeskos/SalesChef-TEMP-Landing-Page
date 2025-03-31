@@ -8,7 +8,7 @@ import {
   Palette, 
   FileUp, 
   BarChart3,
-  PresentationScreen
+  Presentation
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from "@/components/ui/card";
@@ -92,7 +92,7 @@ const FeaturesSection = () => {
       description: "Analyze content performance and continuously improve based on real-world results."
     },
     {
-      icon: PresentationScreen,
+      icon: Presentation,
       agentName: "Demonstrate",
       title: "Executive Communication",
       description: "Generate sales presentations, sell sheets, range comparisons, and training materials instantly."
