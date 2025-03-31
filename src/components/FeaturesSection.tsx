@@ -18,6 +18,7 @@ interface FeatureCardProps {
   title: string;
   description: string;
   agentName: string;
+  number: number;
   className?: string;
 }
 
@@ -26,30 +27,37 @@ const FeatureCard = ({
   title, 
   description, 
   agentName,
+  number,
   className
 }: FeatureCardProps) => {
   return (
-    <Card className={cn(
-      "chef-card overflow-hidden",
-      className
-    )}>
-      <div className="h-1.5 w-full bg-gradient-to-r from-purple-600 to-pink-500" />
-      <CardContent className="p-6">
-        <div className="mb-6">
-          <div className="p-3 rounded-full bg-purple-100 inline-flex items-center justify-center">
-            <Icon className="h-6 w-6 text-purple-800" />
-          </div>
-        </div>
-        
-        <div className="mb-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-purple-600">
-            {agentName} Agent
-          </span>
-        </div>
-        <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
-        <p className="text-gray-600 leading-relaxed">{description}</p>
-      </CardContent>
-    </Card>
+    <div className="relative bg-white rounded-xl shadow-md border border-gray-100 p-8 transition-all duration-300 hover:shadow-lg group">
+      {/* Step number */}
+      <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 font-semibold text-sm">
+        {number}
+      </div>
+      
+      {/* Icon */}
+      <div className="p-3 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 inline-flex mb-6">
+        <Icon className="h-6 w-6 text-purple-800" />
+      </div>
+      
+      {/* Agent name */}
+      <div className="mb-2">
+        <span className="text-xs font-semibold uppercase tracking-wider text-purple-600">
+          {agentName} Agent
+        </span>
+      </div>
+      
+      {/* Content */}
+      <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
+      <p className="text-gray-600 leading-relaxed">{description}</p>
+      
+      {/* Connecting line */}
+      {number < 7 && (
+        <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 transform -translate-y-1/2 z-10"></div>
+      )}
+    </div>
   );
 };
 
@@ -100,7 +108,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="chef-section bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <section className="chef-section bg-gray-50 px-4 sm:px-6 lg:px-8 py-16">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -116,7 +124,7 @@ const FeaturesSection = () => {
         </div>
         
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -124,6 +132,7 @@ const FeaturesSection = () => {
               agentName={feature.agentName}
               title={feature.title}
               description={feature.description}
+              number={index + 1}
             />
           ))}
         </div>
