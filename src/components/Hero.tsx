@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -30,7 +31,14 @@ import {
   Upload,
   LayoutGrid,
   CheckCircle,
-  FileCheck
+  FileCheck,
+  Globe,
+  Search,
+  Radar,
+  MessagesSquare,
+  Hash,
+  Target,
+  BarChart
 } from "lucide-react";
 
 const Hero = () => {
@@ -115,6 +123,66 @@ const Hero = () => {
           </div>
           
           <div className="absolute z-20 inset-x-0 mx-auto flex flex-col items-center justify-center">
+            {/* Data and Content Enrichment Box */}
+            <div className="relative w-64 bg-white/20 backdrop-blur-sm rounded-lg border-2 border-white/30 p-3 mb-4 shadow-lg">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Radar className="h-4 w-4 text-white" />
+                <span className="text-sm text-white font-semibold">Data and Content Enrichment</span>
+                <Radar className="h-4 w-4 text-white" />
+              </div>
+              
+              <div className="grid grid-cols-2 gap-1.5 w-full">
+                <div className="flex items-center gap-1 bg-white/15 rounded px-1.5 py-0.5 text-white/90">
+                  <Globe className="h-3 w-3" />
+                  <span className="text-[8px]">Web Scraping</span>
+                </div>
+                
+                <div className="flex items-center gap-1 bg-white/15 rounded px-1.5 py-0.5 text-white/90">
+                  <MessagesSquare className="h-3 w-3" />
+                  <span className="text-[8px]">Social Media</span>
+                </div>
+                
+                <div className="flex items-center gap-1 bg-white/15 rounded px-1.5 py-0.5 text-white/90">
+                  <Star className="h-3 w-3" />
+                  <span className="text-[8px]">Review Sites</span>
+                </div>
+                
+                <div className="flex items-center gap-1 bg-white/15 rounded px-1.5 py-0.5 text-white/90">
+                  <Search className="h-3 w-3" />
+                  <span className="text-[8px]">Google Keywords</span>
+                </div>
+                
+                <div className="flex items-center gap-1 bg-white/15 rounded px-1.5 py-0.5 text-white/90">
+                  <Target className="h-3 w-3" />
+                  <span className="text-[8px]">Competitor Info</span>
+                </div>
+                
+                <div className="flex items-center gap-1 bg-white/15 rounded px-1.5 py-0.5 text-white/90">
+                  <BarChart className="h-3 w-3" />
+                  <span className="text-[8px]">Market Trends</span>
+                </div>
+              </div>
+              
+              {/* Animated data flow arrows */}
+              <div className="absolute -bottom-3 left-1/4 h-3 w-10 overflow-hidden rotate-180">
+                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-3 right-1/4 h-3 w-10 overflow-hidden rotate-180">
+                <div className="absolute top-0 left-0 w-full h-full animate-pulse" style={{animationDuration: '1.5s'}}>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-0"></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-3" style={{animationDelay: '0.3s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-6" style={{animationDelay: '0.6s'}}></div>
+                  <div className="h-[1px] w-2 bg-white/80 absolute left-9" style={{animationDelay: '0.9s'}}></div>
+                </div>
+              </div>
+            </div>
+
             <div className="relative w-44 h-44 bg-white/90 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.8)] flex items-center justify-center">
               <img 
                 src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
