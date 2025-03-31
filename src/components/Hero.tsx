@@ -219,6 +219,49 @@ const Hero = () => {
                   <p className="text-xs font-bold text-gray-800 text-center">Scripts</p>
                 </CardContent>
               </Card>
+              
+              {/* Additional tiles */}
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+                <CardContent className="p-3 flex flex-col items-center justify-center">
+                  <TrendingUp className="h-5 w-5 text-amber-600 mb-1.5" />
+                  <p className="text-xs font-bold text-gray-800 text-center">SEO Content</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+                <CardContent className="p-3 flex flex-col items-center justify-center">
+                  <LineChart className="h-5 w-5 text-cyan-600 mb-1.5" />
+                  <p className="text-xs font-bold text-gray-800 text-center">Reports</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+                <CardContent className="p-3 flex flex-col items-center justify-center">
+                  <UserRound className="h-5 w-5 text-purple-600 mb-1.5" />
+                  <p className="text-xs font-bold text-gray-800 text-center">Personas</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+                <CardContent className="p-3 flex flex-col items-center justify-center">
+                  <Code className="h-5 w-5 text-blue-600 mb-1.5" />
+                  <p className="text-xs font-bold text-gray-800 text-center">API Data</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+                <CardContent className="p-3 flex flex-col items-center justify-center">
+                  <Palette className="h-5 w-5 text-rose-600 mb-1.5" />
+                  <p className="text-xs font-bold text-gray-800 text-center">Design</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/90 hover:shadow-lg hover:scale-105 transition-all">
+                <CardContent className="p-3 flex flex-col items-center justify-center">
+                  <ShieldCheck className="h-5 w-5 text-green-600 mb-1.5" />
+                  <p className="text-xs font-bold text-gray-800 text-center">Compliance</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
