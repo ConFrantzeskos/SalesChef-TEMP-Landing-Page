@@ -17,45 +17,45 @@ const Hero = () => {
           <div className="w-1/3 flex flex-col items-center h-full relative px-4">
             <div className="text-white/80 font-bold mb-3 text-xs">UNSTRUCTURED DATA</div>
             
-            {/* Chaotic data elements with fade-in/out animation */}
+            {/* Chaotic data elements with fade-in/out animation - Improved spacing */}
             <div className="relative h-48 w-full">
-              {/* Random dots with animation */}
-              <div className="absolute top-[10%] left-[20%] w-3 h-3 rounded-full bg-white/70 animate-pulse"></div>
-              <div className="absolute top-[40%] left-[10%] w-2 h-2 rounded-full bg-white/60 animate-pulse" style={{animationDelay: '0.5s'}}></div>
-              <div className="absolute top-[70%] left-[30%] w-4 h-4 rounded-full bg-white/80 animate-pulse" style={{animationDelay: '1s'}}></div>
+              {/* Random dots with animation - Spread out more */}
+              <div className="absolute top-[5%] left-[15%] w-3 h-3 rounded-full bg-white/70 animate-pulse"></div>
+              <div className="absolute top-[35%] left-[8%] w-2 h-2 rounded-full bg-white/60 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+              <div className="absolute top-[75%] left-[20%] w-4 h-4 rounded-full bg-white/80 animate-pulse" style={{animationDelay: '1s'}}></div>
               
-              {/* Random slashes with fade animations */}
-              <div className="absolute top-[15%] left-[50%] w-12 h-[2px] bg-white/60 rotate-45 opacity-70 animate-pulse" style={{animationDelay: '1.2s'}}></div>
-              <div className="absolute top-[35%] left-[40%] w-10 h-[2px] bg-white/70 -rotate-30 opacity-80 animate-pulse" style={{animationDelay: '0.8s'}}></div>
-              <div className="absolute top-[60%] left-[45%] w-14 h-[2px] bg-white/50 rotate-15 opacity-60 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+              {/* Random slashes with fade animations - Better distributed */}
+              <div className="absolute top-[25%] left-[40%] w-12 h-[2px] bg-white/60 rotate-45 opacity-70 animate-pulse" style={{animationDelay: '1.2s'}}></div>
+              <div className="absolute top-[45%] left-[35%] w-10 h-[2px] bg-white/70 -rotate-30 opacity-80 animate-pulse" style={{animationDelay: '0.8s'}}></div>
+              <div className="absolute top-[65%] left-[50%] w-14 h-[2px] bg-white/50 rotate-15 opacity-60 animate-pulse" style={{animationDelay: '1.5s'}}></div>
               
-              {/* Text fragments - first set with fade-in/out animation */}
-              <div className="absolute top-[15%] left-[25%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.3s', animationDuration: '3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>supplier forms</div>
-              <div className="absolute top-[35%] left-[15%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.7s', animationDuration: '4s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>compliance specs</div>
-              <div className="absolute top-[55%] left-[20%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.1s', animationDuration: '3.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>factory specs</div>
-              <div className="absolute top-[75%] left-[25%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.5s', animationDuration: '4.2s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>product specs</div>
+              {/* Text fragments - Better distributed with fade-in/out animation */}
+              <div className="absolute top-[10%] left-[25%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.3s', animationDuration: '3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>supplier forms</div>
+              <div className="absolute top-[30%] left-[12%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.7s', animationDuration: '4s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>compliance specs</div>
+              <div className="absolute top-[50%] left-[20%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.1s', animationDuration: '3.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>factory specs</div>
+              <div className="absolute top-[70%] left-[15%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.5s', animationDuration: '4.2s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>product specs</div>
               
-              {/* New text fragments - additional set */}
-              <div className="absolute top-[25%] left-[55%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.3s', animationDuration: '3.7s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+              {/* Additional text fragments - Better distributed */}
+              <div className="absolute top-[15%] left-[55%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.3s', animationDuration: '3.7s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <Image className="h-3 w-3 inline mr-1" />
                 images
               </div>
-              <div className="absolute top-[45%] left-[60%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.9s', animationDuration: '4.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+              <div className="absolute top-[40%] left-[45%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '0.9s', animationDuration: '4.5s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <Users className="h-3 w-3 inline mr-1" />
                 user generated content
               </div>
-              <div className="absolute top-[65%] left-[52%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.7s', animationDuration: '3.9s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
+              <div className="absolute top-[60%] left-[42%] text-[9px] text-white/90 bg-white/10 px-2 py-1 rounded animate-fade-in" style={{animationDelay: '1.7s', animationDuration: '3.9s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>
                 <Star className="h-3 w-3 inline mr-1" />
                 reviews
               </div>
               
-              {/* Additional text fragments - second set */}
-              <div className="absolute top-[20%] left-[5%] text-[9px] text-white/80 bg-white/10 px-1 rounded animate-fade-in" style={{animationDelay: '2s', animationDuration: '3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>inseam</div>
-              <div className="absolute top-[50%] left-[65%] text-[8px] text-white/70 bg-white/10 px-1 rounded animate-fade-in" style={{animationDelay: '1.4s', animationDuration: '3.3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>lore</div>
+              {/* Additional text fragments - Repositioned */}
+              <div className="absolute top-[25%] left-[5%] text-[9px] text-white/80 bg-white/10 px-1 rounded animate-fade-in" style={{animationDelay: '2s', animationDuration: '3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>inseam</div>
+              <div className="absolute top-[55%] left-[60%] text-[8px] text-white/70 bg-white/10 px-1 rounded animate-fade-in" style={{animationDelay: '1.4s', animationDuration: '3.3s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>lore</div>
               
-              {/* Code-like fragments */}
-              <div className="absolute top-[40%] left-[70%] text-[6px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '0.6s', animationDuration: '3.7s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"{data:[]}"}</div>
-              <div className="absolute top-[65%] left-[60%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '1.2s', animationDuration: '4.1s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"<attr>"}</div>
+              {/* Code-like fragments - Repositioned */}
+              <div className="absolute top-[20%] left-[70%] text-[6px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '0.6s', animationDuration: '3.7s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"{data:[]}"}</div>
+              <div className="absolute top-[80%] left-[55%] text-[7px] text-white/60 font-mono animate-fade-in" style={{animationDelay: '1.2s', animationDuration: '4.1s', animationIterationCount: 'infinite', animationDirection: 'alternate'}}>{"<attr>"}</div>
             </div>
 
             {/* Animated arrows pointing to center */}
@@ -82,7 +82,7 @@ const Hero = () => {
             </span>
           </div>
           
-          {/* Output: Structured Content Tiles */}
+          {/* Output: Structured Content Tiles - Reduced size */}
           <div className="w-1/3 flex flex-col items-center h-full relative">
             {/* New heading above the output section */}
             <div className="text-white/80 font-bold mb-1 text-xs">COMPLETE SOURCE OF TRUTH</div>
@@ -97,62 +97,62 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Original Output Tiles */}
-            <div className="grid grid-cols-2 gap-2 mb-3">
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <FileText className="h-8 w-8 text-purple-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">Sales Sheet</p>
+            {/* Output Tiles - First row - Made smaller */}
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <FileText className="h-6 w-6 text-purple-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Sales Sheet</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <ShoppingBag className="h-8 w-8 text-pink-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">PDP</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <ShoppingBag className="h-6 w-6 text-pink-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">PDP</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <BarChart2 className="h-8 w-8 text-blue-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">Analytics</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <BarChart2 className="h-6 w-6 text-blue-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Analytics</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <FileText className="h-8 w-8 text-red-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">PDF</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <FileText className="h-6 w-6 text-red-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">PDF</p>
               </div>
             </div>
             
-            {/* Additional Output Tiles */}
-            <div className="grid grid-cols-2 gap-2">
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <Image className="h-8 w-8 text-indigo-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">Social Media</p>
+            {/* Additional Output Tiles - Second row - Made smaller */}
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <Image className="h-6 w-6 text-indigo-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Social Media</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <MessageCircle className="h-8 w-8 text-emerald-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">Service Scripts</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <MessageCircle className="h-6 w-6 text-emerald-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Service Scripts</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <TrendingUp className="h-8 w-8 text-amber-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">Sell Points</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <TrendingUp className="h-6 w-6 text-amber-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Sell Points</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <LineChart className="h-8 w-8 text-cyan-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">Insights</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <LineChart className="h-6 w-6 text-cyan-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Insights</p>
               </div>
             </div>
             
-            {/* Product Compliance Tile */}
-            <div className="mt-3 w-full grid grid-cols-2 gap-2">
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <MessageSquare className="h-8 w-8 text-green-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">FAQs</p>
+            {/* Product Compliance Tile - Made smaller and better spaced */}
+            <div className="mt-2 w-full grid grid-cols-2 gap-2">
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <MessageSquare className="h-6 w-6 text-green-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">FAQs</p>
               </div>
               
-              <div className="bg-white/90 rounded-lg shadow-lg p-2 transform transition-transform hover:scale-105">
-                <ShieldCheck className="h-8 w-8 text-purple-600 mx-auto" />
-                <p className="text-xs font-bold text-gray-800 text-center mt-1">Product Compliance</p>
+              <div className="bg-white/90 rounded-lg shadow-lg p-1.5 transform transition-transform hover:scale-105">
+                <ShieldCheck className="h-6 w-6 text-purple-600 mx-auto" />
+                <p className="text-[8px] font-bold text-gray-800 text-center mt-1">Product Compliance</p>
               </div>
             </div>
           </div>
