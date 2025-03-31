@@ -118,9 +118,6 @@ const Hero = () => {
                 className="w-4/5 h-4/5 object-contain" 
               />
             </div>
-            <span className="mt-3 bg-white/20 backdrop-blur-sm rounded-full px-6 py-1.5 text-white text-sm font-semibold">
-              PXM Platform
-            </span>
           </div>
           
           <div className="w-1/3 flex flex-col items-center h-full relative">
