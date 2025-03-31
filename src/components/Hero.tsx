@@ -125,7 +125,7 @@ const Hero = () => {
           </div>
           
           <div className="w-1/3 flex flex-col items-center h-full relative">
-            <div className="text-white/80 font-bold mb-1 text-xs">COMPLETE SOURCE OF TRUTH</div>
+            <div className="text-white/80 font-bold mb-1 text-xs">AI-CORRECTED</div>
             <div className="text-white/80 font-bold mb-3 text-xs">STRUCTURED OUTPUT</div>
             
             <div className="grid grid-cols-3 gap-1.5 mb-1.5 w-full">
