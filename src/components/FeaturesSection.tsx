@@ -7,8 +7,7 @@ import {
   Users, 
   Palette, 
   FileUp, 
-  BarChart3,
-  Presentation
+  BarChart3
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from "@/components/ui/card";
@@ -54,7 +53,7 @@ const FeatureCard = ({
       <p className="text-gray-600 leading-relaxed">{description}</p>
       
       {/* Connecting line */}
-      {number < 7 && (
+      {number < 6 && (
         <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 transform -translate-y-1/2 z-10"></div>
       )}
     </div>
@@ -85,7 +84,7 @@ const FeaturesSection = () => {
       icon: Palette,
       agentName: "Design",
       title: "Brand & Tone Consistency",
-      description: "Ensure all content matches your brand guidelines, voice, and style requirements."
+      description: "Ensure all content matches your brand guidelines and create sales sheets, PDPs, and other templates for every channel and format."
     },
     {
       icon: FileUp,
@@ -98,13 +97,7 @@ const FeaturesSection = () => {
       agentName: "Dissect",
       title: "Closed-loop Intelligence",
       description: "Analyze content performance and continuously improve based on real-world results."
-    },
-    {
-      icon: Presentation,
-      agentName: "Demonstrate",
-      title: "Executive Communication",
-      description: "Generate sales presentations, sell sheets, range comparisons, and training materials instantly."
-    },
+    }
   ];
 
   return (
@@ -124,7 +117,7 @@ const FeaturesSection = () => {
         </div>
         
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
