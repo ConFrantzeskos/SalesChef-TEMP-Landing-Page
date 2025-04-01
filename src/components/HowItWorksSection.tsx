@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Database, ChefHat, BarChart3, ArrowRight } from 'lucide-react';
+import { Database, ChefHat, BarChart3, ArrowRight, Globe } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 interface StepProps {
@@ -28,7 +28,7 @@ const Step = ({ number, title, description, icon: Icon }: StepProps) => {
       <p className="text-gray-600 leading-relaxed">{description}</p>
       
       {/* Connecting line */}
-      {number < 6 && (
+      {number < 7 && (
         <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 transform -translate-y-1/2 z-10"></div>
       )}
     </div>
@@ -69,6 +69,12 @@ const HowItWorksSection = () => {
     },
     {
       number: 6,
+      icon: Globe,
+      title: "Distribute",
+      description: "Native integration with thousands of marketplaces, ERPs, CRMs, and other endpoints for seamless content distribution."
+    },
+    {
+      number: 7,
       icon: BarChart3,
       title: "Dissect",
       description: "Analyze what's working, what's not, and continuously improve your product content for better results."
@@ -87,12 +93,12 @@ const HowItWorksSection = () => {
             </h2>
           </div>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Our six-step recipe transforms raw product data into delicious content that drives sales across all channels.
+            Our seven-step recipe transforms raw product data into delicious content that drives sales across all channels.
           </p>
         </div>
         
         {/* Process Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-16">
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col">
               <Step 
