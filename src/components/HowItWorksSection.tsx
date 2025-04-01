@@ -2,6 +2,7 @@
 import React from 'react';
 import { Database, ChefHat, BarChart3, ArrowRight, Globe } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface StepProps {
   number: number;
@@ -12,26 +13,28 @@ interface StepProps {
 
 const Step = ({ number, title, description, icon: Icon }: StepProps) => {
   return (
-    <div className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 p-8 transition-all duration-300 hover:shadow-chef-md group">
-      {/* Step number */}
-      <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 font-semibold text-sm">
-        {number}
-      </div>
-      
-      {/* Icon */}
-      <div className="p-3 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 inline-flex mb-6">
-        <Icon className="h-6 w-6 text-purple-800" />
-      </div>
-      
-      {/* Content */}
-      <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
-      
-      {/* Connecting line */}
-      {number < 7 && (
-        <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 transform -translate-y-1/2 z-10"></div>
-      )}
-    </div>
+    <Card className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 transition-all duration-300 hover:shadow-chef-md group">
+      <CardContent className="p-8">
+        <div className="flex items-start gap-6">
+          {/* Step number and icon */}
+          <div className="flex-shrink-0">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-100 to-pink-100">
+              <span className="text-xl font-bold text-purple-800">{number}</span>
+            </div>
+            <div className="h-full w-[1px] bg-gradient-to-b from-purple-300 to-pink-300 mx-auto mt-4 mb-4 hidden md:block"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="flex-1">
+            <div className="mb-4">
+              <Icon className="h-8 w-8 text-purple-700 mb-3" />
+              <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+            </div>
+            <p className="text-gray-600 leading-relaxed text-lg">{description}</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 
@@ -92,27 +95,26 @@ const HowItWorksSection = () => {
               How SalesChef Works
             </h2>
           </div>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             Our seven-step recipe transforms raw product data into delicious content that drives sales across all channels.
           </p>
         </div>
         
-        {/* Process Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8 mb-16">
+        {/* Process Steps - Vertical Layout */}
+        <div className="max-w-4xl mx-auto space-y-6 mb-16">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col">
-              <Step 
-                number={step.number}
-                icon={step.icon}
-                title={step.title}
-                description={step.description}
-              />
-            </div>
+            <Step 
+              key={index}
+              number={step.number}
+              icon={step.icon}
+              title={step.title}
+              description={step.description}
+            />
           ))}
         </div>
         
         {/* Final CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <div className="inline-block p-8 rounded-chef-lg bg-gradient-to-r from-purple-50 to-pink-50 shadow-chef-sm">
             <ChefHat className="h-10 w-10 mx-auto mb-6 text-purple-700" />
             <p className="text-lg font-medium text-gray-800 mb-6">
