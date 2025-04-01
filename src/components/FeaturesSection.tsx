@@ -9,8 +9,6 @@ import {
   FileUp, 
   BarChart3
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Card, CardContent } from "@/components/ui/card";
 
 interface FeatureCardProps {
   icon: React.ElementType;
@@ -30,7 +28,7 @@ const FeatureCard = ({
   className
 }: FeatureCardProps) => {
   return (
-    <div className="relative bg-white rounded-xl shadow-md border border-gray-100 p-8 transition-all duration-300 hover:shadow-lg group">
+    <div className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 p-8 transition-all duration-300 hover:shadow-chef-md group">
       {/* Step number */}
       <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 font-semibold text-sm">
         {number}
@@ -101,13 +99,13 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="chef-section bg-gray-50 px-4 sm:px-6 lg:px-8 py-16">
-      <div className="max-w-7xl mx-auto">
+    <section className="chef-section bg-gray-50">
+      <div className="chef-container">
         {/* Section header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center mb-4">
+        <div className="chef-header">
+          <div className="flex items-center justify-center mb-6">
             <ChefHat className="h-8 w-8 text-purple-700 mr-2" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gradient-primary">
+            <h2 className="text-gradient-primary">
               Our AI Chef Team
             </h2>
           </div>

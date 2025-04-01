@@ -16,10 +16,10 @@ const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => {
     <div className="border-b border-gray-200 overflow-hidden">
       <button 
         onClick={onClick}
-        className="w-full px-4 py-5 flex justify-between items-center text-left transition-colors duration-300 focus:outline-none"
+        className="w-full px-6 py-5 flex justify-between items-center text-left transition-colors duration-300 focus:outline-none"
       >
         <h3 className="font-medium text-gray-900 text-lg">{question}</h3>
-        <div className="ml-4">
+        <div className="ml-4 flex-shrink-0">
           {isOpen ? (
             <Minus className="h-5 w-5 text-indigo-800" />
           ) : (
@@ -29,8 +29,8 @@ const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => {
       </button>
       
       <div className={cn(
-        "px-4 overflow-hidden transition-all duration-300",
-        isOpen ? "max-h-96 pb-5 opacity-100" : "max-h-0 pb-0 opacity-0"
+        "px-6 overflow-hidden transition-all duration-300",
+        isOpen ? "max-h-96 pb-6 opacity-100" : "max-h-0 pb-0 opacity-0"
       )}>
         <p className="text-gray-600">{answer}</p>
       </div>
@@ -69,11 +69,11 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="evorra-section bg-white px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <section className="chef-section bg-white">
+      <div className="chef-container">
         {/* Section header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-primary">
+        <div className="chef-header">
+          <h2 className="text-gradient-primary">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -82,7 +82,7 @@ const FaqSection = () => {
         </div>
         
         {/* FAQ list */}
-        <div className="bg-white rounded-xl shadow-md border border-gray-100">
+        <div className="bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 mb-16">
           {faqs.map((faq, index) => (
             <FaqItem
               key={index}
@@ -95,9 +95,9 @@ const FaqSection = () => {
         </div>
         
         {/* Additional Support */}
-        <div className="mt-12 text-center p-8 bg-indigo-50 rounded-xl shadow-md">
-          <h3 className="text-xl font-semibold mb-2 text-gray-900">Still have questions?</h3>
-          <p className="text-gray-600 mb-4">Our team is ready to help you get started with SalesChef.</p>
+        <div className="mt-16 text-center p-8 bg-indigo-50 rounded-chef-lg shadow-chef-sm">
+          <h3 className="text-xl font-semibold mb-4 text-gray-900">Still have questions?</h3>
+          <p className="text-gray-600 mb-6">Our team is ready to help you get started with SalesChef.</p>
           <Button 
             size="lg" 
             className="bg-indigo-800 hover:bg-indigo-900 text-white"

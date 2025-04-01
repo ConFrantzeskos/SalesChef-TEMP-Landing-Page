@@ -2,7 +2,6 @@
 import React from 'react';
 import { Database, ChefHat, BarChart3, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { cn } from '@/lib/utils';
 
 interface StepProps {
   number: number;
@@ -13,7 +12,7 @@ interface StepProps {
 
 const Step = ({ number, title, description, icon: Icon }: StepProps) => {
   return (
-    <div className="relative bg-white rounded-xl shadow-md border border-gray-100 p-8 transition-all duration-300 hover:shadow-lg group">
+    <div className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 p-8 transition-all duration-300 hover:shadow-chef-md group">
       {/* Step number */}
       <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 font-semibold text-sm">
         {number}
@@ -77,13 +76,13 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="chef-section bg-white px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="chef-section bg-white">
+      <div className="chef-container">
         {/* Section header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center mb-4">
+        <div className="chef-header">
+          <div className="flex items-center justify-center mb-6">
             <ChefHat className="h-8 w-8 text-purple-700 mr-2" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gradient-primary">
+            <h2 className="text-gradient-primary">
               How SalesChef Works
             </h2>
           </div>
@@ -108,14 +107,14 @@ const HowItWorksSection = () => {
         
         {/* Final CTA */}
         <div className="text-center mt-12">
-          <div className="inline-block p-8 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 shadow-md">
-            <ChefHat className="h-10 w-10 mx-auto mb-4 text-purple-700" />
-            <p className="text-lg font-medium text-gray-800 mb-4">
+          <div className="inline-block p-8 rounded-chef-lg bg-gradient-to-r from-purple-50 to-pink-50 shadow-chef-sm">
+            <ChefHat className="h-10 w-10 mx-auto mb-6 text-purple-700" />
+            <p className="text-lg font-medium text-gray-800 mb-6">
               Ready to transform your product content strategy?
             </p>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white"
+              className="chef-button-primary"
             >
               Book a Demo
               <ArrowRight className="ml-2 h-4 w-4" />

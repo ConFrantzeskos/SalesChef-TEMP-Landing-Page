@@ -50,6 +50,17 @@
     --chef-pink: 330 80% 60%;
     --chef-gradient-start: 280 70% 40%;
     --chef-gradient-end: 330 80% 60%;
+    
+    /* Design System Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 2.5rem;
+    --space-3xl: 3rem;
+    --space-4xl: 4rem;
+    --space-5xl: 6rem;
   }
 
   .dark {
@@ -100,6 +111,26 @@
     @apply bg-background text-foreground;
     font-feature-settings: "salt" 1;
   }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+  
+  h3 {
+    @apply text-xl font-semibold mb-3;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+  
+  section {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+  }
 }
 
 /* New utility classes inspired by SalesChef design */
@@ -117,11 +148,31 @@
   }
   
   .chef-section {
-    @apply py-16 md:py-24;
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
   }
 
   .chef-chip {
     @apply inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium shadow-sm;
+  }
+  
+  .chef-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .chef-header {
+    @apply text-center mb-16 max-w-3xl mx-auto;
+  }
+  
+  .chef-button-primary {
+    @apply bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white shadow-chef-sm hover:shadow-chef-md transition-all duration-300;
+  }
+  
+  .chef-button-secondary {
+    @apply border-purple-200 text-purple-800 hover:bg-purple-50 transition-all duration-300;
+  }
+  
+  .chef-spacing-y {
+    @apply space-y-8;
   }
 
   .circuit-pattern {
@@ -132,5 +183,4 @@
 #root {
   width: 100%;
   margin: 0 auto;
-  text-align: center;
 }

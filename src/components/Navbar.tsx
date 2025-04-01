@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-7xl items-center">
+      <div className="chef-container flex h-16 items-center">
         <div className="mr-4 flex">
           <Link to="/" className="flex items-center space-x-2">
             <img 
@@ -34,13 +34,13 @@ const Navbar = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Product</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="h-10">Product</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[400px] md:w-[500px] lg:w-[600px] grid-cols-2">
+                  <ul className="grid gap-3 p-6 w-[400px] md:w-[500px] lg:w-[600px] grid-cols-2">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-purple-800 to-pink-700 p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-chef-md bg-gradient-to-b from-purple-800 to-pink-700 p-6 no-underline outline-none focus:shadow-md"
                           href="/"
                         >
                           <div className="mt-4 mb-2 text-lg font-medium text-white">
@@ -91,11 +91,11 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
           
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <Button variant="outline" className="hidden lg:flex">
               Login
             </Button>
-            <Button className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700">
+            <Button className="chef-button-primary">
               Book a Demo
             </Button>
           </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
             <MobileNavLink to="/about" label="About" />
             <MobileNavLink to="/login" label="Login" />
             <div className="pt-4">
-              <Button className="w-full bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700">
+              <Button className="w-full chef-button-primary">
                 Book a Demo
               </Button>
             </div>
@@ -150,7 +150,7 @@ const ListItem = ({ className, title, children, href }: ListItemProps) => {
         <a
           href={href}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-chef-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
         >
@@ -167,7 +167,7 @@ const ListItem = ({ className, title, children, href }: ListItemProps) => {
 const MobileNavLink = ({ to, label }: { to: string; label: string }) => (
   <Link
     to={to}
-    className="block rounded-lg px-3 py-2 text-base font-medium text-gray-900 hover:bg-accent hover:text-accent-foreground"
+    className="block rounded-chef-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-accent hover:text-accent-foreground"
   >
     {label}
   </Link>
