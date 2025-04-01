@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -265,15 +266,15 @@ const Hero = () => {
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
-                  <UserRound className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Personas</p>
+                  <Image className="h-5 w-5 text-purple-600 mb-1.5" />
+                  <p className="text-xs font-semibold text-gray-800 text-center">Assets</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
-                  <Code className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">API Data</p>
+                  <Database className="h-5 w-5 text-purple-600 mb-1.5" />
+                  <p className="text-xs font-semibold text-gray-800 text-center">Marketplace Data</p>
                 </CardContent>
               </Card>
               
