@@ -50,7 +50,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-xl leading-relaxed mt-6">
-            The world's first AI-native Product Information Management platform that transforms messy data into delicious content.
+            The world's first AI-native Product Information Management platform that transforms raw specs into delicious content.
           </p>
 
           <div className="flex items-center pt-2 pb-6 mt-6">
