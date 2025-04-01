@@ -81,7 +81,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Central Platform Showcase (Moved below the intro section) */}
+      {/* Central Platform Showcase with aligned components */}
       <div className="w-full max-w-7xl mx-auto chef-gradient-bg rounded-3xl shadow-xl p-8 md:p-12 overflow-hidden relative">
         {/* Circuit Pattern Background */}
         <div className="absolute inset-0 circuit-pattern opacity-15"></div>
@@ -169,7 +169,7 @@ const Hero = () => {
           {/* Central Platform */}
           <div className="w-full md:w-1/3 flex flex-col items-center justify-center">
             {/* Data and Content Enrichment Card */}
-            <Card className="w-full max-w-sm bg-white/15 backdrop-blur-lg border-white/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
+            <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <CardHeader className="pb-2 text-center">
                 <div className="flex items-center justify-center gap-2">
                   <Radar className="h-4 w-4 text-white" />
@@ -243,7 +243,7 @@ const Hero = () => {
             </div>
             
             {/* SalesChef PIM/DAM with consistent styling */}
-            <Card className="w-full max-w-sm mt-6 bg-white/15 backdrop-blur-lg border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+            <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 mt-6">
               <CardHeader className="pb-2 text-center">
                 <div className="flex items-center justify-center gap-2">
                   <Database className="h-4 w-4 text-white" />
@@ -251,7 +251,7 @@ const Hero = () => {
                   <Database className="h-4 w-4 text-white" />
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pb-4">
                 <div className="text-xs text-white/90 font-medium text-center">
                   Product Source of Truth and Assets
                 </div>
@@ -276,94 +276,94 @@ const Hero = () => {
             </div>
             
             {/* Arrow pointing from SalesChef to Content Transformation (desktop) */}
-            <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-y-1/4">
+            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-y-1/4">
               <div className="h-0.5 w-16 bg-white/50 relative animate-pulse-soft">
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/50"></div>
               </div>
             </div>
             
             <div className="grid grid-cols-3 gap-3 w-full">
-              {/* Output channels with consistent styling */}
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              {/* Output channels with consistent styling and size */}
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <FileText className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Sales Sheet</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <ShoppingBag className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">PDP</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <BarChart2 className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Analytics</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <FileText className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">PDF</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <Image className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Social</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <MessageCircle className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Scripts</p>
                 </CardContent>
               </Card>
               
               {/* Additional tiles with consistent styling */}
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <TrendingUp className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">SEO Content</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <LineChart className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Reports</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <UserRound className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Personas</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <Code className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">API Data</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <Palette className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Design</p>
                 </CardContent>
               </Card>
               
-              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg">
-                <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
+                <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <ShieldCheck className="h-5 w-5 text-purple-600 mb-1.5" />
                   <p className="text-xs font-semibold text-gray-800 text-center">Compliance</p>
                 </CardContent>
