@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { 
@@ -81,11 +80,8 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Central Platform Showcase with aligned components */}
+      {/* Central Platform Showcase */}
       <div className="w-full max-w-7xl mx-auto chef-gradient-bg rounded-3xl shadow-xl p-8 md:p-12 overflow-hidden relative">
-        {/* Circuit Pattern Background */}
-        <div className="absolute inset-0 circuit-pattern opacity-15"></div>
-        
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative z-10">
           {/* Unstructured Data Section */}
           <div className="w-full md:w-1/3 flex flex-col items-center">
@@ -94,23 +90,15 @@ const Hero = () => {
             </div>
             
             <div className="relative h-64 w-full rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur-sm shadow-lg">
-              {/* Data points and connections with consistent styling */}
+              {/* Data points and connections */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                {/* Data points with consistent sizes and animation timing */}
+                {/* Data points with consistent sizes and animation */}
                 <div className="absolute top-[5%] left-[10%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft"></div>
                 <div className="absolute top-[25%] left-[5%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '0.5s'}}></div>
                 <div className="absolute top-[70%] left-[15%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '1s'}}></div>
                 <div className="absolute top-[40%] left-[25%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '1.3s'}}></div>
-                <div className="absolute top-[85%] left-[30%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '0.7s'}}></div>
-                <div className="absolute top-[15%] left-[40%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '1.5s'}}></div>
                 
-                {/* Connection lines with consistent styling */}
-                <div className="absolute top-[10%] left-[35%] w-12 h-[1px] bg-white/60 rotate-45 opacity-70"></div>
-                <div className="absolute top-[30%] left-[15%] w-14 h-[1px] bg-white/60 -rotate-30 opacity-70"></div>
-                <div className="absolute top-[60%] left-[40%] w-16 h-[1px] bg-white/60 rotate-15 opacity-70"></div>
-                <div className="absolute top-[75%] left-[10%] w-10 h-[1px] bg-white/60 -rotate-15 opacity-70"></div>
-                
-                {/* Document tags with consistent styling */}
+                {/* Document tags */}
                 <div className="absolute top-[8%] left-[45%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
                   supplier forms
                 </div>
@@ -120,11 +108,8 @@ const Hero = () => {
                 <div className="absolute top-[55%] left-[20%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
                   factory specs
                 </div>
-                <div className="absolute top-[78%] left-[50%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                  product specs
-                </div>
                 
-                {/* File type icons with consistent styling */}
+                {/* File type icons */}
                 <div className="absolute top-[18%] left-[15%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
                   <Image className="h-3 w-3 inline mr-1" />
                   images
@@ -137,38 +122,12 @@ const Hero = () => {
                   <Database className="h-3 w-3 inline mr-1" />
                   databases
                 </div>
-                
-                {/* Code snippets with consistent styling */}
-                <div className="absolute top-[22%] left-[65%] text-[8px] text-white/70 font-mono bg-white/5 px-1.5 py-0.5 rounded-sm">{"{data:[]}"}</div>
-                <div className="absolute top-[80%] left-[40%] text-[8px] text-white/70 font-mono bg-white/5 px-1.5 py-0.5 rounded-sm">{"function() { }"}</div>
-                <div className="absolute top-[53%] left-[65%] text-[8px] text-white/70 font-mono bg-white/5 px-1.5 py-0.5 rounded-sm">{"{id:15483}"}</div>
-              </div>
-            </div>
-            
-            {/* Arrow pointing to Central Platform - Desktop */}
-            <div className="hidden md:flex justify-center w-full mt-8">
-              <div className="w-12 h-16 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-0.5 h-full bg-white/50 animate-pulse-soft"></div>
-                </div>
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/50"></div>
-              </div>
-            </div>
-            
-            {/* Arrow pointing to Central Platform - Mobile */}
-            <div className="flex md:hidden justify-center w-full my-8">
-              <div className="h-8 w-12 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-0.5 w-full bg-white/50 animate-pulse-soft"></div>
-                </div>
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/50"></div>
               </div>
             </div>
           </div>
           
           {/* Central Platform */}
           <div className="w-full md:w-1/3 flex flex-col items-center justify-center">
-            {/* Data and Content Enrichment Card */}
             <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <CardHeader className="pb-2 text-center">
                 <div className="flex items-center justify-center gap-2">
@@ -179,7 +138,7 @@ const Hero = () => {
               </CardHeader>
               <CardContent className="px-4 pb-4 pt-0">
                 <div className="grid grid-cols-2 gap-2">
-                  {/* Consistent styling for all enrichment items */}
+                  {/* Enrichment items */}
                   <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
                     <Globe className="h-3.5 w-3.5 group-hover:text-white transition-colors" />
                     <span className="text-xs font-medium">Web Scraping</span>
@@ -213,16 +172,6 @@ const Hero = () => {
               </CardContent>
             </Card>
 
-            {/* Arrow pointing to SalesChef Logo */}
-            <div className="hidden md:flex justify-center w-full my-4">
-              <div className="w-12 h-8 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-0.5 h-full bg-white/50 animate-pulse-soft"></div>
-                </div>
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/50"></div>
-              </div>
-            </div>
-
             {/* Logo with consistent styling */}
             <div className="relative w-48 h-48 bg-white/95 rounded-full shadow-chef flex items-center justify-center animate-float">
               <img 
@@ -230,16 +179,6 @@ const Hero = () => {
                 alt="SalesChef Logo" 
                 className="w-4/5 h-4/5 object-contain" 
               />
-            </div>
-            
-            {/* Arrow pointing to SalesChef PIM/DAM */}
-            <div className="hidden md:flex justify-center w-full mt-6">
-              <div className="w-12 h-8 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-0.5 h-full bg-white/50 animate-pulse-soft"></div>
-                </div>
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white/50"></div>
-              </div>
             </div>
             
             {/* SalesChef PIM/DAM with consistent styling */}
@@ -263,23 +202,6 @@ const Hero = () => {
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <div className="bg-white/15 backdrop-blur-sm px-6 py-2 rounded-full mb-8 shadow-sm">
               <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Content Transformation</span>
-            </div>
-            
-            {/* Arrow pointing from SalesChef to Content Transformation (mobile) */}
-            <div className="flex md:hidden justify-center w-full mb-8">
-              <div className="h-8 w-12 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-0.5 w-full bg-white/50 animate-pulse-soft"></div>
-                </div>
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/50"></div>
-              </div>
-            </div>
-            
-            {/* Arrow pointing from SalesChef to Content Transformation (desktop) */}
-            <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-y-1/4">
-              <div className="h-0.5 w-16 bg-white/50 relative animate-pulse-soft">
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 border-t-[6px] border-b-[6px] border-r-[8px] border-t-transparent border-b-transparent border-r-white/50"></div>
-              </div>
             </div>
             
             <div className="grid grid-cols-3 gap-3 w-full">
