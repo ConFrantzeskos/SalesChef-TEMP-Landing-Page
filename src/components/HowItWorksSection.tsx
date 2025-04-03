@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Database, ChefHat, BarChart3, ArrowRight, Globe, Utensils, Palette, FileType, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -67,42 +68,42 @@ const HowItWorksSection = () => {
       icon: ChefHat,
       title: "Gather Extra Flavors (Data Enrichment & Tagging)",
       kitchenDescription: "Lets you add attributes, tags, or categories. Stores references for competitor info or notes. Basic library for images, documents (like the pantry for extra spices).",
-      chefDescription: "Discover — UNLOCK THE FULL STORY! Seamlessly pulls in competitor listings, reviews, social sentiment. Feeds real-time market intel back into the PIM. Ensures every product is enriched with insights beyond the bare specs."
+      chefDescription: "Discover — Unlock the full story! Seamlessly pulls in competitor listings, reviews, social sentiment. Feeds real-time market intel back into the PIM. Ensures every product is enriched with insights beyond the bare specs."
     },
     {
       number: 3,
       icon: FileType,
       title: "Tailor the Recipe (Defining Stakeholder Views)",
       kitchenDescription: "Creates separate \"views\" of product data for different channels (retail, marketing, internal teams). Often requires manual effort to format or refine each view.",
-      chefDescription: "Define — GET EXACTLY WHAT EACH STAKEHOLDER NEEDS! Automatically adjusts content for each channel/audience. Chooses the right \"ingredients\" (details, tone, length) for each persona. Eliminates guesswork so each stakeholder gets precisely what they need."
+      chefDescription: "Define — Get exactly what each stakeholder needs! Automatically adjusts content for each channel/audience. Chooses the right \"ingredients\" (details, tone, length) for each persona. Eliminates guesswork so each stakeholder gets precisely what they need."
     },
     {
       number: 4,
       icon: Palette,
       title: "Ensure Brand Consistency (Branding & Design)",
       kitchenDescription: "Stores brand guidelines, assets, logos. Houses product images, letting you attach them to SKUs. Typically reliant on manual checks to match brand standards.",
-      chefDescription: "Design — YOUR BRAND VOICE, PERFECTLY CONSISTENT! Applies brand style and voice to every output. Automatically chooses layouts, colors, tone based on brand rules. Makes sure all content looks and feels consistent—like a chef plating each dish beautifully."
+      chefDescription: "Design — Your brand voice, perfectly consistent! Applies brand style and voice to every output. Automatically chooses layouts, colors, tone based on brand rules. Makes sure all content looks and feels consistent—like a chef plating each dish beautifully."
     },
     {
       number: 5,
       icon: ChefHat,
       title: "Whip Up the Dish (Content Creation)",
       kitchenDescription: "Can generate basic export templates (PDF sell sheets, product feeds). Usually demands manual copy/paste or separate tools for real creative work.",
-      chefDescription: "Develop — STOP COPYING AND PASTING! Uses AI to create product detail pages, training decks, sales sheets. Adapts text/imagery for each platform or retailer automatically. Slashes the time from concept to final content—like a sous-chef who preps everything at lightning speed."
+      chefDescription: "Develop — Stop copying and pasting! Uses AI to create product detail pages, training decks, sales sheets. Adapts text/imagery for each platform or retailer automatically. Slashes the time from concept to final content—like a sous-chef who preps everything at lightning speed."
     },
     {
       number: 6,
       icon: Send,
       title: "Serve Across Channels (Syndication/Distribution)",
       kitchenDescription: "Distributes product data to online channels (e.g., Amazon, Shopify), often just exporting standard specs. Maintains feeds for pricing/stock, but each channel integration can be tedious.",
-      chefDescription: "Distribute — PUSH A BUTTON, WATCH YOUR CONTENT FLY! Instantly delivers brand-aligned, fully enriched content. Connects to thousands of marketplaces, retailers, and internal teams. Automates those multi-platform updates so you can \"serve\" each channel in one go."
+      chefDescription: "Distribute — Push a button, watch your content fly! Instantly delivers brand-aligned, fully enriched content. Connects to thousands of marketplaces, retailers, and internal teams. Automates those multi-platform updates so you can \"serve\" each channel in one go."
     },
     {
       number: 7,
       icon: BarChart3,
       title: "Taste & Refine (Reporting & Analytics)",
       kitchenDescription: "Basic checks on data completeness (which fields are missing?). Possibly shows usage stats, but rarely ties to deeper performance metrics.",
-      chefDescription: "Dissect — SEE WHAT'S ACTUALLY WORKING! Collects real performance data: conversions, competitor comparisons, content engagement. Feeds back insights to every preceding step. Lets you continuously optimize and \"tweak the recipe\" to boost results."
+      chefDescription: "Dissect — See what's actually working! Collects real performance data: conversions, competitor comparisons, content engagement. Feeds back insights to every preceding step. Lets you continuously optimize and \"tweak the recipe\" to boost results."
     }
   ];
 
@@ -155,3 +156,4 @@ const HowItWorksSection = () => {
 };
 
 export default HowItWorksSection;
+
