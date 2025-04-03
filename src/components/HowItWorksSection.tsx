@@ -75,7 +75,7 @@ const HowItWorksSection = () => {
       icon: FileType,
       title: "Tailor the Recipe (Defining Stakeholder Views)",
       kitchenDescription: "Creates separate \"views\" of product data for different channels (retail, marketing, internal teams). Often requires manual effort to format or refine each view.",
-      chefDescription: "Define — Mapping industry-specific requirements! Identifies the unique informational needs across different sectors and job roles. Creates specialized views for buyers, marketers, eCommerce teams, designers, and retail staff based on their specific requirements. Establishes the framework for what each stakeholder needs before content creation begins."
+      chefDescription: "Define — Figure out who needs what! We map out exactly what information each person needs in their job: sell sheets for sales teams, spec tables for buyers, lifestyle images for marketers, dimension details for designers, and training materials for retail staff. Creates ready-to-fill templates that match each role's unique requirements, setting the stage before any content creation begins."
     },
     {
       number: 4,
