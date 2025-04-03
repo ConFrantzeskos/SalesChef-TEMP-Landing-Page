@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Database, ChefHat, BarChart3, ArrowRight, Globe } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -41,7 +42,7 @@ const HowItWorksSection = () => {
       number: 1,
       icon: Database,
       title: "Drop",
-      description: "Connect to your existing systems or upload files—we handle messy data, multiple sources, and inconsistent formats."
+      description: "Dump your messy data on us—no cleaning required! We handle inconsistent formats, multiple sources, and product specs in minutes, not weeks. Connect via API or just upload Excel files."
     },
     {
       number: 2,
@@ -53,31 +54,31 @@ const HowItWorksSection = () => {
       number: 3,
       icon: ChefHat,
       title: "Define",
-      description: "Identify who needs what information and how to structure it for each stakeholder, from executives to retail staff."
+      description: "Get exactly what each stakeholder needs—from executive summaries to detailed sell sheets. We tailor content for retailers, sales teams, and customers so everyone gets information that actually makes sense to them."
     },
     {
       number: 4,
       icon: ChefHat,
       title: "Design",
-      description: "Apply your brand guidelines, tone of voice, and style rules consistently across all product content."
+      description: "Your brand voice, perfectly consistent everywhere. We apply your guidelines to every piece of content, ensuring your products sound like YOU—whether it's on Amazon, Walmart, or your sales team's lips."
     },
     {
       number: 5,
       icon: ChefHat,
       title: "Develop",
-      description: "Create optimized content for every channel—from PDPs to sales sheets to training materials."
+      description: "Stop copying and pasting! We create ready-to-upload content for every channel—PDPs that convert, training materials that educate, and sales sheets that actually close deals. Different formats, same great messaging."
     },
     {
       number: 6,
       icon: Globe,
       title: "Distribute",
-      description: "Native integration with thousands of marketplaces, ERPs, CRMs, and other endpoints for seamless content distribution."
+      description: "Push a button, watch your content fly! Our system connects to thousands of marketplaces and platforms so you can update content everywhere instantly. No more tedious uploading to 20 different retailer backends."
     },
     {
       number: 7,
       icon: BarChart3,
       title: "Dissect",
-      description: "Analyze what's working, what's not, and continuously improve your product content for better results."
+      description: "See what's actually working. Our analytics show which product stories drive sales, which content needs tweaking, and where you're beating competitors. Real data to continuously improve conversions and win more shelf space."
     }
   ];
 
