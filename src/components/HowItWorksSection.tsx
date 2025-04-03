@@ -15,7 +15,6 @@ const Step = ({ number, title, description, icon: Icon }: StepProps) => {
     <Card className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 transition-all duration-300 hover:shadow-chef-md group">
       <CardContent className="p-8">
         <div className="flex items-start gap-6">
-          {/* Step number and icon */}
           <div className="flex-shrink-0">
             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-100 to-pink-100">
               <span className="text-xl font-bold text-purple-800">{number}</span>
@@ -23,7 +22,6 @@ const Step = ({ number, title, description, icon: Icon }: StepProps) => {
             <div className="h-full w-[1px] bg-gradient-to-b from-purple-300 to-pink-300 mx-auto mt-4 mb-4 hidden md:block"></div>
           </div>
           
-          {/* Content */}
           <div className="flex-1">
             <div className="mb-4">
               <Icon className="h-8 w-8 text-purple-700 mb-3" />
@@ -49,7 +47,7 @@ const HowItWorksSection = () => {
       number: 2,
       icon: ChefHat,
       title: "Discover",
-      description: "Our AI enriches your product data with competitive insights, consumer sentiment, reviews, consumer insights, and consumer benefits—transforming raw product attributes into a holistic understanding of consumer context."
+      description: "Unlock the full story behind your products. We dive deep into reviews, competitive insights, and consumer sentiment—turning boring product specs into killer sales narratives that retailers and customers can't resist."
     },
     {
       number: 3,
@@ -86,7 +84,6 @@ const HowItWorksSection = () => {
   return (
     <section className="chef-section bg-white">
       <div className="chef-container">
-        {/* Section header */}
         <div className="chef-header">
           <div className="flex items-center justify-center mb-6">
             <ChefHat className="h-8 w-8 text-purple-700 mr-2" />
@@ -99,7 +96,6 @@ const HowItWorksSection = () => {
           </p>
         </div>
         
-        {/* Process Steps - Vertical Layout */}
         <div className="max-w-4xl mx-auto space-y-6 mb-16">
           {steps.map((step, index) => (
             <Step 
@@ -112,7 +108,6 @@ const HowItWorksSection = () => {
           ))}
         </div>
         
-        {/* Final CTA */}
         <div className="text-center mt-16">
           <div className="inline-block p-8 rounded-chef-lg bg-gradient-to-r from-purple-50 to-pink-50 shadow-chef-sm">
             <ChefHat className="h-10 w-10 mx-auto mb-6 text-purple-700" />
