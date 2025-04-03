@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Database, ChefHat, BarChart3, ArrowRight, Globe } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,7 @@ const HowItWorksSection = () => {
       number: 2,
       icon: ChefHat,
       title: "Discover",
-      description: "Our AI enriches your product data with competitive insights, consumer sentiment, and market trends."
+      description: "Our AI enriches your product data with competitive insights, consumer sentiment, consumer insights, and consumer benefits."
     },
     {
       number: 3,
