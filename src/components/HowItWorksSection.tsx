@@ -49,7 +49,7 @@ const HowItWorksSection = () => {
       number: 2,
       icon: ChefHat,
       title: "Discover",
-      description: "Our AI enriches your product data with competitive insights, consumer sentiment, consumer insights, and consumer benefits."
+      description: "Our AI enriches your product data with competitive insights, consumer sentiment, reviews, consumer insights, and consumer benefits—transforming raw product attributes into a holistic understanding of consumer context."
     },
     {
       number: 3,
