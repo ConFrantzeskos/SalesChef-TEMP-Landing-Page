@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Database, ChefHat, BarChart3, ArrowRight, Globe, Utensils, Palette, FileType, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -61,7 +60,7 @@ const HowItWorksSection = () => {
       icon: Database,
       title: "Stock the Pantry (Data Import & Normalization)",
       kitchenDescription: "Receives raw product data in bulk (CSV, Excel, PDFs, etc.). Basic structure for categorizing and storing it (like shelves in a pantry). Some manual cleanup and reformatting tools.",
-      chefDescription: "Drop — DUMP YOUR MESSY DATA ON US! Automatically ingests messy data with minimal prep. Quickly maps and normalizes product fields (no fuss over formats). Clears duplicates and flags missing info, so the kitchen stays tidy."
+      chefDescription: "Drop — We'll handle your messy data! Automatically ingests complex data with minimal user preparation. Quickly maps and normalizes product fields with ease. Clears duplicates and flags missing information, keeping your data kitchen spotless."
     },
     {
       number: 2,
