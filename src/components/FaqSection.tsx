@@ -42,25 +42,45 @@ const FaqSection = () => {
   const [openIndex, setOpenIndex] = React.useState(0);
   
   const faqs = [
+    // For Product Managers
     {
-      question: "How is SalesChef different from a traditional PIM?",
-      answer: "Unlike traditional PIMs that just store and organize product data, SalesChef automatically transforms your raw product specs into sales-optimized content using AI. We focus on revenue generation rather than just data management, eliminating the need for content writers and speeding up your time to market."
+      question: "How much faster can we actually launch new products with SalesChef?",
+      answer: "Our customers cut their time-to-market by 80% on average. What used to take 6-8 weeks now happens in DAYS. You'll eliminate the endless back-and-forth between product teams, marketing, and sales when creating content. One client launched 1,200 new SKUs in a single week—something that would've taken them 6 months before SalesChef."
     },
+    // For Marketing Directors
     {
-      question: "Do I need technical expertise to use SalesChef?",
-      answer: "Not at all! SalesChef is designed for business users. Our intuitive interface requires no coding skills, and implementation typically takes days, not months. We handle all the technical complexities behind the scenes."
+      question: "How does SalesChef eliminate the constant struggle with inconsistent product information?",
+      answer: "SalesChef gives you a single source of truth that updates EVERYWHERE simultaneously. No more finding outdated specs on your website while your Amazon listings show something different. When you make a change, it propagates across ALL channels instantly—your website, retailer listings, sales materials, everything. One client reduced content-related customer service tickets by 73% after implementing SalesChef."
     },
+    // For E-commerce Managers
     {
-      question: "Can SalesChef integrate with my existing systems?",
-      answer: "Yes, SalesChef integrates with most popular e-commerce platforms, ERPs, marketplaces, and content management systems through our pre-built connectors. We also offer custom API integration for specialized systems."
+      question: "What kind of conversion improvements can we expect on our product pages?",
+      answer: "Our clients see a 20-40% jump in conversion rates within 90 days. Why? Because SalesChef analyzes thousands of successful product listings to understand exactly what drives purchases in your category. We transform boring specs into benefit-focused content that actually answers customer questions. One sporting goods client increased their average order value by 32% just by improving product descriptions."
     },
+    // For Sales Directors
     {
-      question: "How does SalesChef's AI generate product content?",
-      answer: "Our AI analyzes your product specifications, market data, and consumer behavior patterns to create compelling, SEO-optimized product descriptions, features, and marketing copy that converts. The AI continuously improves based on performance data."
+      question: "How will SalesChef help my sales team win more retail shelf space?",
+      answer: "SalesChef automatically generates killer sell sheets, pitch decks, and training materials that make your products irresistible to retailers. Your team will have instant access to customized presentations for each buyer meeting—no more scrambling the night before. One CPG client landed distribution in 400 new stores after arming their sales team with SalesChef-generated materials."
     },
+    // For Content Teams
     {
-      question: "What ROI can I expect from SalesChef?",
-      answer: "Most customers see a 20-40% increase in conversion rates within the first three months. Additionally, content creation costs are typically reduced by 70-90%, and time-to-market for new products decreases by 80% on average."
+      question: "How much content creation work will this actually save my team?",
+      answer: "Most clients report 70-90% reduction in content creation workload. Your team can stop wasting time on repetitive writing tasks and focus on high-value creative work instead. SalesChef can generate 500 product descriptions in the time it takes a writer to create 5—and they'll be tailored to each specific channel's requirements. One fashion client redeployed 4 full-time writers to more strategic projects after implementing SalesChef."
+    },
+    // For IT Directors
+    {
+      question: "Is SalesChef going to be yet another complicated system that my team needs to maintain?",
+      answer: "Absolutely not. SalesChef deploys in days, not months, with zero code required from your team. Our pre-built connectors handle 95% of integration scenarios without custom development. Most clients need just 2-3 hours of IT involvement for the entire implementation. And our platform handles all the heavy lifting of pushing content to different channels—no need for your team to build or maintain those integrations."
+    },
+    // For CFOs
+    {
+      question: "What's the real ROI timeline for SalesChef?",
+      answer: "Most clients achieve positive ROI within 60-90 days. The math is simple: reduced content creation costs (70-90% savings), faster time-to-market (80% reduction), higher conversion rates (20-40% increase), and elimination of costly errors. One electronics manufacturer calculated a 387% ROI in the first year, primarily from being able to launch products 12 weeks earlier than their previous timeline."
+    },
+    // For CEOs
+    {
+      question: "How will SalesChef give us a competitive advantage in our market?",
+      answer: "Three ways: Speed, Scale, and Smarts. You'll get products to market faster than competitors (weeks sooner), scale your product catalog without adding headcount (one client went from 500 to 10,000 SKUs with the same team size), and leverage AI-driven insights about what actually sells (continuously improving based on sales data). In a recent survey, 86% of our clients reported gaining market share within 6 months of implementing SalesChef."
     }
   ];
   
@@ -77,7 +97,7 @@ const FaqSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Everything you need to know about SalesChef and how it can transform your product content strategy.
+            Got questions? We've got straight-talking answers about how SalesChef will transform your business—no fluff, just facts.
           </p>
         </div>
         
@@ -97,12 +117,12 @@ const FaqSection = () => {
         {/* Additional Support */}
         <div className="mt-16 text-center p-8 bg-indigo-50 rounded-chef-lg shadow-chef-sm">
           <h3 className="text-xl font-semibold mb-4 text-gray-900">Still have questions?</h3>
-          <p className="text-gray-600 mb-6">Our team is ready to help you get started with SalesChef.</p>
+          <p className="text-gray-600 mb-6">Our team is ready to show you exactly how SalesChef will work for YOUR specific products and challenges.</p>
           <Button 
             size="lg" 
             className="bg-indigo-800 hover:bg-indigo-900 text-white"
           >
-            Contact Sales
+            Get a Personalized Demo
           </Button>
         </div>
       </div>
