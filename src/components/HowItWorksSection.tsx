@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Database, ChefHat, BarChart3, ArrowRight, Globe, Utensils, Palette, FileType, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -74,7 +75,7 @@ const HowItWorksSection = () => {
       icon: FileType,
       title: "Tailor the Recipe (Defining Stakeholder Views)",
       kitchenDescription: "Creates separate \"views\" of product data for different channels (retail, marketing, internal teams). Often requires manual effort to format or refine each view.",
-      chefDescription: "Define — Bridging every stakeholder's needs! Identifies exactly what each person wants across the sales journey. Automatically tailors content for buyers, marketers, eCommerce teams, designers, and retail staff. Generates custom templates, documents, and outputs specific to each role—no more guesswork or manual adaptation."
+      chefDescription: "Define — Mapping industry-specific requirements! Identifies the unique informational needs across different sectors and job roles. Creates specialized views for buyers, marketers, eCommerce teams, designers, and retail staff based on their specific requirements. Establishes the framework for what each stakeholder needs before content creation begins."
     },
     {
       number: 4,
