@@ -124,6 +124,10 @@ export default {
         "spin-slow": {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" }
+        },
+        "agent-pulse": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" }
         }
 			},
 			animation: {
@@ -134,7 +138,8 @@ export default {
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
         "float": "float 4s ease-in-out infinite",
         "glow": "glow 2s ease-in-out infinite",
-        "spin-slow": "spin-slow 40s linear infinite"
+        "spin-slow": "spin-slow 40s linear infinite",
+        "agent-pulse": "agent-pulse 3s ease-in-out infinite"
 			},
       backgroundImage: {
         'grid-purple-500': 'linear-gradient(to right, rgb(168 85 247 / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(168 85 247 / 0.1) 1px, transparent 1px)',
