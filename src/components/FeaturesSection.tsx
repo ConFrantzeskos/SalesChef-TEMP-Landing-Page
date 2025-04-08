@@ -105,8 +105,15 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="chef-section bg-gray-50" id="features">
-      <div className="chef-container">
+    <section className="chef-section bg-gray-50 relative overflow-hidden" id="features">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-purple-100/50 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-pink-100/50 rounded-full blur-3xl"></div>
+        <div className="circuit-pattern absolute inset-0 opacity-[0.02]"></div>
+      </div>
+      
+      <div className="chef-container relative z-10">
         {/* Section header */}
         <div className="chef-header">
           <div className="flex items-center justify-center mb-6">
@@ -132,6 +139,14 @@ const FeaturesSection = () => {
               number={index + 1}
             />
           ))}
+        </div>
+        
+        {/* Enterprise Ready Badge */}
+        <div className="mt-16 max-w-md mx-auto">
+          <div className="flex items-center justify-center py-4 px-6 bg-purple-900 rounded-full text-white">
+            <Shield className="h-5 w-5 text-purple-300 mr-2" />
+            <span className="text-sm font-medium">Enterprise-Grade. SOC 2 Type II Certified.</span>
+          </div>
         </div>
       </div>
     </section>

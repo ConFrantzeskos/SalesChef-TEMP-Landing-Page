@@ -4,7 +4,11 @@ import Hero from '@/components/Hero';
 import FaqSection from '@/components/FaqSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import FeaturesSection from '@/components/FeaturesSection';
-import { ArrowUp, ChefHat } from 'lucide-react';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import EnterpriseLogos from '@/components/EnterpriseLogos';
+import CtaSection from '@/components/CtaSection';
+import Footer from '@/components/Footer';
+import { ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 
@@ -32,8 +36,11 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <EnterpriseLogos />
         <FeaturesSection />
         <HowItWorksSection />
+        <TestimonialsSection />
+        <CtaSection />
         <FaqSection />
       </main>
       
@@ -49,60 +56,7 @@ const Index = () => {
         </Button>
       )}
       
-      <footer className="bg-gray-50 py-12 text-center text-gray-600">
-        <div className="chef-container">
-          <div className="mb-8 flex items-center justify-center">
-            <ChefHat className="h-6 w-6 text-purple-700 mr-2" />
-            <span className="text-xl font-semibold text-gradient-primary">SalesChef</span>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-left max-w-5xl mx-auto">
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-4">Platform</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#features" className="text-gray-600 hover:text-purple-700">Features</a></li>
-                <li><a href="#how-it-works" className="text-gray-600 hover:text-purple-700">How It Works</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Integrations</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Enterprise</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Documentation</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Case Studies</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Webinars</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Blog</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-4">Company</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">About Us</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Careers</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Partners</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Compliance</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-purple-700">Security</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-200 pt-8">
-            <p className="text-sm">© {new Date().getFullYear()} SalesChef. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
