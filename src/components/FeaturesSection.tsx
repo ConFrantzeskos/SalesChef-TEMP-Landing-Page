@@ -10,7 +10,10 @@ import {
   BarChart3,
   Globe,
   Shield,
-  Workflow
+  Workflow,
+  Target,
+  LineChart,
+  Layers
 } from 'lucide-react';
 
 interface FeatureCardProps {
@@ -70,7 +73,7 @@ const FeaturesSection = () => {
       description: "Connect and normalize product data from legacy systems, PLM software, ERP platforms, and global supplier networks with zero data transformation overhead."
     },
     {
-      icon: Shield,
+      icon: Target,
       agentName: "Discover",
       title: "Market Intelligence",
       description: "Monitor competitive positioning, capture customer sentiment, and identify market gaps to inform product strategy and positioning across your entire portfolio."
@@ -88,13 +91,13 @@ const FeaturesSection = () => {
       description: "Maintain perfect brand consistency while supporting regional variations, localization requirements, and channel-specific guidelines at enterprise scale."
     },
     {
-      icon: FileUp,
+      icon: Layers,
       agentName: "Develop",
       title: "Automated Content Operations",
       description: "Generate channel-optimized digital assets, marketing materials, product launch kits, and localized content that meets regulatory requirements in each market."
     },
     {
-      icon: BarChart3,
+      icon: LineChart,
       agentName: "Dissect",
       title: "Enterprise Performance Analytics",
       description: "Connect product content directly to revenue impact with comprehensive dashboards, executive reporting, and predictive analytics for portfolio optimization."
@@ -102,7 +105,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="chef-section bg-gray-50">
+    <section className="chef-section bg-gray-50" id="features">
       <div className="chef-container">
         {/* Section header */}
         <div className="chef-header">
@@ -112,8 +115,8 @@ const FeaturesSection = () => {
               Enterprise AI Platform
             </h2>
           </div>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            SalesChef delivers an end-to-end product information management solution that enables marketing and eCommerce leaders to transform complex product data into revenue-driving content across all channels.
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            SalesChef delivers an end-to-end product experience management solution that enables marketing and eCommerce leaders to transform complex product data into revenue-driving content across all channels.
           </p>
         </div>
         

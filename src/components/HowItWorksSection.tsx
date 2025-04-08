@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Database, ChefHat, BarChart3, ArrowRight, Globe, Utensils, Palette, FileType, Send } from 'lucide-react';
+import { Database, ChefHat, BarChart3, ArrowRight, Globe, Utensils, Palette, FileType, Send, LineChart, Target, Layers, Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -34,7 +34,7 @@ const Step = ({ number, title, kitchenDescription, chefDescription, icon: Icon }
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-medium text-purple-800 mb-2 flex items-center">
                   <Utensils className="h-4 w-4 mr-2" />
-                  The Kitchen (Core PIM)
+                  Traditional PIM Approach
                 </h4>
                 <p className="text-gray-600">{kitchenDescription}</p>
               </div>
@@ -42,7 +42,7 @@ const Step = ({ number, title, kitchenDescription, chefDescription, icon: Icon }
               <div className="bg-purple-50 p-4 rounded-lg">
                 <h4 className="font-medium text-purple-800 mb-2 flex items-center">
                   <ChefHat className="h-4 w-4 mr-2" />
-                  The Chef (SalesChef)
+                  SalesChef Enterprise Solution
                 </h4>
                 <p className="text-purple-700">{chefDescription}</p>
               </div>
@@ -59,56 +59,56 @@ const HowItWorksSection = () => {
     {
       number: 1,
       icon: Database,
-      title: "Stock the Pantry (Data Import & Normalization)",
-      kitchenDescription: "Receives raw product data in bulk (CSV, Excel, PDFs, etc.). Basic structure for categorizing and storing it (like shelves in a pantry). Some manual cleanup and reformatting tools.",
-      chefDescription: "Drop — Enterprise-grade data foundation! Automatically processes and integrates complex product data from multiple sources, legacy systems, and third-party vendors. Normalizes and standardizes data across departments, regions, and product lines while maintaining compliance with your enterprise taxonomy."
+      title: "Enterprise Data Integration",
+      kitchenDescription: "Manual data imports and exports, tedious cleanup of inconsistent formats, and resource-intensive normalization processes that can take months to complete.",
+      chefDescription: "Drop — Seamless enterprise integration! Connect directly to your ERP, PLM, and supplier portals to automatically normalize and standardize product data across your global organization with no manual reformatting."
     },
     {
       number: 2,
-      icon: ChefHat,
-      title: "Gather Extra Flavors (Data Enrichment & Tagging)",
-      kitchenDescription: "Lets you add attributes, tags, or categories. Stores references for competitor info or notes. Basic library for images, documents (like the pantry for extra spices).",
-      chefDescription: "Discover — Automated competitive intelligence! Provides eCommerce leaders with market insights, competitor positioning, and customer sentiment analysis at scale. Maps your product portfolio against market trends and creates enriched product data that drives conversion across all channels."
+      icon: Target,
+      title: "Market & Competitive Intelligence",
+      kitchenDescription: "Separate, siloed market research efforts across departments with inconsistent methodologies and no integration with product data management.",
+      chefDescription: "Discover — Real-time competitive insights! Continuously monitor your digital shelf position, track competitors, and identify market opportunities with AI-powered analysis that enriches your product data automatically."
     },
     {
       number: 3,
-      icon: FileType,
-      title: "Tailor the Recipe (Defining Stakeholder Views)",
-      kitchenDescription: "Creates separate \"views\" of product data for different channels (retail, marketing, internal teams). Often requires manual effort to format or refine each view.",
-      chefDescription: "Define — Align cross-functional teams! Creates role-specific information views for CMOs, eCommerce directors, channel managers, and regional teams. Develops customized templates and dashboards that deliver actionable data to each executive stakeholder based on KPIs and strategic objectives."
+      icon: Shield,
+      title: "Stakeholder & Compliance Management",
+      kitchenDescription: "Manual creation of separate views for different departments, with tedious version control and compliance verification that causes delays in go-to-market.",
+      chefDescription: "Define — Streamlined cross-functional alignment! Create role-specific dashboards for executives, marketers, regional teams, and channel managers that ensure perfect regulatory compliance in each market."
     },
     {
       number: 4,
       icon: Palette,
-      title: "Ensure Brand Consistency (Branding & Design)",
-      kitchenDescription: "Stores brand guidelines, assets, logos. Houses product images, letting you attach them to SKUs. Typically reliant on manual checks to match brand standards.",
-      chefDescription: "Design — Enterprise brand governance! Ensures brand consistency across all global markets and channels with automated style guide enforcement. Integrates with your existing DAM systems to apply brand standards to all content outputs while supporting localization and region-specific requirements."
+      title: "Global Brand Governance",
+      kitchenDescription: "Multiple, fragmented design systems with inconsistent brand application across regions and channels requiring extensive manual review and correction.",
+      chefDescription: "Design — Enterprise brand consistency at scale! Implement automated brand governance that ensures perfect consistency while supporting regional variations and channel-specific requirements across your global footprint."
     },
     {
       number: 5,
-      icon: ChefHat,
-      title: "Whip Up the Dish (Content Creation)",
-      kitchenDescription: "Can generate basic export templates (PDF sell sheets, product feeds). Usually demands manual copy/paste or separate tools for real creative work.",
-      chefDescription: "Develop — Scale content operations! Automates the creation of omnichannel assets that marketing leaders need: product launch kits, digital shelf content, campaign materials, and localized assets. Reduces content production time by 80% while maintaining compliance with regulatory requirements."
+      icon: Layers,
+      title: "Omnichannel Content Creation",
+      kitchenDescription: "Resource-intensive production of content for each channel, with duplicate effort, inconsistent messaging, and limited scalability for global operations.",
+      chefDescription: "Develop — AI-powered content engine! Scale your content operations by automatically generating channel-optimized assets, marketing materials, and localized content that meets regulatory requirements in each market."
     },
     {
       number: 6,
       icon: Send,
-      title: "Serve Across Channels (Syndication/Distribution)",
-      kitchenDescription: "Distributes product data to online channels (e.g., Amazon, Shopify), often just exporting standard specs. Maintains feeds for pricing/stock, but each channel integration can be tedious.",
-      chefDescription: "Distribute — Omnichannel orchestration! Synchronizes product content across all enterprise touchpoints: global marketplaces, retailer portals, direct-to-consumer platforms, and internal systems. Provides digital shelf analytics and optimization while supporting complex distribution workflows."
+      title: "Global Channel Syndication",
+      kitchenDescription: "Manual publishing processes to each channel with tedious data transformation, formatting issues, and no visibility into marketplace performance.",
+      chefDescription: "Distribute — Seamless omnichannel orchestration! Synchronize perfect product content across all enterprise touchpoints: global marketplaces, retailer portals, direct-to-consumer platforms, and internal systems."
     },
     {
       number: 7,
-      icon: BarChart3,
-      title: "Taste & Refine (Reporting & Analytics)",
-      kitchenDescription: "Basic checks on data completeness (which fields are missing?). Possibly shows usage stats, but rarely ties to deeper performance metrics.",
-      chefDescription: "Dissect — Actionable business intelligence! Delivers comprehensive analytics dashboards for C-suite visibility into product performance, content ROI, and digital shelf presence. Integrates with your enterprise BI tools to connect product content directly to revenue impact and growth KPIs."
+      icon: LineChart,
+      title: "Enterprise Performance Analytics",
+      kitchenDescription: "Basic usage metrics with no connection to revenue impact, making it impossible to demonstrate ROI or optimize product content strategy.",
+      chefDescription: "Dissect — Executive-level business intelligence! Connect product content directly to revenue with C-suite dashboards, predictive analytics, and comprehensive reports that drive portfolio optimization and growth."
     }
   ];
 
   return (
-    <section className="chef-section bg-white">
+    <section className="chef-section bg-white" id="how-it-works">
       <div className="chef-container">
         <div className="chef-header">
           <div className="flex items-center justify-center mb-6">

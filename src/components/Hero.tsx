@@ -31,26 +31,26 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 const Hero = () => {
   return (
     <div className="px-4 py-20 md:py-32 sm:px-6 lg:px-8 min-h-[90vh] flex flex-col justify-start bg-gradient-to-br from-purple-50 via-white to-pink-50/30">
-      {/* Hero Text and CTA Section (Moved to the top) */}
+      {/* Hero Text and CTA Section */}
       <div className="max-w-7xl mx-auto w-full mb-24">
         <div className="text-left">
           <div className="flex items-center gap-2">
             <span className="chef-chip bg-purple-100 text-purple-800 shadow-sm">
               <Sparkles className="h-3 w-3" />
-              AI-Powered
+              Enterprise AI Platform
             </span>
             <span className="chef-chip bg-pink-100 text-pink-800 shadow-sm">
-              PXM Platform
+              Product Experience Management
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gradient-primary mt-6">
-            From <span className="text-purple-700">Specs</span> to{" "}
-            <span className="text-pink-600">Sales</span>
+            Transform <span className="text-purple-700">Product Data</span> into{" "}
+            <span className="text-pink-600">Revenue</span>
           </h1>
 
-          <p className="text-xl text-gray-600 max-w-xl leading-relaxed mt-6">
-            The world's first AI-native Product Information Management platform that transforms raw specs into delicious content.
+          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed mt-6">
+            The AI-powered enterprise platform that enables marketing and eCommerce leaders to create exceptional product experiences across every digital touchpoint.
           </p>
 
           <div className="flex items-center pt-2 pb-6 mt-6">
@@ -58,7 +58,7 @@ const Hero = () => {
               <ChefHat className="h-6 w-6 text-white" />
             </div>
             <p className="text-sm text-gray-600 italic">
-              "Like a professional chef, we take your raw product ingredients and create perfect dishes for every stakeholder."
+              "SalesChef empowers enterprise teams to deliver consistent, compelling product experiences that drive conversion across all channels and markets."
             </p>
           </div>
 
@@ -67,7 +67,7 @@ const Hero = () => {
               size="lg" 
               className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white shadow-lg transition-all duration-300"
             >
-              Book a Demo
+              Request Executive Demo
               <ArrowRight className="ml-2 h-4 w-4 animate-bounce-x" />
             </Button>
             <Button 
@@ -75,7 +75,7 @@ const Hero = () => {
               variant="outline" 
               className="border-purple-200 text-purple-800 hover:bg-purple-50 transition-all duration-300"
             >
-              How It Works
+              Platform Overview
             </Button>
           </div>
         </div>
@@ -87,7 +87,7 @@ const Hero = () => {
           {/* Unstructured Data Section */}
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <div className="bg-white/15 backdrop-blur-sm px-6 py-2 rounded-full mb-8 shadow-sm">
-              <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Unstructured Data</span>
+              <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Enterprise Data Sources</span>
             </div>
             
             <div className="relative h-64 w-full rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur-sm shadow-lg">
@@ -101,27 +101,27 @@ const Hero = () => {
                 
                 {/* Document tags */}
                 <div className="absolute top-[8%] left-[45%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                  supplier forms
+                  legacy ERP systems
                 </div>
                 <div className="absolute top-[32%] left-[45%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                  compliance specs
+                  global PLM platforms
                 </div>
                 <div className="absolute top-[55%] left-[20%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                  factory specs
+                  regional catalog data
                 </div>
                 
                 {/* File type icons */}
                 <div className="absolute top-[18%] left-[15%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
                   <Image className="h-3 w-3 inline mr-1" />
-                  images
+                  DAM systems
                 </div>
                 <div className="absolute top-[45%] left-[35%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
                   <FileSpreadsheet className="h-3 w-3 inline mr-1" />
-                  spreadsheets
+                  supplier data
                 </div>
                 <div className="absolute top-[65%] left-[30%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
                   <Database className="h-3 w-3 inline mr-1" />
-                  databases
+                  master data
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ const Hero = () => {
               <CardHeader className="pb-2 text-center">
                 <div className="flex items-center justify-center gap-2">
                   <Radar className="h-4 w-4 text-white" />
-                  <CardTitle className="text-sm font-medium text-white tracking-wide">Data Enrichment</CardTitle>
+                  <CardTitle className="text-sm font-medium text-white tracking-wide">Enterprise AI Orchestration</CardTitle>
                   <Radar className="h-4 w-4 text-white" />
                 </div>
               </CardHeader>
@@ -142,32 +142,32 @@ const Hero = () => {
                   {/* Enrichment items */}
                   <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
                     <Globe className="h-3.5 w-3.5 group-hover:text-white transition-colors" />
-                    <span className="text-xs font-medium">Web Scraping</span>
+                    <span className="text-xs font-medium">Competitive Intel</span>
                   </div>
                   
                   <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
                     <MessagesSquare className="h-3.5 w-3.5 group-hover:text-white transition-colors" />
-                    <span className="text-xs font-medium">Social Media</span>
+                    <span className="text-xs font-medium">Market Trends</span>
                   </div>
                   
                   <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
                     <Star className="h-3.5 w-3.5 group-hover:text-white transition-colors" />
-                    <span className="text-xs font-medium">Review Sites</span>
+                    <span className="text-xs font-medium">Review Analysis</span>
                   </div>
                   
                   <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
                     <Search className="h-3.5 w-3.5 group-hover:text-white transition-colors" />
-                    <span className="text-xs font-medium">Keywords</span>
+                    <span className="text-xs font-medium">Search Trends</span>
                   </div>
                   
                   <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
                     <Hash className="h-3.5 w-3.5 group-hover:text-white transition-colors" />
-                    <span className="text-xs font-medium">Product Attributes</span>
+                    <span className="text-xs font-medium">Taxonomy Builder</span>
                   </div>
                   
                   <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
                     <Target className="h-3.5 w-3.5 group-hover:text-white transition-colors" />
-                    <span className="text-xs font-medium">Competitive Insights</span>
+                    <span className="text-xs font-medium">Portfolio Analysis</span>
                   </div>
                 </div>
               </CardContent>
@@ -187,13 +187,13 @@ const Hero = () => {
               <CardHeader className="pb-2 text-center">
                 <div className="flex items-center justify-center gap-2">
                   <Database className="h-4 w-4 text-white" />
-                  <CardTitle className="text-sm font-medium text-white tracking-wide">SalesChef PIM/DAM</CardTitle>
+                  <CardTitle className="text-sm font-medium text-white tracking-wide">Enterprise PXM Platform</CardTitle>
                   <Database className="h-4 w-4 text-white" />
                 </div>
               </CardHeader>
               <CardContent className="pb-4">
                 <div className="text-xs text-white/90 font-medium text-center">
-                  Product Source of Truth and Assets
+                  Unified Product Experience Management
                 </div>
               </CardContent>
             </Card>
@@ -202,7 +202,7 @@ const Hero = () => {
           {/* Content Output */}
           <div className="w-full md:w-1/3 flex flex-col items-center">
             <div className="bg-white/15 backdrop-blur-sm px-6 py-2 rounded-full mb-8 shadow-sm">
-              <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Content Transformation</span>
+              <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Omnichannel Outputs</span>
             </div>
             
             <div className="grid grid-cols-3 gap-3 w-full">
@@ -210,42 +210,42 @@ const Hero = () => {
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <FileText className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Sales Sheet</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Global Marketplaces</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <ShoppingBag className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">PDP</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">D2C Platforms</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <BarChart2 className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Analytics</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Executive Dashboards</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <FileText className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">PDF</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Campaign Assets</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <Image className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Social</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Rich Media</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <MessageCircle className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Scripts</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Chatbot Content</p>
                 </CardContent>
               </Card>
               
@@ -260,35 +260,35 @@ const Hero = () => {
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <LineChart className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Reports</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Growth Reports</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <Image className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Assets</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Multi-Format Assets</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <Database className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Marketplace Data</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Channel Syndication</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <Palette className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Design</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Global Brand Assets</p>
                 </CardContent>
               </Card>
               
               <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-24 flex flex-col">
                 <CardContent className="p-3 flex flex-col items-center justify-center h-full">
                   <ShieldCheck className="h-5 w-5 text-purple-600 mb-1.5" />
-                  <p className="text-xs font-semibold text-gray-800 text-center">Compliance</p>
+                  <p className="text-xs font-semibold text-gray-800 text-center">Compliance Docs</p>
                 </CardContent>
               </Card>
             </div>
