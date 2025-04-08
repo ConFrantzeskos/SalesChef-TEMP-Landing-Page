@@ -7,7 +7,10 @@ import {
   Users, 
   Palette, 
   FileUp, 
-  BarChart3
+  BarChart3,
+  Globe,
+  Shield,
+  Workflow
 } from 'lucide-react';
 
 interface FeatureCardProps {
@@ -63,38 +66,38 @@ const FeaturesSection = () => {
     {
       icon: Database,
       agentName: "Drop",
-      title: "Clean-up From Chaos",
-      description: "Ingest, correct, standardize and categorize any product data, regardless of format or source."
+      title: "Enterprise Data Integration",
+      description: "Connect and normalize product data from legacy systems, PLM software, ERP platforms, and global supplier networks with zero data transformation overhead."
     },
     {
-      icon: Search,
+      icon: Shield,
       agentName: "Discover",
-      title: "Context Enrichment",
-      description: "Extract reasons to buy, keywords, and insights from reviews, social media, and competitor data."
+      title: "Market Intelligence",
+      description: "Monitor competitive positioning, capture customer sentiment, and identify market gaps to inform product strategy and positioning across your entire portfolio."
     },
     {
       icon: Users,
       agentName: "Define",
-      title: "Persona Intelligence",
-      description: "Define who needs what info and tailor content for each stakeholder, from sales to retail staff."
+      title: "Cross-Functional Alignment",
+      description: "Create personalized dashboards for C-suite executives, regional directors, and channel managers with role-specific KPIs and data visualization."
     },
     {
       icon: Palette,
       agentName: "Design",
-      title: "Brand & Tone Consistency",
-      description: "Ensure all content matches your brand guidelines and create sales sheets, PDPs, and other templates for every channel and format."
+      title: "Global Brand Governance",
+      description: "Maintain perfect brand consistency while supporting regional variations, localization requirements, and channel-specific guidelines at enterprise scale."
     },
     {
       icon: FileUp,
       agentName: "Develop",
-      title: "Multimodal Content Generation",
-      description: "Create optimized text, images, videos, and more for every channel and purpose."
+      title: "Automated Content Operations",
+      description: "Generate channel-optimized digital assets, marketing materials, product launch kits, and localized content that meets regulatory requirements in each market."
     },
     {
       icon: BarChart3,
       agentName: "Dissect",
-      title: "Closed-loop Intelligence",
-      description: "Analyze content performance and continuously improve based on real-world results."
+      title: "Enterprise Performance Analytics",
+      description: "Connect product content directly to revenue impact with comprehensive dashboards, executive reporting, and predictive analytics for portfolio optimization."
     }
   ];
 
@@ -106,11 +109,11 @@ const FeaturesSection = () => {
           <div className="flex items-center justify-center mb-6">
             <ChefHat className="h-8 w-8 text-purple-700 mr-2" />
             <h2 className="text-gradient-primary">
-              Our AI Chef Team
+              Enterprise AI Platform
             </h2>
           </div>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Like a professional kitchen, SalesChef's AI agents work together to transform raw product data into delicious, revenue-driving content.
+            SalesChef delivers an end-to-end product information management solution that enables marketing and eCommerce leaders to transform complex product data into revenue-driving content across all channels.
           </p>
         </div>
         
