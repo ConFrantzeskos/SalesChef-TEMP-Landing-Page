@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { Database, ChefHat, BarChart3, ArrowRight, Globe, Utensils, Palette, FileType, Send, LineChart, Target, Layers, Shield } from 'lucide-react';
+import { Database, ChefHat, ArrowRight, Globe, Utensils, Palette, Send, LineChart, Target, Layers, Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from 'framer-motion';
 
 interface StepProps {
   number: number;
@@ -14,43 +15,50 @@ interface StepProps {
 
 const Step = ({ number, title, traditionalApproach, salesChefSolution, icon: Icon }: StepProps) => {
   return (
-    <Card className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 transition-all duration-300 hover:shadow-chef-md group overflow-hidden">
-      <CardContent className="p-8">
-        <div className="flex items-start gap-6">
-          <div className="flex-shrink-0">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-100 to-pink-100">
-              <span className="text-xl font-bold text-purple-800">{number}</span>
-            </div>
-            <div className="h-full w-[1px] bg-gradient-to-b from-purple-300 to-pink-300 mx-auto mt-4 mb-4 hidden md:block"></div>
-          </div>
-          
-          <div className="flex-1">
-            <div className="mb-4">
-              <Icon className="h-8 w-8 text-purple-700 mb-3" />
-              <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
+    <motion.div
+      initial={{ opacity: 0, x: number % 2 === 0 ? 20 : -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: number * 0.1 }}
+      viewport={{ once: true }}
+    >
+      <Card className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 transition-all duration-300 hover:shadow-chef group overflow-hidden">
+        <CardContent className="p-8">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-xl font-bold text-purple-800">{number}</span>
+              </div>
+              <div className="h-full w-[1px] bg-gradient-to-b from-purple-300 to-pink-300 mx-auto mt-4 mb-4 hidden md:block"></div>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-medium text-gray-800 mb-2 flex items-center">
-                  <Utensils className="h-4 w-4 mr-2 text-gray-500" />
-                  Traditional PIM Approach
-                </h4>
-                <p className="text-gray-600">{traditionalApproach}</p>
+            <div className="flex-1">
+              <div className="mb-4">
+                <Icon className="h-8 w-8 text-purple-700 mb-3" />
+                <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
               </div>
               
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h4 className="font-medium text-purple-800 mb-2 flex items-center">
-                  <ChefHat className="h-4 w-4 mr-2" />
-                  SalesChef Enterprise Solution
-                </h4>
-                <p className="text-purple-700">{salesChefSolution}</p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1">
+                  <h4 className="font-medium text-gray-800 mb-2 flex items-center">
+                    <Utensils className="h-4 w-4 mr-2 text-gray-500" />
+                    The Old Way
+                  </h4>
+                  <p className="text-gray-600">{traditionalApproach}</p>
+                </div>
+                
+                <div className="bg-purple-50 p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1">
+                  <h4 className="font-medium text-purple-800 mb-2 flex items-center">
+                    <ChefHat className="h-4 w-4 mr-2" />
+                    The SalesChef Way
+                  </h4>
+                  <p className="text-purple-700">{salesChefSolution}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 
@@ -117,17 +125,23 @@ const HowItWorksSection = () => {
       </div>
       
       <div className="chef-container relative z-10">
-        <div className="chef-header">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="chef-header"
+        >
           <div className="flex items-center justify-center mb-6">
             <ChefHat className="h-8 w-8 text-purple-700 mr-2" />
-            <h2 className="text-gradient-primary">
+            <h2 className="text-gradient-primary text-3xl md:text-4xl font-bold">
               Enterprise-Grade PIM Automation
             </h2>
           </div>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
             Our AI-powered platform transforms complex enterprise product data into strategic business assets, enabling marketing and eCommerce leaders to accelerate time-to-market and drive digital shelf performance.
           </p>
-        </div>
+        </motion.div>
         
         <div className="max-w-5xl mx-auto space-y-8 mb-16">
           {steps.map((step, index) => (
@@ -142,21 +156,27 @@ const HowItWorksSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-16">
-          <div className="inline-block p-8 rounded-chef-lg bg-gradient-to-r from-purple-50 to-pink-50 shadow-chef-sm">
-            <ChefHat className="h-10 w-10 mx-auto mb-6 text-purple-700" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <div className="inline-block p-8 rounded-chef-lg bg-gradient-to-r from-purple-50 to-pink-50 shadow-chef-sm transform transition-all duration-300 hover:shadow-chef-md hover:-translate-y-1">
+            <ChefHat className="h-10 w-10 mx-auto mb-6 text-purple-700 animate-pulse-soft" />
             <p className="text-lg font-medium text-gray-800 mb-6">
               Ready to transform your enterprise product content strategy?
             </p>
             <Button 
               size="lg" 
-              className="chef-button-primary"
+              className="chef-button-primary group"
             >
               Request Executive Demo
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:animate-bounce-x" />
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 
+import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import FaqSection from '@/components/FaqSection';
@@ -10,7 +11,7 @@ import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
 import { ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -45,16 +46,25 @@ const Index = () => {
       </main>
       
       {/* Scroll to top button */}
-      {showScrollTop && (
-        <Button 
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 rounded-full bg-purple-700 hover:bg-purple-800 text-white shadow-lg z-50"
-          size="icon"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp className="h-5 w-5" />
-        </Button>
-      )}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Button 
+              onClick={scrollToTop}
+              className="fixed bottom-8 right-8 p-3 rounded-full bg-purple-700 hover:bg-purple-800 text-white shadow-lg z-50 group"
+              size="icon"
+              aria-label="Scroll to top"
+            >
+              <ArrowUp className="h-5 w-5 group-hover:animate-bounce" />
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
       
       <Footer />
     </div>

@@ -3,18 +3,15 @@ import React from 'react';
 import { 
   ChefHat,
   Database, 
-  Search, 
+  Target, 
   Users, 
   Palette, 
-  FileUp, 
-  BarChart3,
-  Globe,
-  Shield,
-  Workflow,
-  Target,
+  Layers,
   LineChart,
-  Layers
+  Shield
 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Card } from '@/components/ui/card';
 
 interface FeatureCardProps {
   icon: React.ElementType;
@@ -34,20 +31,26 @@ const FeatureCard = ({
   className
 }: FeatureCardProps) => {
   return (
-    <div className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 p-8 transition-all duration-300 hover:shadow-chef-md group">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: number * 0.1 }}
+      viewport={{ once: true }}
+      className="relative bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 p-8 transition-all duration-300 hover:shadow-chef group"
+    >
       {/* Step number */}
       <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-800 font-semibold text-sm">
         {number}
       </div>
       
       {/* Icon */}
-      <div className="p-3 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 inline-flex mb-6">
+      <div className="p-3 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 inline-flex mb-6 group-hover:scale-110 transition-transform duration-300">
         <Icon className="h-6 w-6 text-purple-800" />
       </div>
       
       {/* Agent name */}
       <div className="mb-2">
-        <span className="text-xs font-semibold uppercase tracking-wider text-purple-600">
+        <span className="text-xs font-semibold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-1 rounded-full">
           {agentName} Agent
         </span>
       </div>
@@ -56,11 +59,11 @@ const FeatureCard = ({
       <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
       <p className="text-gray-600 leading-relaxed">{description}</p>
       
-      {/* Connecting line */}
+      {/* Connecting line - only show in desktop */}
       {number < 6 && (
         <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-300 to-pink-300 transform -translate-y-1/2 z-10"></div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
@@ -115,20 +118,26 @@ const FeaturesSection = () => {
       
       <div className="chef-container relative z-10">
         {/* Section header */}
-        <div className="chef-header">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="chef-header"
+        >
           <div className="flex items-center justify-center mb-6">
             <ChefHat className="h-8 w-8 text-purple-700 mr-2" />
-            <h2 className="text-gradient-primary">
+            <h2 className="text-gradient-primary text-3xl md:text-4xl font-bold">
               Enterprise AI Platform
             </h2>
           </div>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             SalesChef delivers an end-to-end product experience management solution that enables marketing and eCommerce leaders to transform complex product data into revenue-driving content across all channels.
           </p>
-        </div>
+        </motion.div>
         
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-12">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -142,12 +151,18 @@ const FeaturesSection = () => {
         </div>
         
         {/* Enterprise Ready Badge */}
-        <div className="mt-16 max-w-md mx-auto">
-          <div className="flex items-center justify-center py-4 px-6 bg-purple-900 rounded-full text-white">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16 max-w-md mx-auto"
+        >
+          <div className="flex items-center justify-center py-4 px-6 bg-gradient-to-r from-purple-900 to-purple-800 rounded-full text-white shadow-lg hover:shadow-xl transition-shadow duration-300">
             <Shield className="h-5 w-5 text-purple-300 mr-2" />
             <span className="text-sm font-medium">Enterprise-Grade. SOC 2 Type II Certified.</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

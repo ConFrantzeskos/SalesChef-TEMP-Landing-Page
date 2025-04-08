@@ -1,29 +1,37 @@
 
 import React from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, ChefHat } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 interface FaqItemProps {
   question: string;
   answer: string;
   isOpen: boolean;
   onClick: () => void;
+  index: number;
 }
 
-const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => {
+const FaqItem = ({ question, answer, isOpen, onClick, index }: FaqItemProps) => {
   return (
-    <div className="border-b border-gray-200 overflow-hidden">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="border-b border-gray-200 overflow-hidden"
+    >
       <button 
         onClick={onClick}
-        className="w-full px-6 py-5 flex justify-between items-center text-left transition-colors duration-300 focus:outline-none"
+        className="w-full px-6 py-5 flex justify-between items-center text-left transition-colors duration-300 focus:outline-none group"
       >
-        <h3 className="font-medium text-gray-900 text-lg">{question}</h3>
+        <h3 className="font-medium text-gray-900 text-lg group-hover:text-purple-700">{question}</h3>
         <div className="ml-4 flex-shrink-0">
           {isOpen ? (
-            <Minus className="h-5 w-5 text-indigo-800" />
+            <Minus className="h-5 w-5 text-purple-700" />
           ) : (
-            <Plus className="h-5 w-5 text-indigo-800" />
+            <Plus className="h-5 w-5 text-purple-700" />
           )}
         </div>
       </button>
@@ -34,7 +42,7 @@ const FaqItem = ({ question, answer, isOpen, onClick }: FaqItemProps) => {
       )}>
         <p className="text-gray-600">{answer}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -92,17 +100,29 @@ const FaqSection = () => {
     <section className="chef-section bg-white">
       <div className="chef-container">
         {/* Section header */}
-        <div className="chef-header">
-          <h2 className="text-gradient-primary">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="chef-header"
+        >
+          <h2 className="text-gradient-primary text-3xl md:text-4xl font-bold">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
             Got questions? We've got straight-talking answers about how SalesChef will transform your business—no fluff, just facts.
           </p>
-        </div>
+        </motion.div>
         
         {/* FAQ list */}
-        <div className="bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-chef-lg shadow-chef-sm border border-gray-100 mb-16"
+        >
           {faqs.map((faq, index) => (
             <FaqItem
               key={index}
@@ -110,21 +130,29 @@ const FaqSection = () => {
               answer={faq.answer}
               isOpen={openIndex === index}
               onClick={() => toggleFaq(index)}
+              index={index}
             />
           ))}
-        </div>
+        </motion.div>
         
         {/* Additional Support */}
-        <div className="mt-16 text-center p-8 bg-indigo-50 rounded-chef-lg shadow-chef-sm">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center p-8 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-chef-lg shadow-chef-sm transform transition-all duration-300 hover:shadow-chef-md"
+        >
+          <ChefHat className="h-10 w-10 text-purple-700 mx-auto mb-4 animate-pulse-soft" />
           <h3 className="text-xl font-semibold mb-4 text-gray-900">Still have questions?</h3>
           <p className="text-gray-600 mb-6">Our team is ready to show you exactly how SalesChef will work for YOUR specific products and challenges.</p>
           <Button 
             size="lg" 
-            className="bg-indigo-800 hover:bg-indigo-900 text-white"
+            className="bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 text-white shadow-lg"
           >
             Get a Personalized Demo
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
