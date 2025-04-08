@@ -120,6 +120,10 @@ export default {
         "glow": {
           "0%, 100%": { boxShadow: "0 0 5px 0 rgba(255,255,255,0.4)" },
           "50%": { boxShadow: "0 0 20px 0 rgba(255,255,255,0.6)" }
+        },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
         }
 			},
 			animation: {
@@ -129,7 +133,8 @@ export default {
         "fade-in": "fade-in 0.5s ease-out forwards",
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
         "float": "float 4s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite"
+        "glow": "glow 2s ease-in-out infinite",
+        "spin-slow": "spin-slow 40s linear infinite"
 			},
       backgroundImage: {
         'grid-purple-500': 'linear-gradient(to right, rgb(168 85 247 / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(168 85 247 / 0.1) 1px, transparent 1px)',
@@ -140,6 +145,8 @@ export default {
         'chef-sm': '0 4px 12px -2px rgba(147,51,234,0.15)',
         'chef-md': '0 8px 24px -4px rgba(147,51,234,0.2)',
         'chef-lg': '0 12px 36px -6px rgba(147,51,234,0.25)',
+        'glow-purple': '0 0 15px 2px rgba(168, 85, 247, 0.3)',
+        'glow-white': '0 0 20px 5px rgba(255, 255, 255, 0.2)',
       }
 		}
 	},

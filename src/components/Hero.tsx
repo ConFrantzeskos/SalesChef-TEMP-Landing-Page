@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChefHat, Play, Shield, Zap, Trophy, BarChart3 } from "lucide-react";
+import { ArrowRight, ChefHat, Play, Shield, Zap, Trophy, BarChart3, Database, Layers, LineChart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -102,178 +103,248 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Completely Redesigned Platform Showcase */}
+        {/* Transformation Engine Showcase - REDESIGNED */}
         <div className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-3xl shadow-2xl">
-          {/* Main gradient background with enhanced depth */}
           <div className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 p-10 md:p-14 overflow-hidden">
-            {/* Animated particles and decorative elements */}
+            {/* Background elements */}
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute inset-0 opacity-10 bg-grid-purple-500 bg-[size:24px_24px]"></div>
               <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border border-white/10 rounded-full animate-spin-slow" style={{ animationDuration: '40s' }}></div>
               <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 border border-white/5 rounded-full animate-spin-slow" style={{ animationDuration: '30s', animationDirection: 'reverse' }}></div>
             </div>
             
-            {/* Section Title with visual anchor */}
-            <div className="relative mb-10 text-center">
+            {/* Section Title */}
+            <div className="relative mb-12 text-center">
               <div className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-4">
                 <ChefHat className="w-4 h-4 text-purple-300 mr-2" />
-                <h3 className="text-white font-medium text-sm tracking-wider">THE AI-POWERED TRANSFORMATION ENGINE</h3>
+                <h3 className="text-white font-medium text-sm tracking-wider">DATA TRANSFORMATION ENGINE</h3>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-                Turn Complex Data Into Revenue-Driving Assets
+                Turning Enterprise Complexity Into Revenue
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mt-6"></div>
             </div>
             
-            {/* Three-column transformation story with visual flow */}
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-              {/* Column 1: CHALLENGE - Complex Enterprise Data */}
-              <div className="transform transition-all duration-500 hover:translate-y-[-5px]">
-                <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-red-500/20 backdrop-blur-sm mr-3">
-                    <Shield className="w-5 h-5 text-red-300" />
-                  </div>
-                  <h3 className="font-semibold text-white text-lg">THE CHALLENGE</h3>
-                </div>
+            {/* Data Flow Diagram - Completely Redesigned */}
+            <div className="relative z-10">
+              {/* Flow diagram with three interconnected hubs */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0">
                 
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 h-full relative overflow-hidden group">
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-500/50 to-orange-500/50"></div>
-                  
-                  <h4 className="font-bold text-white mb-3 text-xl">Complex Enterprise Data</h4>
-                  <p className="text-white/70 mb-4 leading-relaxed">Fragmented, inconsistent product information trapped across disparate legacy systems</p>
-                  
-                  <div className="grid grid-cols-2 gap-2 mt-4">
-                    {['Legacy ERP', 'PLM Platforms', 'Catalog Data', 'DAM Systems', 'Supplier Data', 'Master Data'].map((item, index) => (
-                      <div 
-                        key={index} 
-                        className="relative bg-white/5 hover:bg-white/10 rounded-lg p-3 text-sm font-medium text-white/80 flex items-center justify-center text-center min-h-[60px] group transition-all duration-300"
-                      >
-                        <span className="group-hover:scale-105 transition-transform duration-300">{item}</span>
-                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400/50 group-hover:w-full transition-all duration-500"></div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Path indicator */}
-                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 z-20">
-                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 shadow-lg">
-                      <ArrowRight className="h-4 w-4 text-white" />
+                {/* Input Hub: Enterprise Data Sources */}
+                <div className="relative">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 relative overflow-hidden"
+                  >
+                    {/* Input Hub Title */}
+                    <div className="flex items-center mb-4">
+                      <Database className="w-6 h-6 text-blue-300 mr-3" />
+                      <h3 className="text-xl font-bold text-white">Enterprise Data</h3>
                     </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Column 2: TRANSFORMATION - SalesChef AI Platform */}
-              <div className="transform transition-all duration-500 hover:translate-y-[-8px]">
-                <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/20 backdrop-blur-sm mr-3">
-                    <Zap className="w-5 h-5 text-purple-300" />
-                  </div>
-                  <h3 className="font-semibold text-white text-lg">THE TRANSFORMATION</h3>
-                </div>
-                
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/15 p-5 h-full relative overflow-hidden shadow-glow-purple group">
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                  
-                  {/* Logo and Platform Name */}
-                  <div className="flex flex-col items-center justify-center mb-6">
-                    <div className="w-20 h-20 bg-white rounded-full shadow-glow-white flex items-center justify-center mb-2">
-                      <img 
-                        src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
-                        alt="SalesChef Logo" 
-                        className="w-4/5 h-4/5 object-contain" 
-                      />
-                    </div>
-                    <h4 className="font-bold text-white text-xl text-center">Enterprise PXM Platform</h4>
-                    <p className="text-white/70 text-sm text-center">Unified Product Experience Management</p>
-                  </div>
-                  
-                  {/* AI Engine Capabilities */}
-                  <div className="relative z-10 mt-4">
-                    <h5 className="text-center text-white/90 font-medium text-sm uppercase tracking-wider mb-3">AI Orchestration Engine</h5>
-                    <div className="grid grid-cols-2 gap-2">
-                      {['Competitive Intel', 'Market Trends', 'Review Analysis', 'Search Trends', 'Taxonomy Builder', 'Portfolio Analysis'].map((feature, index) => (
-                        <div 
-                          key={index} 
-                          className="bg-white/10 hover:bg-white/15 rounded-lg py-2 px-3 text-white/80 text-sm transition-all duration-300 group hover:shadow-inner hover:scale-[1.02] text-center"
+                    
+                    {/* Data Sources Flow */}
+                    <div className="relative flex flex-col gap-3 mb-4">
+                      {[
+                        { name: "ERP Systems", color: "from-blue-500/20 to-blue-600/20" },
+                        { name: "PLM Platforms", color: "from-blue-400/20 to-blue-500/20" },
+                        { name: "DAM Systems", color: "from-blue-300/20 to-blue-400/20" },
+                        { name: "Supplier Networks", color: "from-blue-200/20 to-blue-300/20" },
+                        { name: "Master Data", color: "from-blue-100/20 to-blue-200/20" }
+                      ].map((source, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                          className={`bg-gradient-to-r ${source.color} hover:bg-white/10 rounded-lg p-3 text-white/90 text-sm flex items-center justify-between group transition-all duration-300`}
                         >
-                          <span className="group-hover:text-white transition-colors duration-300">{feature}</span>
-                        </div>
+                          <span>{source.name}</span>
+                          <ArrowRight className="w-4 h-4 text-white/50 group-hover:text-white/90 transition-all" />
+                        </motion.div>
                       ))}
                     </div>
-                  </div>
-
-                  {/* Path indicator */}
-                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 z-20">
-                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg">
-                      <ArrowRight className="h-4 w-4 text-white" />
+                    
+                    {/* Connection to next hub */}
+                    <div className="hidden lg:flex justify-center mt-6">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "100%" }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        viewport={{ once: true }}
+                        className="h-0.5 bg-gradient-to-r from-blue-400/50 to-purple-500/50 w-full"
+                      />
                     </div>
+                  </motion.div>
+
+                  {/* Mobile connector */}
+                  <div className="flex justify-center lg:hidden my-4">
+                    <div className="w-0.5 h-8 bg-gradient-to-b from-blue-400/50 to-purple-500/50" />
                   </div>
+                </div>
+                
+                {/* Processing Hub: AI Engine */}
+                <div className="relative z-20">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 transform lg:scale-110 relative lg:-mx-4 lg:z-10 shadow-xl overflow-hidden"
+                  >
+                    {/* AI Engine glow effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-pink-600/5 animate-pulse-soft" />
+                    
+                    {/* Engine Hub Title */}
+                    <div className="flex items-center mb-6">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30 mr-3">
+                        <Zap className="w-5 h-5 text-purple-200" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">AI Transformation Engine</h3>
+                        <p className="text-xs text-white/60">Unified Product Experience Management</p>
+                      </div>
+                    </div>
+
+                    {/* SalesChef Logo */}
+                    <div className="flex justify-center mb-6">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-glow-white">
+                        <img 
+                          src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
+                          alt="SalesChef Logo" 
+                          className="w-4/5 h-4/5 object-contain" 
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* AI Capabilities - Interactive Hexagon Grid */}
+                    <div className="flex flex-wrap justify-center gap-2 relative z-10">
+                      {[
+                        "Competitive Intel", "Market Analysis", 
+                        "Taxonomy Builder", "Attribute Mapping",
+                        "Content Generation", "Audience Insights"
+                      ].map((capability, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                          viewport={{ once: true }}
+                          className="hex-button relative group"
+                        >
+                          <div className="hex-bg absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-300" />
+                          <div className="hex-content relative z-10 text-xs text-white/90 group-hover:text-white font-medium py-2 px-3 text-center">
+                            {capability}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                    
+                    {/* Processing animations */}
+                    <div className="absolute inset-0 pointer-events-none">
+                      <div className="absolute top-1/2 left-1/2 w-40 h-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-purple-500/20 animate-ping opacity-20" style={{ animationDuration: '3s' }} />
+                      <div className="absolute top-1/2 left-1/2 w-60 h-60 -translate-x-1/2 -translate-y-1/2 rounded-full border border-pink-500/10 animate-ping opacity-10" style={{ animationDuration: '4s' }} />
+                    </div>
+                    
+                    {/* Connection to next hub */}
+                    <div className="hidden lg:flex justify-center mt-6">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "100%" }}
+                        transition={{ duration: 1, delay: 0.7 }}
+                        viewport={{ once: true }}
+                        className="h-0.5 bg-gradient-to-r from-purple-500/50 to-green-400/50 w-full"
+                      />
+                    </div>
+                  </motion.div>
+                  
+                  {/* Mobile connector */}
+                  <div className="flex justify-center lg:hidden my-4">
+                    <div className="w-0.5 h-8 bg-gradient-to-b from-purple-500/50 to-green-400/50" />
+                  </div>
+                </div>
+                
+                {/* Output Hub: Revenue-Driving Assets */}
+                <div className="relative">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 relative overflow-hidden"
+                  >
+                    {/* Output Hub Title */}
+                    <div className="flex items-center mb-4">
+                      <Layers className="w-6 h-6 text-green-300 mr-3" />
+                      <h3 className="text-xl font-bold text-white">Revenue Assets</h3>
+                    </div>
+                    
+                    {/* Output Channels - Dynamic Smart Grid */}
+                    <div className="grid grid-cols-3 gap-2">
+                      {[
+                        "Marketplaces", "D2C Sites", "Retail Channels",
+                        "SEO Content", "Campaign Assets", "Digital Catalogs",
+                        "Social Media", "Analytics Dashboards", "Sales Enablement"
+                      ].map((output, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.2, delay: 0.5 + index * 0.05 }}
+                          viewport={{ once: true }}
+                          className="output-tile relative overflow-hidden group"
+                        >
+                          <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-500/20 group-hover:from-green-500/30 group-hover:to-teal-500/30 transition-all duration-300" />
+                          <div className="absolute top-0 left-0 w-full h-0.5 bg-green-400/40" />
+                          <div className="p-2 text-center">
+                            <span className="text-xs font-medium text-white/90 group-hover:text-white transition-colors duration-300">
+                              {output}
+                            </span>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
                 </div>
               </div>
               
-              {/* Column 3: OUTCOMES - Business Results */}
-              <div className="transform transition-all duration-500 hover:translate-y-[-5px]">
-                <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-500/20 backdrop-blur-sm mr-3">
-                    <Trophy className="w-5 h-5 text-green-300" />
+              {/* Results Bar - Key Business Metrics */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                viewport={{ once: true }}
+                className="mt-12 relative z-10"
+              >
+                <div className="flex flex-col md:flex-row items-center justify-between px-6 py-5 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                  <div className="flex items-center mb-4 md:mb-0">
+                    <LineChart className="w-5 h-5 text-purple-300 mr-2" />
+                    <span className="text-white font-medium text-sm">Business Impact</span>
                   </div>
-                  <h3 className="font-semibold text-white text-lg">THE OUTCOMES</h3>
-                </div>
-                
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 h-full relative overflow-hidden group">
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500/50 to-emerald-500/50"></div>
                   
-                  <h4 className="font-bold text-white mb-3 text-xl">Revenue-Driving Assets</h4>
-                  <p className="text-white/70 mb-4 leading-relaxed">Optimized omnichannel content that drives measurable business growth</p>
-                  
-                  <div className="grid grid-cols-3 gap-2 mt-4">
-                    {[
-                      'Global Marketplaces', 'D2C Platforms', 'Executive Dashboards', 
-                      'Campaign Assets', 'Rich Media', 'SEO Content',
-                      'Growth Reports', 'Multi-Format Assets', 'Channel Syndication',
-                      'Chatbot Content', 'Global Brand Assets', 'Compliance Docs'
-                    ].map((output, index) => (
-                      <div 
-                        key={index} 
-                        className="bg-white/90 hover:bg-white shadow-sm hover:shadow-md rounded-lg p-2 text-center transition-all duration-300 group hover:scale-105 relative overflow-hidden"
-                      >
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-emerald-400"></div>
-                        <p className="text-xs font-semibold text-gray-800">{output}</p>
-                      </div>
-                    ))}
+                  <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-bold text-white">7.8x</p>
+                      <p className="text-xs text-white/60">Faster to Market</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-bold text-white">42%</p>
+                      <p className="text-xs text-white/60">Conversion Lift</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-bold text-white">85%</p>
+                      <p className="text-xs text-white/60">Time Saved</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-bold text-white">327%</p>
+                      <p className="text-xs text-white/60">Average ROI</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            {/* Key Business Metrics */}
-            <div className="mt-12 relative z-10">
-              <div className="flex flex-col md:flex-row items-center justify-between px-4 py-5 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                <div className="flex items-center mb-4 md:mb-0">
-                  <BarChart3 className="w-6 h-6 text-purple-300 mr-3" />
-                  <span className="text-white font-medium">Enterprise Impact Metrics</span>
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-                  <div className="text-center">
-                    <p className="text-2xl md:text-3xl font-bold text-white">7.8x</p>
-                    <p className="text-xs text-white/60">Faster Time-to-Market</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-2xl md:text-3xl font-bold text-white">42%</p>
-                    <p className="text-xs text-white/60">Conversion Increase</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-2xl md:text-3xl font-bold text-white">85%</p>
-                    <p className="text-xs text-white/60">Operation Time Saved</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-2xl md:text-3xl font-bold text-white">327%</p>
-                    <p className="text-xs text-white/60">Average ROI</p>
-                  </div>
-                </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
