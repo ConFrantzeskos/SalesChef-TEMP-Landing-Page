@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChefHat, Play } from "lucide-react";
+import { ArrowRight, ChefHat, Play, Shield, Zap, Trophy, BarChart3 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Hero = () => {
@@ -101,86 +102,132 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Improved Platform Showcase */}
-        <div className="w-full max-w-7xl mx-auto chef-gradient-bg rounded-3xl shadow-xl p-8 md:p-12 overflow-hidden relative">
-          <div className="relative z-10">
-            {/* Platform Diagram with a cleaner, more attractive layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
-              
-              {/* Left Column - Data Sources */}
-              <div className="flex flex-col space-y-6">
-                <div className="bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full mb-2 shadow-sm text-center">
-                  <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Enterprise Data Sources</span>
+        {/* Completely Redesigned Platform Showcase */}
+        <div className="relative w-full max-w-7xl mx-auto overflow-hidden rounded-3xl shadow-2xl">
+          {/* Main gradient background with enhanced depth */}
+          <div className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 p-10 md:p-14 overflow-hidden">
+            {/* Animated particles and decorative elements */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute inset-0 opacity-10 bg-grid-purple-500 bg-[size:24px_24px]"></div>
+              <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border border-white/10 rounded-full animate-spin-slow" style={{ animationDuration: '40s' }}></div>
+              <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 border border-white/5 rounded-full animate-spin-slow" style={{ animationDuration: '30s', animationDirection: 'reverse' }}></div>
+            </div>
+            
+            {/* Section Title with visual anchor */}
+            <div className="relative mb-10 text-center">
+              <div className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-4">
+                <ChefHat className="w-4 h-4 text-purple-300 mr-2" />
+                <h3 className="text-white font-medium text-sm tracking-wider">THE AI-POWERED TRANSFORMATION ENGINE</h3>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                Turn Complex Data Into Revenue-Driving Assets
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mt-6"></div>
+            </div>
+            
+            {/* Three-column transformation story with visual flow */}
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+              {/* Column 1: CHALLENGE - Complex Enterprise Data */}
+              <div className="transform transition-all duration-500 hover:translate-y-[-5px]">
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-red-500/20 backdrop-blur-sm mr-3">
+                    <Shield className="w-5 h-5 text-red-300" />
+                  </div>
+                  <h3 className="font-semibold text-white text-lg">THE CHALLENGE</h3>
                 </div>
                 
-                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20 h-full">
-                  <div className="grid grid-cols-2 gap-3">
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 h-full relative overflow-hidden group">
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-500/50 to-orange-500/50"></div>
+                  
+                  <h4 className="font-bold text-white mb-3 text-xl">Complex Enterprise Data</h4>
+                  <p className="text-white/70 mb-4 leading-relaxed">Fragmented, inconsistent product information trapped across disparate legacy systems</p>
+                  
+                  <div className="grid grid-cols-2 gap-2 mt-4">
                     {['Legacy ERP', 'PLM Platforms', 'Catalog Data', 'DAM Systems', 'Supplier Data', 'Master Data'].map((item, index) => (
-                      <div key={index} className="bg-white/15 hover:bg-white/25 transition-colors duration-300 p-3 rounded-lg text-white text-sm font-medium flex items-center justify-center text-center h-16">
-                        {item}
+                      <div 
+                        key={index} 
+                        className="relative bg-white/5 hover:bg-white/10 rounded-lg p-3 text-sm font-medium text-white/80 flex items-center justify-center text-center min-h-[60px] group transition-all duration-300"
+                      >
+                        <span className="group-hover:scale-105 transition-transform duration-300">{item}</span>
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400/50 group-hover:w-full transition-all duration-500"></div>
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
-              
-              {/* Center Column - AI Platform */}
-              <div className="flex flex-col space-y-6">
-                {/* Central AI Platform */}
-                <div className="relative flex flex-col items-center">
-                  {/* SalesChef Logo with glow effect */}
-                  <div className="relative w-28 h-28 md:w-32 md:h-32 bg-white/95 rounded-full shadow-chef flex items-center justify-center animate-float z-20 mb-5">
-                    <img 
-                      src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
-                      alt="SalesChef Logo" 
-                      className="w-4/5 h-4/5 object-contain" 
-                    />
+
+                  {/* Path indicator */}
+                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 z-20">
+                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 shadow-lg">
+                      <ArrowRight className="h-4 w-4 text-white" />
+                    </div>
                   </div>
-                  
-                  {/* AI Orchestration */}
-                  <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 mb-4">
-                    <CardContent className="p-4">
-                      <div className="text-center mb-3">
-                        <h3 className="text-sm font-semibold text-white tracking-wide">Enterprise AI Orchestration</h3>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2">
-                        {['Competitive Intel', 'Market Trends', 'Review Analysis', 'Search Trends', 'Taxonomy Builder', 'Portfolio Analysis'].map((feature, index) => (
-                          <div 
-                            key={index} 
-                            className="flex items-center justify-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/25 transition-all group cursor-pointer"
-                          >
-                            <span className="text-xs font-medium text-center">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                  
-                  {/* PXM Platform */}
-                  <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <CardContent className="px-4 py-4">
-                      <div className="text-center">
-                        <h3 className="text-sm font-semibold text-white tracking-wide">Enterprise PXM Platform</h3>
-                        <div className="text-xs text-white/90 font-medium mt-1">
-                          Unified Product Experience Management
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  
-                  {/* Decorative connections */}
-                  <div className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-white/0 via-white/30 to-white/0 z-10"></div>
                 </div>
               </div>
               
-              {/* Right Column - Outputs */}
-              <div className="flex flex-col space-y-6">
-                <div className="bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full mb-2 shadow-sm text-center">
-                  <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Omnichannel Outputs</span>
+              {/* Column 2: TRANSFORMATION - SalesChef AI Platform */}
+              <div className="transform transition-all duration-500 hover:translate-y-[-8px]">
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/20 backdrop-blur-sm mr-3">
+                    <Zap className="w-5 h-5 text-purple-300" />
+                  </div>
+                  <h3 className="font-semibold text-white text-lg">THE TRANSFORMATION</h3>
                 </div>
                 
-                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20 h-full">
-                  <div className="grid grid-cols-3 gap-3">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/15 p-5 h-full relative overflow-hidden shadow-glow-purple group">
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                  
+                  {/* Logo and Platform Name */}
+                  <div className="flex flex-col items-center justify-center mb-6">
+                    <div className="w-20 h-20 bg-white rounded-full shadow-glow-white flex items-center justify-center mb-2">
+                      <img 
+                        src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
+                        alt="SalesChef Logo" 
+                        className="w-4/5 h-4/5 object-contain" 
+                      />
+                    </div>
+                    <h4 className="font-bold text-white text-xl text-center">Enterprise PXM Platform</h4>
+                    <p className="text-white/70 text-sm text-center">Unified Product Experience Management</p>
+                  </div>
+                  
+                  {/* AI Engine Capabilities */}
+                  <div className="relative z-10 mt-4">
+                    <h5 className="text-center text-white/90 font-medium text-sm uppercase tracking-wider mb-3">AI Orchestration Engine</h5>
+                    <div className="grid grid-cols-2 gap-2">
+                      {['Competitive Intel', 'Market Trends', 'Review Analysis', 'Search Trends', 'Taxonomy Builder', 'Portfolio Analysis'].map((feature, index) => (
+                        <div 
+                          key={index} 
+                          className="bg-white/10 hover:bg-white/15 rounded-lg py-2 px-3 text-white/80 text-sm transition-all duration-300 group hover:shadow-inner hover:scale-[1.02] text-center"
+                        >
+                          <span className="group-hover:text-white transition-colors duration-300">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Path indicator */}
+                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 z-20">
+                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg">
+                      <ArrowRight className="h-4 w-4 text-white" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Column 3: OUTCOMES - Business Results */}
+              <div className="transform transition-all duration-500 hover:translate-y-[-5px]">
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-500/20 backdrop-blur-sm mr-3">
+                    <Trophy className="w-5 h-5 text-green-300" />
+                  </div>
+                  <h3 className="font-semibold text-white text-lg">THE OUTCOMES</h3>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-5 h-full relative overflow-hidden group">
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500/50 to-emerald-500/50"></div>
+                  
+                  <h4 className="font-bold text-white mb-3 text-xl">Revenue-Driving Assets</h4>
+                  <p className="text-white/70 mb-4 leading-relaxed">Optimized omnichannel content that drives measurable business growth</p>
+                  
+                  <div className="grid grid-cols-3 gap-2 mt-4">
                     {[
                       'Global Marketplaces', 'D2C Platforms', 'Executive Dashboards', 
                       'Campaign Assets', 'Rich Media', 'SEO Content',
@@ -189,21 +236,45 @@ const Hero = () => {
                     ].map((output, index) => (
                       <div 
                         key={index} 
-                        className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg p-2 flex items-center justify-center h-16"
+                        className="bg-white/90 hover:bg-white shadow-sm hover:shadow-md rounded-lg p-2 text-center transition-all duration-300 group hover:scale-105 relative overflow-hidden"
                       >
-                        <p className="text-xs font-semibold text-gray-800 text-center">{output}</p>
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-emerald-400"></div>
+                        <p className="text-xs font-semibold text-gray-800">{output}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* Background decorative elements */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute top-1/3 left-1/3 w-1/3 h-1/3 border border-white/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-            <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border border-white/10 rounded-full animate-spin" style={{ animationDuration: '30s', animationDirection: 'reverse' }}></div>
+            
+            {/* Key Business Metrics */}
+            <div className="mt-12 relative z-10">
+              <div className="flex flex-col md:flex-row items-center justify-between px-4 py-5 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                <div className="flex items-center mb-4 md:mb-0">
+                  <BarChart3 className="w-6 h-6 text-purple-300 mr-3" />
+                  <span className="text-white font-medium">Enterprise Impact Metrics</span>
+                </div>
+                
+                <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-bold text-white">7.8x</p>
+                    <p className="text-xs text-white/60">Faster Time-to-Market</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-bold text-white">42%</p>
+                    <p className="text-xs text-white/60">Conversion Increase</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-bold text-white">85%</p>
+                    <p className="text-xs text-white/60">Operation Time Saved</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-bold text-white">327%</p>
+                    <p className="text-xs text-white/60">Average ROI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

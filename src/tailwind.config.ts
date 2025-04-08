@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -92,16 +93,25 @@ export default {
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
         }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
         "bounce-x": "bounce-x 1s ease-in-out infinite",
-        "fade-in": "fade-in 0.5s ease-out forwards"
+        "fade-in": "fade-in 0.5s ease-out forwards",
+        "spin-slow": "spin-slow 40s linear infinite"
 			},
       backgroundImage: {
         'grid-purple-500': 'linear-gradient(to right, rgb(168 85 247 / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(168 85 247 / 0.1) 1px, transparent 1px)',
+      },
+      boxShadow: {
+        'glow-purple': '0 0 15px 2px rgba(168, 85, 247, 0.3)',
+        'glow-white': '0 0 20px 5px rgba(255, 255, 255, 0.2)',
       }
 		}
 	},
