@@ -101,186 +101,101 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Central Platform Showcase - KEEPING THIS AS REQUESTED */}
+        {/* Improved Platform Showcase */}
         <div className="w-full max-w-7xl mx-auto chef-gradient-bg rounded-3xl shadow-xl p-8 md:p-12 overflow-hidden relative">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative z-10">
-            {/* Unstructured Data Section */}
-            <div className="w-full md:w-1/3 flex flex-col items-center">
-              <div className="bg-white/15 backdrop-blur-sm px-6 py-2 rounded-full mb-8 shadow-sm">
-                <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Enterprise Data Sources</span>
-              </div>
+          <div className="relative z-10">
+            {/* Platform Diagram with a cleaner, more attractive layout */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
               
-              <div className="relative h-64 w-full rounded-2xl border border-white/20 bg-white/5 p-4 backdrop-blur-sm shadow-lg">
-                {/* Data points and connections */}
-                <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                  {/* Data points with consistent sizes and animation */}
-                  <div className="absolute top-[5%] left-[10%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft"></div>
-                  <div className="absolute top-[25%] left-[5%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '0.5s'}}></div>
-                  <div className="absolute top-[70%] left-[15%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '1s'}}></div>
-                  <div className="absolute top-[40%] left-[25%] w-3 h-3 rounded-full bg-white/70 animate-pulse-soft" style={{animationDelay: '1.3s'}}></div>
-                  
-                  {/* Document tags */}
-                  <div className="absolute top-[8%] left-[45%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                    legacy ERP systems
-                  </div>
-                  <div className="absolute top-[32%] left-[45%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                    global PLM platforms
-                  </div>
-                  <div className="absolute top-[55%] left-[20%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                    regional catalog data
-                  </div>
-                  
-                  {/* File type icons */}
-                  <div className="absolute top-[18%] left-[15%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                    DAM systems
-                  </div>
-                  <div className="absolute top-[45%] left-[35%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                    supplier data
-                  </div>
-                  <div className="absolute top-[65%] left-[30%] text-[10px] text-white/90 bg-white/10 px-2 py-1 rounded-md shadow-sm backdrop-blur-sm font-medium">
-                    master data
+              {/* Left Column - Data Sources */}
+              <div className="flex flex-col space-y-6">
+                <div className="bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full mb-2 shadow-sm text-center">
+                  <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Enterprise Data Sources</span>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20 h-full">
+                  <div className="grid grid-cols-2 gap-3">
+                    {['Legacy ERP', 'PLM Platforms', 'Catalog Data', 'DAM Systems', 'Supplier Data', 'Master Data'].map((item, index) => (
+                      <div key={index} className="bg-white/15 hover:bg-white/25 transition-colors duration-300 p-3 rounded-lg text-white text-sm font-medium flex items-center justify-center text-center h-16">
+                        {item}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Central Platform */}
-            <div className="w-full md:w-1/3 flex flex-col items-center justify-center">
-              <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="px-4 py-4">
-                  <div className="text-center mb-2">
-                    <h3 className="text-sm font-medium text-white tracking-wide">Enterprise AI Orchestration</h3>
+              
+              {/* Center Column - AI Platform */}
+              <div className="flex flex-col space-y-6">
+                {/* Central AI Platform */}
+                <div className="relative flex flex-col items-center">
+                  {/* SalesChef Logo with glow effect */}
+                  <div className="relative w-28 h-28 md:w-32 md:h-32 bg-white/95 rounded-full shadow-chef flex items-center justify-center animate-float z-20 mb-5">
+                    <img 
+                      src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
+                      alt="SalesChef Logo" 
+                      className="w-4/5 h-4/5 object-contain" 
+                    />
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {/* Enrichment items */}
-                    <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
-                      <span className="text-xs font-medium">Competitive Intel</span>
-                    </div>
-                    
-                    <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
-                      <span className="text-xs font-medium">Market Trends</span>
-                    </div>
-                    
-                    <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
-                      <span className="text-xs font-medium">Review Analysis</span>
-                    </div>
-                    
-                    <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
-                      <span className="text-xs font-medium">Search Trends</span>
-                    </div>
-                    
-                    <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
-                      <span className="text-xs font-medium">Taxonomy Builder</span>
-                    </div>
-                    
-                    <div className="flex items-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/20 transition-all group">
-                      <span className="text-xs font-medium">Portfolio Analysis</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Logo with consistent styling */}
-              <div className="relative w-36 h-36 bg-white/95 rounded-full shadow-chef flex items-center justify-center animate-float">
-                <img 
-                  src="/lovable-uploads/a97abb90-7ede-47ed-a0c8-fd19c5ecc583.png" 
-                  alt="SalesChef Logo" 
-                  className="w-4/5 h-4/5 object-contain" 
-                />
+                  
+                  {/* AI Orchestration */}
+                  <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 mb-4">
+                    <CardContent className="p-4">
+                      <div className="text-center mb-3">
+                        <h3 className="text-sm font-semibold text-white tracking-wide">Enterprise AI Orchestration</h3>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2">
+                        {['Competitive Intel', 'Market Trends', 'Review Analysis', 'Search Trends', 'Taxonomy Builder', 'Portfolio Analysis'].map((feature, index) => (
+                          <div 
+                            key={index} 
+                            className="flex items-center justify-center gap-1.5 bg-white/15 rounded-lg px-3 py-2 text-white/90 shadow-sm hover:bg-white/25 transition-all group cursor-pointer"
+                          >
+                            <span className="text-xs font-medium text-center">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  {/* PXM Platform */}
+                  <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <CardContent className="px-4 py-4">
+                      <div className="text-center">
+                        <h3 className="text-sm font-semibold text-white tracking-wide">Enterprise PXM Platform</h3>
+                        <div className="text-xs text-white/90 font-medium mt-1">
+                          Unified Product Experience Management
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  {/* Decorative connections */}
+                  <div className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-white/0 via-white/30 to-white/0 z-10"></div>
+                </div>
               </div>
               
-              {/* SalesChef PIM/DAM with consistent styling */}
-              <Card className="w-full bg-white/15 backdrop-blur-lg border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 mt-6">
-                <CardContent className="px-4 py-4">
-                  <div className="text-center">
-                    <h3 className="text-sm font-medium text-white tracking-wide">Enterprise PXM Platform</h3>
-                    <div className="text-xs text-white/90 font-medium mt-1">
-                      Unified Product Experience Management
-                    </div>
+              {/* Right Column - Outputs */}
+              <div className="flex flex-col space-y-6">
+                <div className="bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full mb-2 shadow-sm text-center">
+                  <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Omnichannel Outputs</span>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20 h-full">
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      'Global Marketplaces', 'D2C Platforms', 'Executive Dashboards', 
+                      'Campaign Assets', 'Rich Media', 'SEO Content',
+                      'Growth Reports', 'Multi-Format Assets', 'Channel Syndication',
+                      'Chatbot Content', 'Global Brand Assets', 'Compliance Docs'
+                    ].map((output, index) => (
+                      <div 
+                        key={index} 
+                        className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg p-2 flex items-center justify-center h-16"
+                      >
+                        <p className="text-xs font-semibold text-gray-800 text-center">{output}</p>
+                      </div>
+                    ))}
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-            
-            {/* Content Output */}
-            <div className="w-full md:w-1/3 flex flex-col items-center">
-              <div className="bg-white/15 backdrop-blur-sm px-6 py-2 rounded-full mb-8 shadow-sm">
-                <span className="text-white/90 font-medium text-sm tracking-wider uppercase">Omnichannel Outputs</span>
-              </div>
-              
-              <div className="grid grid-cols-3 gap-3 w-full">
-                {/* Output channels with consistent styling and size */}
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Global Marketplaces</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">D2C Platforms</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Executive Dashboards</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Campaign Assets</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Rich Media</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Chatbot Content</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">SEO Content</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Growth Reports</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Multi-Format Assets</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Channel Syndication</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Global Brand Assets</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/95 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border-none rounded-lg h-16 flex flex-col">
-                  <CardContent className="p-2 flex flex-col items-center justify-center h-full">
-                    <p className="text-xs font-semibold text-gray-800 text-center">Compliance Docs</p>
-                  </CardContent>
-                </Card>
+                </div>
               </div>
             </div>
           </div>
