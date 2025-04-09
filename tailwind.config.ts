@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import { spacing, borderRadius, shadows } from "./src/styles/design-system";
 
 export default {
 	darkMode: ["class"],
@@ -20,15 +21,15 @@ export default {
 		},
 		extend: {
 			spacing: {
-				'chef-xs': '0.25rem',    // 4px
-				'chef-sm': '0.5rem',     // 8px
-				'chef-md': '1rem',       // 16px
-				'chef-lg': '1.5rem',     // 24px
-				'chef-xl': '2rem',       // 32px
-				'chef-2xl': '2.5rem',    // 40px
-				'chef-3xl': '3rem',      // 48px
-				'chef-4xl': '4rem',      // 64px
-				'chef-5xl': '6rem',      // 96px
+				'chef-xs': `${spacing.xs}rem`,    // 4px
+				'chef-sm': `${spacing.sm}rem`,     // 8px
+				'chef-md': `${spacing.md}rem`,       // 16px
+				'chef-lg': `${spacing.lg}rem`,     // 24px
+				'chef-xl': `${spacing.xl}rem`,       // 32px
+				'chef-2xl': `${spacing['2xl']}rem`,    // 40px
+				'chef-3xl': `${spacing['3xl']}rem`,      // 48px
+				'chef-4xl': `${spacing['4xl']}rem`,      // 64px
+				'chef-5xl': `${spacing['5xl']}rem`,      // 96px
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -79,10 +80,10 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
-				'chef-sm': '0.375rem',  // 6px
-				'chef-md': '0.75rem',   // 12px 
-				'chef-lg': '1rem',      // 16px
-				'chef-xl': '1.5rem',    // 24px
+				'chef-sm': borderRadius.sm,   // 6px
+				'chef-md': borderRadius.md,   // 12px 
+				'chef-lg': borderRadius.lg,   // 16px
+				'chef-xl': borderRadius.xl,   // 24px
 			},
 			keyframes: {
 				'accordion-down': {
@@ -146,10 +147,10 @@ export default {
         'gradient-chef': 'linear-gradient(135deg, rgba(147,51,234,0.9) 0%, rgba(219,39,119,0.9) 100%)',
       },
       boxShadow: {
-        'chef': '0 10px 30px -10px rgba(147,51,234,0.3)',
-        'chef-sm': '0 4px 12px -2px rgba(147,51,234,0.15)',
-        'chef-md': '0 8px 24px -4px rgba(147,51,234,0.2)',
-        'chef-lg': '0 12px 36px -6px rgba(147,51,234,0.25)',
+        'chef': shadows.md,
+        'chef-sm': shadows.sm,
+        'chef-md': shadows.md,
+        'chef-lg': shadows.lg,
         'glow-purple': '0 0 15px 2px rgba(168, 85, 247, 0.3)',
         'glow-white': '0 0 20px 5px rgba(255, 255, 255, 0.2)',
       }
