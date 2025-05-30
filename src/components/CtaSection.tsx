@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Upload, Eye, Calendar, ChefHat, ShieldCheck, Star, Zap, ArrowRight } from "lucide-react";
@@ -57,16 +58,13 @@ const CtaSection = () => {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
-              <div className="flex flex-col items-center gap-2">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-purple-800 hover:bg-gray-100 shadow-lg text-base font-medium px-6 group"
-                >
-                  <Upload className="mr-2 h-5 w-5 group-hover:animate-pulse-soft" />
-                  Upload SKUs → Watch it Cook
-                </Button>
-                <p className="text-white/80 text-sm">Drop a CSV. See what your content could become.</p>
-              </div>
+              <Button 
+                size="lg" 
+                className="bg-white text-purple-800 hover:bg-gray-100 shadow-lg text-base font-medium px-6 group"
+              >
+                <Upload className="mr-2 h-5 w-5 group-hover:animate-pulse-soft" />
+                Upload 5 SKUs → Watch it Cook
+              </Button>
               
               <Button 
                 size="lg" 
