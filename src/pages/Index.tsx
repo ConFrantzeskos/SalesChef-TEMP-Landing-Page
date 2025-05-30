@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProblemFramingSection from '@/components/ProblemFramingSection';
 import FeaturesSection from '@/components/FeaturesSection';
-import HowItWorksSection from '@/components/HowItWorksSection';
 import ResultsSection from '@/components/ResultsSection';
 import TrustSection from '@/components/TrustSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -38,16 +37,13 @@ const Index = () => {
         {/* 3. INTRODUCING SALES.CHEF – The AI-Powered Kitchen */}
         <FeaturesSection />
         
-        {/* 4. HOW IT WORKS – The Transformation Flow */}
-        <HowItWorksSection />
-        
-        {/* 5. RESULTS – Clear, Tangible Outcomes */}
+        {/* 4. RESULTS – Clear, Tangible Outcomes */}
         <ResultsSection />
         
-        {/* 6. TRUST SECTION – Social Proof, Security, Speed */}
+        {/* 5. TRUST SECTION – Social Proof, Security, Speed */}
         <TrustSection />
         
-        {/* 7. FINAL CTA – Emotional and Actionable Close */}
+        {/* 6. FINAL CTA – Emotional and Actionable Close */}
         <CtaSection />
         
         {/* Additional sections */}

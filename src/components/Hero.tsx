@@ -38,13 +38,13 @@ const Hero = () => {
               SalesChef transforms messy product data—no matter where it lives—into persuasive, high-converting content for every channel.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mb-8">
+            <div className="flex flex-wrap items-center gap-4 mb-4">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-purple-700 to-pink-600 hover:from-purple-800 hover:to-pink-700 text-white shadow-lg transition-all duration-300 text-base"
               >
                 <Upload className="mr-2 h-4 w-4" />
-                Upload 5 SKUs → Watch it Cook
+                Upload SKUs → Watch it Cook
               </Button>
               
               <Button 
@@ -58,7 +58,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-gray-500 mb-8">
               Drop a CSV. See what your content could become.
             </div>
           </div>

@@ -56,14 +56,14 @@ const CtaSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-4"
             >
               <Button 
                 size="lg" 
                 className="bg-white text-purple-800 hover:bg-gray-100 shadow-lg text-base font-medium px-6 group"
               >
                 <Upload className="mr-2 h-5 w-5 group-hover:animate-pulse-soft" />
-                Upload 5 SKUs → Watch it Cook
+                Upload SKUs → Watch it Cook
               </Button>
               
               <Button 
@@ -76,6 +76,16 @@ const CtaSection = () => {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:animate-bounce-x" />
               </Button>
             </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-sm text-white/80 mb-12"
+            >
+              Drop a CSV. See what your content could become.
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               {[
@@ -83,19 +93,19 @@ const CtaSection = () => {
                   icon: Zap,
                   title: "Implementation in 30 Days",
                   description: "Enterprise-ready deployment with dedicated success team",
-                  delay: 0.6
+                  delay: 0.7
                 },
                 {
                   icon: ShieldCheck,
                   title: "Enterprise Security",
                   description: "SOC 2 Type II, GDPR, CCPA compliant platform",
-                  delay: 0.7
+                  delay: 0.8
                 },
                 {
                   icon: Star,
                   title: "24/7 Priority Support",
                   description: "Dedicated customer success manager and team",
-                  delay: 0.8
+                  delay: 0.9
                 }
               ].map((item, index) => (
                 <motion.div 

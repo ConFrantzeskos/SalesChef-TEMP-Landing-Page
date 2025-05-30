@@ -103,8 +103,8 @@ const FeaturesSection = () => {
         {/* Section header */}
         <SectionHeader 
           icon={ChefHat}
-          title="SalesChef changes everything"
-          description="(except your existing tech stack). Keep your existing stack. SalesChef is a team of AI agents - like chefs - each trained to transform raw product specs into full-funnel, high-performance content; manipulating your content, not your systems."
+          title="SalesChef changes everything (except your stack)"
+          description="Keep your existing stack. SalesChef is a team of AI agents - like chefs - each trained to transform raw product specs into full-funnel, high-performance content; manipulating your content, not your systems."
         />
         
         {/* AI Chef Agents showcase */}
