@@ -50,45 +50,57 @@ const FaqSection = () => {
   const [openIndex, setOpenIndex] = React.useState(0);
   
   const faqs = [
-    // For Product Managers
     {
-      question: "How much faster can we actually launch new products with SalesChef?",
-      answer: "Our customers cut their time-to-market by 80% on average. What used to take 6-8 weeks now happens in DAYS. You'll eliminate the endless back-and-forth between product teams, marketing, and sales when creating content. One client launched 1,200 new SKUs in a single week—something that would've taken them 6 months before SalesChef."
+      question: "Marketers: How does SalesChef lift conversion and ROI?",
+      answer: "By turning raw specs into persuasive, benefit-led content, SalesChef increases PDP relevance and search visibility while slashing SEM waste. Customers see richer pages sooner, leading to higher add-to-cart rates and measurable revenue uplift."
     },
-    // For Marketing Directors
     {
-      question: "How does SalesChef eliminate the constant struggle with inconsistent product information?",
-      answer: "SalesChef gives you a single source of truth that updates EVERYWHERE simultaneously. No more finding outdated specs on your website while your Amazon listings show something different. When you make a change, it propagates across ALL channels instantly—your website, retailer listings, sales materials, everything. One client reduced content-related customer service tickets by 73% after implementing SalesChef."
+      question: "Marketers: Will the copy match our brand voice?",
+      answer: "Yes. The Design Agent ingests your tone-of-voice guides, style manuals and legal guard-rails, then locks them as non-editable constraints. Every Draft Agent output automatically passes a Diligence Agent QA checkpoint before anything is published."
     },
-    // For E-commerce Managers
     {
-      question: "What kind of conversion improvements can we expect on our product pages?",
-      answer: "Our clients see a 20-40% jump in conversion rates within 90 days. Why? Because SalesChef analyzes thousands of successful product listings to understand exactly what drives purchases in your category. We transform boring specs into benefit-focused content that actually answers customer questions. One sporting goods client increased their average order value by 32% just by improving product descriptions."
+      question: "Merchandisers: Can SalesChef help us decide which SKUs to range?",
+      answer: "Absolutely. The Discover and Detect Agents surface search demand, competitive gaps and trend signals; the Define Agent maps segments to product benefits. Together they create evidence-based \"range rationales\" so you back the right eight TVs, not 400."
     },
-    // For Sales Directors
     {
-      question: "How will SalesChef help my sales team win more retail shelf space?",
-      answer: "SalesChef automatically generates killer sell sheets, pitch decks, and training materials that make your products irresistible to retailers. Your team will have instant access to customized presentations for each buyer meeting—no more scrambling the night before. One CPG client landed distribution in 400 new stores after arming their sales team with SalesChef-generated materials."
+      question: "Merchandisers: Does SalesChef generate line-review decks?",
+      answer: "One click. SalesChef assembles spec sheets, feature/benefit ladders, pricing comps and lifestyle imagery into ready-to-present PDFs or slides, freeing your team from manual cut-and-paste."
     },
-    // For Content Teams
     {
-      question: "How much content creation work will this actually save my team?",
-      answer: "Most clients report 70-90% reduction in content creation workload. Your team can stop wasting time on repetitive writing tasks and focus on high-value creative work instead. SalesChef can generate 500 product descriptions in the time it takes a writer to create 5—and they'll be tailored to each specific channel's requirements. One fashion client redeployed 4 full-time writers to more strategic projects after implementing SalesChef."
+      question: "eCommerce Managers: Will it break my Shopify/Magento/Amazon feeds?",
+      answer: "No. SalesChef is deliberately PIM-less and stateless. The Deploy Agent maps clean output to each channel's schema, validates against every rule (title length, prohibited terms, etc.) and keeps rollback versions for safety."
     },
-    // For IT Directors
     {
-      question: "Is SalesChef going to be yet another complicated system that my team needs to maintain?",
-      answer: "Absolutely not. SalesChef deploys in days, not months, with zero code required from your team. Our pre-built connectors handle 95% of integration scenarios without custom development. Most clients need just 2-3 hours of IT involvement for the entire implementation. And our platform handles all the heavy lifting of pushing content to different channels—no need for your team to build or maintain those integrations."
+      question: "eCommerce Managers: How long from upload to live content?",
+      answer: "For a typical CSV of 50 SKUs: ingest < 2 min, enrichment 3-5 min, QA 1 min. You can publish inside 10 minutes—hours if you prefer scheduled drops."
     },
-    // For CFOs
     {
-      question: "What's the real ROI timeline for SalesChef?",
-      answer: "Most clients achieve positive ROI within 60-90 days. The math is simple: reduced content creation costs (70-90% savings), faster time-to-market (80% reduction), higher conversion rates (20-40% increase), and elimination of costly errors. One electronics manufacturer calculated a 387% ROI in the first year, primarily from being able to launch products 12 weeks earlier than their previous timeline."
+      question: "Retail Executives: What's the business case?",
+      answer: "Customers report: 15–30 % lower paid-media bills, 8–12 % conversion-rate uplift, and 4–6× content throughput without extra head-count. Payback is usually < 90 days on an enterprise licence."
     },
-    // For CEOs
     {
-      question: "How will SalesChef give us a competitive advantage in our market?",
-      answer: "Three ways: Speed, Scale, and Smarts. You'll get products to market faster than competitors (weeks sooner), scale your product catalog without adding headcount (one client went from 500 to 10,000 SKUs with the same team size), and leverage AI-driven insights about what actually sells (continuously improving based on sales data). In a recent survey, 86% of our clients reported gaining market share within 6 months of implementing SalesChef."
+      question: "Retail Executives: Is this another system of record to maintain?",
+      answer: "No. SalesChef never tries to be your \"single source of truth\". It ingests data, transforms it, publishes, then forgets—leaving your ERP, OMS or DAM untouched. Zero-storage means zero migration risk."
+    },
+    {
+      question: "All buyers: What file types and sources can we drop in?",
+      answer: "CSV, XLS/XLSM, JSON, PDF, Images, live PDP URLs, ERP/REST/GraphQL feeds—anything with product data. The Drop Agent auto-detects delimiters, encodings and units, and virus-scans in-flight."
+    },
+    {
+      question: "All buyers: How does SalesChef handle global roll-outs?",
+      answer: "Internationalisation is baked in: auto-translation to 30+ languages, locale-specific units (cm vs inches), currency symbols, right-to-left previews, and hreflang tagging. You can localise once and publish everywhere."
+    },
+    {
+      question: "Tourism: Can SalesChef enrich tour or hotel listings?",
+      answer: "Yes. Swap \"SKU\" for \"room night\" or \"day tour\". The same agents extract amenities, craft compelling benefit bullets (\"sunrise views of Uluru\"), generate multilingual copy and prepare OTA-ready feeds—no extra code."
+    },
+    {
+      question: "Media & Entertainment: We manage a catalogue of 5 000 films. What's in it for us?",
+      answer: "SalesChef ingests title metadata, scripts and key art, then produces platform-specific synopses, SEO tags, subtitles, social trailers and accessibility audio—all under your studio style guide—ready for IMDb, YouTube, FAST or OTT storefronts."
+    },
+    {
+      question: "Industrial / Manufacturing: Our specs are highly technical. Will the AI hallucinate?",
+      answer: "Technical accuracy is enforced: the Drop Agent locks invariant fields, while the Diligence Agent cross-checks generated text against source values and your compliance-flag table. If a claim isn't in the data, it doesn't make the page."
     }
   ];
   
