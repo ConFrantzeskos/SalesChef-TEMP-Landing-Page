@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, ChefHat, ShieldCheck, Star, Zap } from "lucide-react";
+import { Upload, Eye, Calendar, ChefHat, ShieldCheck, Star, Zap, ArrowRight } from "lucide-react";
 import { motion } from 'framer-motion';
 
 const CtaSection = () => {
@@ -37,7 +37,8 @@ const CtaSection = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
             >
-              Ready to transform your enterprise product content strategy?
+              You already have the specs. <br />
+              Let's make them sell.
             </motion.h2>
             
             <motion.p 
@@ -47,7 +48,7 @@ const CtaSection = () => {
               viewport={{ once: true }}
               className="text-lg text-white/80 mb-10 max-w-3xl mx-auto"
             >
-              Join the Fortune 500 companies who are leveraging SalesChef to increase conversion, accelerate time-to-market, and drive measurable revenue growth.
+              Upload a CSV. See what SalesChef can do with five of your real products.
             </motion.p>
             
             <motion.div 
@@ -61,8 +62,8 @@ const CtaSection = () => {
                 size="lg" 
                 className="bg-white text-purple-800 hover:bg-gray-100 shadow-lg text-base font-medium px-6 group"
               >
-                <Calendar className="mr-2 h-5 w-5 group-hover:animate-pulse-soft" />
-                Schedule Executive Demo
+                <Upload className="mr-2 h-5 w-5 group-hover:animate-pulse-soft" />
+                Upload 5 SKUs → Watch it Cook
               </Button>
               
               <Button 
@@ -70,7 +71,8 @@ const CtaSection = () => {
                 variant="outline" 
                 className="border-white/30 text-white hover:bg-white/10 transition-all duration-300 text-base font-medium px-6 group"
               >
-                Request Custom ROI Analysis
+                <Eye className="mr-2 h-4 w-4" />
+                See a Sample Transformation
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:animate-bounce-x" />
               </Button>
             </motion.div>

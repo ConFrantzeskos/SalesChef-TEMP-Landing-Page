@@ -3,15 +3,18 @@ import React from 'react';
 import { 
   ChefHat,
   Database, 
-  Zap, 
   Target, 
   Users, 
-  Lightbulb,
   Palette, 
   Layers,
   LineChart,
-  Shield,
-  ArrowRight
+  ArrowRight,
+  Upload,
+  Search,
+  Edit,
+  Paintbrush,
+  Send,
+  BarChart3
 } from 'lucide-react';
 import { AgentProps } from '@/types/agent';
 import SectionHeader from './features/SectionHeader';
@@ -21,68 +24,68 @@ const FeaturesSection = () => {
   const agents: AgentProps[] = [
     {
       name: "Drop",
-      tagline: "Enterprise Data Integration",
-      description: "Connect siloed data across your entire organization",
-      icon: Database,
+      tagline: "Ingests and cleans",
+      description: "Keep your existing stack. SalesChef connects to everything.",
+      icon: Upload,
       ctaIcon: ArrowRight,
       color: "from-blue-500 to-blue-700",
-      features: ["Legacy ERP systems", "PLM platforms", "DAM systems", "Master data"],
-      cta: "Unlock your data",
+      features: ["Any data source", "Automatic cleaning", "Format standardization", "Data validation"],
+      cta: "Connect your data",
       position: "left"
     },
     {
       name: "Discover",
-      tagline: "Market Intelligence",
-      description: "Harness AI to identify opportunities and trends",
-      icon: Target,
+      tagline: "Researches, enriches",
+      description: "AI agents research and enrich your product data with market intelligence.",
+      icon: Search,
       ctaIcon: ArrowRight,
       color: "from-purple-500 to-purple-700",
-      features: ["Competitive positioning", "Customer sentiment", "Search trends", "Market gaps"],
-      cta: "Reveal insights",
+      features: ["Competitive analysis", "Customer reviews", "Market trends", "SEO insights"],
+      cta: "Enrich your catalog",
       position: "right"
     },
     {
-      name: "Define",
-      tagline: "Cross-Functional Alignment",
-      description: "Create personalized views for every stakeholder",
-      icon: Users,
+      name: "Draft",
+      tagline: "Writes compelling content",
+      description: "Transform specs into persuasive, benefit-driven content that converts.",
+      icon: Edit,
       ctaIcon: ArrowRight,
       color: "from-indigo-500 to-indigo-700",
-      features: ["C-suite dashboards", "Regional views", "Department KPIs", "Channel metrics"],
-      cta: "Align teams",
+      features: ["Product descriptions", "Feature bullets", "Benefits copy", "SEO content"],
+      cta: "Write better copy",
       position: "left"
     },
     {
       name: "Design",
-      tagline: "Global Brand Governance",
-      description: "Maintain perfect brand consistency at enterprise scale",
-      icon: Palette,
+      tagline: "Formats to brand",
+      description: "Maintain perfect brand consistency across every channel and touchpoint.",
+      icon: Paintbrush,
       ctaIcon: ArrowRight,
       color: "from-pink-500 to-pink-700",
-      features: ["Brand guidelines", "Regional variations", "Channel templates", "Approval workflows"],
-      cta: "Elevate your brand",
+      features: ["Brand guidelines", "Channel formats", "Visual templates", "Style consistency"],
+      cta: "Brand your content",
       position: "right"
     },
     {
-      name: "Develop",
-      tagline: "Automated Content Operations",
-      description: "Generate channel-optimized assets and content at scale",
-      icon: Layers,
+      name: "Deploy",
+      tagline: "Publishes everywhere",
+      description: "Distribute content across all your channels with one click.",
+      icon: Send,
       ctaIcon: ArrowRight,
       color: "from-amber-500 to-amber-700",
-      features: ["Product content", "Marketing assets", "Technical specs", "Localized materials"],
-      cta: "Scale content",
+      features: ["Multi-channel publishing", "Format optimization", "Automated syndication", "Real-time updates"],
+      cta: "Go live instantly",
       position: "left"
     },
     {
       name: "Dissect",
-      tagline: "Enterprise Performance Analytics",
-      description: "Connect content directly to revenue impact",
-      icon: LineChart,
+      tagline: "Optimizes and learns",
+      description: "Continuous optimization based on performance data and market feedback.",
+      icon: BarChart3,
       ctaIcon: ArrowRight,
       color: "from-emerald-500 to-emerald-700",
-      features: ["Executive reporting", "Portfolio optimization", "Predictive analytics", "ROI tracking"],
-      cta: "Measure impact",
+      features: ["Performance analytics", "A/B testing", "Content optimization", "Feedback loops"],
+      cta: "Optimize results",
       position: "right"
     }
   ];
@@ -100,11 +103,11 @@ const FeaturesSection = () => {
         {/* Section header */}
         <SectionHeader 
           icon={ChefHat}
-          title="Enterprise AI Agents"
-          description="Six specialized AI agents working in harmony to transform complex product data into revenue-driving content across your entire enterprise."
+          title="SalesChef changes everything"
+          description="(except your existing tech stack). Keep your existing stack. SalesChef is a team of AI agents - like chefs - each trained to transform raw product specs into full-funnel, high-performance content; manipulating your content, not your systems."
         />
         
-        {/* Agents showcase */}
+        {/* AI Chef Agents showcase */}
         <AgentList agents={agents} />
       </div>
     </section>
